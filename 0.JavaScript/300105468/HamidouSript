@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="id01">Diallo</p>
+  
+<script>
+var element = document.getElementById("id01");
+element.innerHTML = "Hamidou";
+</script>
+
+
+<p>JavaScript changed "Diallo" to "Hamidou".</p>
+
+
+</body>
+</html> 
