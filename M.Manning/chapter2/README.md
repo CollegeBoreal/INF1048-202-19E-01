@@ -8,19 +8,19 @@
 
 ## Creér la page principale
 
-Suivre la Documentation de [Base](base.md) 
+Suivre la Documentation de [Base](docs/base.md) 
 
 ## Creér le service d'accés aux données
 
-Suivre la Documentation de [Service](service.md) 
+Suivre la Documentation de [Service](docs/service.md) 
 
 ## Créer les composants
 
-* Créer le composant [summary](summary.md)
+* Créer le composant [summary](docs/summary.md)
 
 ## Afficher le sommaire
 
-* Modifier la page principale en faisant [simple](simple.md)
+* Modifier la page principale en faisant [simple](docs/simple.md)
 
 
 
