@@ -1,10 +1,4 @@
-# Créer l'application
-
-* Créer un nouveau projet avec votre :id: (i.e. b30000000 )
-
- ``` 
- $ ng new <ID> && cd <ID>
- ```
+# Créer a page principale
  
  * Éditer le fichier `index.html` et rajouter le code ci-dessous à l'étiquette `<head>`
  
