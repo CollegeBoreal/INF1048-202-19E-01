@@ -167,3 +167,8 @@ export class StocksService {
 })
 export class AppModule { }
 ```
+## Créer les composants
+
+```
+$ ng generate component components/summary
+```
