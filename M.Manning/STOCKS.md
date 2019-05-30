@@ -141,3 +141,11 @@ export class StocksService {
 
 }
 ```
+
+## Fournir le Service
+
+* Éditer le fichier `app.module.ts`
+
+- Importer le module HttpClientModule dans la métadonnée `imports:`
+- Enregistrer le fourniseur de service `StockService` auprès de la métadonnée `providers:`
+
