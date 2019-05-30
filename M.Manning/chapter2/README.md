@@ -18,5 +18,9 @@ Suivre la Documentation de [Service](service.md)
 
 * Créer le composant [summary](summary.md)
 
+## Afficher le sommaire
+
+* Modifier la page principale en faisant [simple](simple.md)
+
 
 
