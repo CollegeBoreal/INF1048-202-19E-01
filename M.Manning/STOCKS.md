@@ -153,11 +153,16 @@ export class StocksService {
 
 ```typescript
 @NgModule({
-  declarations: [],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
-    HttpClientModule],
-  providers: [StocksService],
+    HttpClientModule
+  ],
+  providers: [
+    StocksService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
