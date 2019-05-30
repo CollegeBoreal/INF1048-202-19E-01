@@ -40,8 +40,15 @@
   </main>
 </div>
 ``` 
-  
- 
+
+## Service
+
+Rajouter le `service` appellé `Stocks` avec la commande suivante
+
+ ``` 
+ $ ng generate service services/stocks
+ ```
+
  
 
 
