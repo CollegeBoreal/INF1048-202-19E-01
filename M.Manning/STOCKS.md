@@ -192,7 +192,7 @@ $ ng generate component components/summary
 </div>
 ```
 - Ajouter une parametre d'entrée de composant `@Input` appellé `stock`
-- Ajouter les fonctions `isNegative()` et `isPositive()` au code de la classe SummaryComponent`
+- Ajouter les fonctions `isNegative()` et `isPositive()` au code de la classe `SummaryComponent`
 
 ```typescript
   @Input() stock: any;
