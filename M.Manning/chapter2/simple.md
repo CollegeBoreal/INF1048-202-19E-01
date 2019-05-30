@@ -14,7 +14,7 @@
 
 * Modifier le fichier`app.component.html`
 
-- rajouter la `directive` `*ngIf="stocks"` dans l'étiquette `<main>` 
+   - rajouter la `directive` `*ngIf="stocks"` dans l'étiquette `<main>` 
 
 ```html
  <main class="mdl-layout__content" style="padding: 1.25rem;" *ngIf="stocks">
