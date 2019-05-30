@@ -6,14 +6,14 @@
  $ ng new <ID> && cd <ID>
  ```
  
- * Editer le fichier `index.html` et rajouter le code ci-dessous à l'étiquette `<head>`
+ * Éditer le fichier `index.html` et rajouter le code ci-dessous à l'étiquette `<head>`
  
  ```html 
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.indigo-orange.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  ```
  
- * Editer le fichier `styles.css` et rajouter le code ci-dessous 
+ * Éditer le fichier `styles.css` et rajouter le code ci-dessous 
  
  ```css
  body {
@@ -21,6 +21,26 @@
  }
  ```
  
+ * Éditer le fichier `app.component.html` et rajouter le code suivant
+ 
+ ```html 
+ <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Stock Tracker</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" [routerLink]="['/']">Dashboard</a>
+        <a class="mdl-navigation__link" [routerLink]="['/manage']">Manage</a>        
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content" style="padding: 20px;">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+``` 
+  
  
  
 
