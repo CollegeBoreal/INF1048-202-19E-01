@@ -46,12 +46,18 @@ $ ng generate component components/summary
 
 ```typescript
 @Component({
-  selector: 'summary',
-  styleUrls: ['./summary.component.css'],
-  templateUrl: './summary.component.html'
+  selector: 'app-summary',
+  templateUrl: './summary.component.html',
+  styleUrls: ['./summary.component.css']
 })
-export class SummaryComponent {
+export class SummaryComponent implements OnInit {
+
   @Input() stock: any;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 
   isNegative() {
     if (!this.stock || this.stock.change >= 0) {
@@ -68,4 +74,5 @@ export class SummaryComponent {
 
     return true;
   }
+
 }
