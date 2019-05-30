@@ -49,3 +49,5 @@
   </main>
 </div>
 ```
+
+![image](../images/simple.png)
