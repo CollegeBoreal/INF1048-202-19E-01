@@ -41,6 +41,25 @@
 </div>
 ``` 
 
+## Interface
+
+* Ajouter une structure de données `StockInterface`
+
+``` 
+$ ng generate interface services/stockInterface
+``` 
+
+* Remplacer le code avec celui ci 
+ 
+```typescrit
+ export interface StockInterface {
+  symbol: string;
+  lastTradePriceOnly: number;
+  change: number;
+  changeInPercent: number;
+}
+``` 
+
 ## Service
 
 * Rajouter le `service` appellé `Stocks` avec la commande suivante
@@ -50,7 +69,7 @@
  ```
 * Éditer le fichier `stocks.service.ts`
 
-- Ajouter des variables locales
+- Ajouter des variables locales avant le décorateur `@Injectable`
 
 ```typescript
 const stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
