@@ -79,3 +79,20 @@ export class SummaryComponent implements OnInit {
   }
 
 }
+```
+
+* Éditer le style du composant en ouvrant le fichier `summary.component.css`
+
+```css
+:host .stock-card {
+  background: #333333;
+}
+:host .stock-card.increase {
+  background: #558B2F;
+  color: #fff;
+}
+:host .stock-card.decrease {
+  background: #C62828;
+  color: #fff;
+}
+```
