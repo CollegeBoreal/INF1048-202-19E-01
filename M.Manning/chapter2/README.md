@@ -16,7 +16,7 @@ Suivre la Documentation de [Service](SERVICE.md)
 
 ## Créer les composants
 
-* Créer le composant [summary](SUMMARY-CMP.md)
+* Créer le composant [summary](summary.md)
 
 
 
