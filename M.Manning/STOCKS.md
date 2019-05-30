@@ -169,9 +169,13 @@ export class AppModule { }
 ```
 ## Créer les composants
 
+* Créer le composant `summary`
+
 ```
 $ ng generate component components/summary
 ```
+
+* Mettre à jour son `template`avec le code ci-dessous
 
 ```html
 <div class="mdl-card stock-card mdl-shadow--2dp" 
