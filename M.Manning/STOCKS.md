@@ -35,7 +35,7 @@
       </nav>
     </div>
   </header>
-  <main class="mdl-layout__content" style="padding: 20px;">
+  <main class="mdl-layout__content" style="padding: 1.25rem;">
    
   </main>
 </div>
