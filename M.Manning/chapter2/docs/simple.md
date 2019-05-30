@@ -50,4 +50,6 @@
 </div>
 ```
 
+# Affichage dans le navigateur
+
 ![image](../images/simple.png)
