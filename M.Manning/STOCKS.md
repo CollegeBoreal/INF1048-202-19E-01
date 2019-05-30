@@ -13,6 +13,15 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  ```
  
+ * Editer le fichier `styles.css` et rajouter le code ci-dessous 
+ 
+ ```css
+ body {
+    background: #f3f3f3
+ }
+ ```
+ 
+ 
  
 
 
