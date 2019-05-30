@@ -149,3 +149,16 @@ export class StocksService {
 - Importer le module HttpClientModule dans la métadonnée `imports:`
 - Enregistrer le fourniseur de service `StockService` auprès de la métadonnée `providers:`
 
+* Resultat final
+
+```typescript
+@NgModule({
+  declarations: [],
+  imports: [
+    BrowserModule,
+    HttpClientModule],
+  providers: [StocksService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
