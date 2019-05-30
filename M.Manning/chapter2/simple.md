@@ -1,6 +1,6 @@
 # Afficher une page simple
 
-* Modifier le fichier àpp.component.ts``
+* Modifier le fichier`app.component.ts`
 
 ```typescript
   stocks: Array<StockInterface>;
