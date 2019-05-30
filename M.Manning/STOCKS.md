@@ -174,7 +174,8 @@ $ ng generate component components/summary
 ```
 
 ```html
-<div class="mdl-card stock-card mdl-shadow--2dp" [ngClass]="{increase: isPositive(), decrease: isNegative()}" style="width: 100%;">
+<div class="mdl-card stock-card mdl-shadow--2dp" 
+     [ngClass]="{increase: isPositive(), decrease: isNegative()}" style="width: 100%;">
   <span>
     <div class="mdl-card__title">
       <h4 style="color: #fff; margin: 0">
