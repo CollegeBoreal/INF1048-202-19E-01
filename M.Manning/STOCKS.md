@@ -43,12 +43,48 @@
 
 ## Service
 
-Rajouter le `service` appellé `Stocks` avec la commande suivante
+* Rajouter le `service` appellé `Stocks` avec la commande suivante
 
  ``` 
  $ ng generate service services/stocks
  ```
+* Éditer le fichier `stocks.service.ts`
 
- 
+- Ajouter des variables locales
 
+```typescript
+const stocks: Array<string> = ['AAPL', 'GOOG', 'FB', 'AMZN', 'TWTR'];
+const service: string = 'https://angular2-in-action-api.herokuapp.com';
+```
+
+- Modifier son constructeur
+
+```typescript
+   constructor(private http: HttpClient) {}
+``` 
+
+- Ajouter des fonctions
+
+```typescript
+  get() {
+    return stocks;
+  }
+
+  add(stock) {
+    stocks.push(stock);
+    return this.get();
+  }
+
+  remove(stock) {
+    stocks.splice(stocks.indexOf(stock), 1);
+    return this.get();
+  }
+
+  load(symbols) {
+    if (symbols) {
+      return this.http.get<Array<StockInterface>>(service + '/stocks/snapshot?symbols=' + symbols.join());
+    }
+  }
+
+``` 
 
