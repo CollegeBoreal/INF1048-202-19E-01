@@ -24,7 +24,7 @@ Modifier la page principale en faisant [simple](docs/simple.md)
 
 ---
 
-# Explorer le routage
+# Création des pages de l'application
 
 ## Créer un composant utilisant le service d'un fournisseur
 
