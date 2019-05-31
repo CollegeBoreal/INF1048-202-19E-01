@@ -6,7 +6,7 @@
 $ ng generate component components/manage
 ```
 
--- Preparer la venue du composant --
+*** Préparer la venue du composant ***
 
 * Éditer le composant principal de l'application `app.component.html`
 
