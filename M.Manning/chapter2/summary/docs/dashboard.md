@@ -78,5 +78,16 @@ export class DashboardComponent implements OnInit {
 }
 ```
 
+* Remplacer le template `dashboard.component.html` par
 
+```typescript
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col" *ngIf="!stocks" style="text-align: center;">
+    Loading
+  </div>
+  <div class="mdl-cell mdl-cell--3-col" *ngFor="let stock of stocks">
+    <app-summary [stock]="stock"></app-summary>
+  </div>
+</div>
+```
 
