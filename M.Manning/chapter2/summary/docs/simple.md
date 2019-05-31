@@ -56,4 +56,4 @@
 
 # Notes
 
-Sauvegardez votre travail :bubble: `git`
+Sauvegardez votre travail :bulb: `git`
