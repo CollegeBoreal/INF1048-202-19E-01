@@ -8,6 +8,10 @@ $ ng generate component components/dashboard
 
 * Éditer le composant principal de l'application `app.component.html`
 
+  - retirer la directive `*ngIf="stocks"` aux paramètres de l'étiquette `<main>`
+  
+  - rajouter l'étiquette `<app-dashboard>`
+
 ```html
   <main class="mdl-layout__content" style="padding: 1.25rem;" >
     <app-dashboard></app-dashboard>
