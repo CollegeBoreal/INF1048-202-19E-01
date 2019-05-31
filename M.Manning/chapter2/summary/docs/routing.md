@@ -17,3 +17,22 @@ const routes: Routes = [];
 export class AppRoutingModule { }
 
 ```
+
+
+
+
+# Notes:
+
+Vous pouvez créer le module de routage avec Angular/CLI
+
+!!!Attention!!! Assurez vous d'utiliser `git` pour récupérer le fichier `app.module.ts` car il sera écraser
+
+```
+$ ng generate module app --routing --flat --force
+```
+
+Pour récuperer le fichier écrasé par la commande `--force`
+
+```
+$ git checkout src/app/app.module.ts
+```
