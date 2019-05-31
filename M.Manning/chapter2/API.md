@@ -3,6 +3,19 @@
 
 https://angular2-in-action-api.herokuapp.com/stocks/historical/jmia
 
+```typescript
+export interface HistoricalInterface {
+  date: Date;
+  open: number;
+  low: number;
+  close: number;
+  adjClose: number;
+  volume: number;
+  symbol: string;
+}
+```
+
+
 ```json
 [
  {"date":"2019-05-31T04:00:00.000Z","open":24.969999,"high":26.379999,"low":24.77,"close":26.280001,"adjClose":26.280001,"volume":792059,"symbol":"jmia"}
