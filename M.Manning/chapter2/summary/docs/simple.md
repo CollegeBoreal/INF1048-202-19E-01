@@ -58,4 +58,4 @@
 
 Sauvegardez votre travail :bulb: `git`
 
-[:China:](../../)
+[:china:](../../)
