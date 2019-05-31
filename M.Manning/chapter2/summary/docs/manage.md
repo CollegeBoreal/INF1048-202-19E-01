@@ -6,28 +6,6 @@
 $ ng generate component components/manage
 ```
 
-* Éditer le composant principal de l'application `app.component.html`
-
-  - rajouter l'étiquette `<app-manage>`
-
-```html
-  <main class="mdl-layout__content" style="padding: 1.25rem;" >
-    <app-manage></app-manage>
-  </main>
-```
-
-* Éditer le module principal de l'application `app.module.ts`
-
-  - Importer le module `FormsModule` permettant la gestion des formulaires
-
-```typescript
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-  ],
-```
-
 * Éditer le composant de Gestion `manage.component.ts`
 
    - Déclarer les variables locales `stock` (au singulier) et `symbols`
@@ -105,3 +83,26 @@ export class ManageComponent implements OnInit {
   <div class="mdl-cell mdl-cell--4-col"></div>
 </div>
 ```
+
+* Éditer le composant principal de l'application `app.component.html`
+
+  - rajouter l'étiquette `<app-manage>`
+
+```html
+  <main class="mdl-layout__content" style="padding: 1.25rem;" >
+    <app-manage></app-manage>
+  </main>
+```
+
+* Éditer le module principal de l'application `app.module.ts`
+
+  - Importer le module `FormsModule` permettant la gestion des formulaires
+
+```typescript
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+  ],
+```
+
