@@ -10,7 +10,7 @@
 </main>
 ```
 
-   - dans `app.component.html` ajouter les différents de navigation `<nav>` liés `[routerLink]` au routage
+   - dans `app.component.html` ajouter la navigation `<nav>` liés `[routerLink]` aux différentes routes
    
 ```html
 <nav class="mdl-navigation mdl-layout--large-screen-only">
