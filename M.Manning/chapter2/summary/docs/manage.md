@@ -24,7 +24,7 @@ $ ng generate component components/manage
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
 ```
 
