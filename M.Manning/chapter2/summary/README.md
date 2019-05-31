@@ -11,15 +11,15 @@
 
 Suivre la Documentation de [Base](docs/base.md) 
 
-## Creér le service d'accés aux données
+### Creér le service d'accés aux données
 
 Suivre la Documentation de [Service](docs/service.md) 
 
-## Créer un composant `Sommaire`
+### Créer un composant `Sommaire`
 
 Suivre la Documentation de [summary](docs/summary.md)
 
-## Afficher le sommaire
+### Afficher le sommaire
 
 Modifier la page principale en faisant [simple](docs/simple.md)
 
@@ -27,11 +27,11 @@ Modifier la page principale en faisant [simple](docs/simple.md)
 
 # Création des pages de l'application
 
-## Créer un composant utilisant le service d'un fournisseur
+### Créer un composant utilisant le service d'un fournisseur
 
 Suivre la Documentation de [dashboard](docs/dashboard.md)
 
-## Créer un composant utilisant des formulaires et des évenements
+### Créer un composant utilisant des formulaires et des évenements
 
 Suivre la Documentation de [manage](docs/manage.md)
 
@@ -39,6 +39,6 @@ Suivre la Documentation de [manage](docs/manage.md)
 
 # Explorer le routage
 
-## Créer la route et le menu associé
+### Créer la route et le menu associé
 
 Suivre la Documentation de [routing](docs/routing.md)
