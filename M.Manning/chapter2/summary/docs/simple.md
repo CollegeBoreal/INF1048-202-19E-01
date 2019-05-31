@@ -58,4 +58,4 @@
 
 Sauvegardez votre travail :bulb: `git`
 
-[:congokinshasa:](../../)
+[:congo-kinshasa:](../../)
