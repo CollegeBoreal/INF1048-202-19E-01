@@ -1,6 +1,6 @@
 # Routing
 
-* Créer le module de `routage` (paragraphe `2.9`)
+### Créer le module de `routage` (paragraphe `2.9`)
 
    - créer le fichier `src/app/app-routing.module.ts` avec le contenu suivant
 
