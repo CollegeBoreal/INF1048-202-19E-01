@@ -1,5 +1,7 @@
 
 
+https://angular2-in-action-api.herokuapp.com/stocks/snapshot?symbols=aapl,goog,fb
+
 
 https://angular2-in-action-api.herokuapp.com/stocks/historical/jmia
 
