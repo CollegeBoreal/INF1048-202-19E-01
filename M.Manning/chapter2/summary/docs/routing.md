@@ -31,7 +31,7 @@ Vous pouvez créer le module de routage avec Angular/CLI
 $ ng generate module app --routing --flat --force
 ```
 
-Pour récuperer le fichier écrasé par la commande `--force`
+Pour récuperer le fichier écrasé par le paramètre `--force`
 
 ```
 $ git checkout src/app/app.module.ts
