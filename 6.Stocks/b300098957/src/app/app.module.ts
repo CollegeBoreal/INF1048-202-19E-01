@@ -1,13 +1,29 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import {StocksService} from './services/stocks.service';
+import {HttpClientModule} from '@angular/common/http';
+import { SummaryComponent } from './components/summary/summary.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ManageComponent } from './components/manage/manage.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AppComponent,
+    SummaryComponent,
+    DashboardComponent,
+    ManageComponent
+  ],
   imports: [
-    CommonModule,
-    AppRoutingModule
-  ]
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [
+    StocksService
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
