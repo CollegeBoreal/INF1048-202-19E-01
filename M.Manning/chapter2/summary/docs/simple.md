@@ -53,3 +53,7 @@
 # Affichage dans le navigateur
 
 ![image](../images/simple.png)
+
+# Notes
+
+Sauvegardez votre travail :buble: `git`
