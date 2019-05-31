@@ -6,7 +6,7 @@
 $ ng generate component components/manage
 ```
 
-*** Préparer la venue du composant ***
+#### Préparer la venue du composant
 
 * Éditer le composant principal de l'application `app.component.html`
 
@@ -30,7 +30,7 @@ $ ng generate component components/manage
   ],
 ```
 
-
+#### Faire évoluer composant
 
 * Éditer le composant de Gestion `manage.component.ts`
 
