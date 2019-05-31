@@ -28,3 +28,24 @@ $ ng generate component components/manage
   ],
 ```
 
+* Éditer le composant de Gestion `manage.component.ts`
+
+```typescript
+  symbols: Array<string>;
+  stock: string;
+
+  constructor(private service: StocksService) { }
+
+  ngOnInit() {
+    this.symbols = this.service.get();
+  }
+
+  add() {
+    this.symbols.push(this.stock.toUpperCase());
+    this.stock = '';
+  }
+
+  remove(symbol) {
+    this.symbols = this.service.remove(symbol);
+  }
+```
