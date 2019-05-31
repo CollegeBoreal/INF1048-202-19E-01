@@ -17,3 +17,17 @@ $ ng generate component components/dashboard
     <app-dashboard></app-dashboard>
   </main>
 ```
+
+* Réinitialiser le composant principal de l'application `app.component.ts`
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {}
+```
+
