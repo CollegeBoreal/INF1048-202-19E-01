@@ -1,4 +1,4 @@
 # Stocks
 
-* Suivre les instructions de tutoriel `Stocks` du [chapitre 2](../M.Manning/chapter2)
+* Suivre les instructions de tutoriel `Stocks` du [Chapitre 2](../M.Manning/chapter2) ** <= Clicke le lien **
 
