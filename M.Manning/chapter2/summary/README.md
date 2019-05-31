@@ -26,9 +26,12 @@ Suivre la Documentation de [summary](docs/summary.md)
 
 # Explorer le routage
 
-## Créer un composant `tableau de bord`
+## Créer un composant utilisant le service d'un fournisseur
 
 Suivre la Documentation de [dashboard](docs/dashboard.md)
 
+## Créer un composant utilisant des formulaires et des évenements
+
+Suivre la Documentation de [manage](docs/manage.md)
 
 
