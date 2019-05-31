@@ -19,3 +19,6 @@
 </nav>
 ```
 
+## Naviguer à souhait
+
+![image](../images/link.png)
