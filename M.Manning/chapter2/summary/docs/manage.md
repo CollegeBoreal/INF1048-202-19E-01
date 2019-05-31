@@ -52,8 +52,15 @@ $ ng generate component components/manage
 * Résultat Final
 
 ```typescript
-  stock: string;
+@Component({
+  selector: 'app-manage',
+  templateUrl: './manage.component.html',
+  styleUrls: ['./manage.component.css']
+})
+export class ManageComponent implements OnInit {
+
   symbols: Array<string>;
+  stock: string;
 
   constructor(private service: StocksService) { }
 
@@ -69,4 +76,6 @@ $ ng generate component components/manage
   remove(symbol) {
     this.symbols = this.service.remove(symbol);
   }
+
+}
 ```
