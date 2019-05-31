@@ -30,7 +30,7 @@ $ ng generate component components/manage
   ],
 ```
 
-#### Faire évoluer composant
+#### Faire évoluer le composant
 
 * Éditer le composant de Gestion `manage.component.ts`
 
@@ -110,3 +110,6 @@ export class ManageComponent implements OnInit {
 </div>
 ```
 
+#### Affichage attendu
+
+![image](../images/manage.png)
