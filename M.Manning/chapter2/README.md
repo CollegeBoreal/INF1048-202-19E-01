@@ -1,3 +1,3 @@
 # Chapter2
 
-* [Summary](summary)
+* Suivre la documentation de [Summary](summary)
