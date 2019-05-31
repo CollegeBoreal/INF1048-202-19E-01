@@ -5,8 +5,9 @@
  ``` 
  $ ng new <ID> && cd <ID>
  ```
+# Création de la page principale
 
-## Creér la page principale
+## Créer le composant de page principale
 
 Suivre la Documentation de [Base](docs/base.md) 
 
