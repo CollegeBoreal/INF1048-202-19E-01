@@ -14,13 +14,21 @@ Suivre la Documentation de [Base](docs/base.md)
 
 Suivre la Documentation de [Service](docs/service.md) 
 
-## Créer les composants
+## Créer un composant `Sommaire`
 
-* Créer le composant [summary](docs/summary.md)
+Suivre la Documentation de [summary](docs/summary.md)
 
 ## Afficher le sommaire
 
 * Modifier la page principale en faisant [simple](docs/simple.md)
+
+---
+
+# Explorer le routage
+
+## Créer un composant `tableau de bord`
+
+Suivre la Documentation de [dashboard](docs/dashboard.md)
 
 
 
