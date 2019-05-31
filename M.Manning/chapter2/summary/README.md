@@ -20,7 +20,7 @@ Suivre la Documentation de [summary](docs/summary.md)
 
 ## Afficher le sommaire
 
-* Modifier la page principale en faisant [simple](docs/simple.md)
+Modifier la page principale en faisant [simple](docs/simple.md)
 
 ---
 
@@ -34,4 +34,10 @@ Suivre la Documentation de [dashboard](docs/dashboard.md)
 
 Suivre la Documentation de [manage](docs/manage.md)
 
+---
 
+# Explorer le routage
+
+## Créer la route et le menu associé
+
+Suivre la Documentation de [routing](docs/routing.md)
