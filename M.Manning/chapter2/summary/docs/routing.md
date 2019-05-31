@@ -18,8 +18,41 @@ export class AppRoutingModule { }
 
 ```
 
+* Ajouter le `routage` en modifiant la constante `routes`
 
+```typescript
+const routes: Routes = [
+  {
+    path: '',
+    component: DashboardComponent
+  },
+  {
+    path: 'manage',
+    component: ManageComponent
+  }
+];
+```
 
+* Résultat final
+
+```typescript
+const routes: Routes = [
+  {
+    path: '',
+    component: DashboardComponent
+  },
+  {
+    path: 'manage',
+    component: ManageComponent
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+```
 
 # Notes:
 
