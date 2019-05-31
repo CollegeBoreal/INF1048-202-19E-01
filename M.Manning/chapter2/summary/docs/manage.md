@@ -87,7 +87,9 @@ export class ManageComponent implements OnInit {
   <div class="mdl-cell mdl-cell--4-col"></div>
   <div class="mdl-cell mdl-cell--4-col">
     <form style="margin-bottom: 5px;" (submit)="add()">
-      <input name="stock" [(ngModel)]="stock" class="mdl-textfield__input" type="text" placeholder="Add Stock" />
+      <input name="stock" [(ngModel)]="stock" 
+             class="mdl-textfield__input" 
+             type="text" placeholder="Add Stock" />
     </form>
     <table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp" style="width: 100%;">
       <tbody>
