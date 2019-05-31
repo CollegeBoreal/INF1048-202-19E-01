@@ -95,7 +95,6 @@ export class DashboardComponent implements OnInit {
 
 ![image](../images/dashboard.png)
 
-# Notes
+[Next](manage.md)
 
-Sauvegardez votre travail :bulb: `git`
 
