@@ -16,3 +16,15 @@ $ ng generate component components/manage
   </main>
 ```
 
+* Éditer le module principal de l'application `app.module.ts`
+
+  - Importer le module `FormsModule` permettant la gestion des formulaires
+
+```typescript
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
+  ],
+```
+
