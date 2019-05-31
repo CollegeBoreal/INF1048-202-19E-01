@@ -91,6 +91,10 @@ export class DashboardComponent implements OnInit {
 </div>
 ```
 
-* L'application devrait maintenant afficher
+# L'application devrait maintenant afficher
 
 ![image](../images/dashboard.png)
+
+[Next](manage.md)
+
+

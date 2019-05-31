@@ -110,6 +110,10 @@ export class ManageComponent implements OnInit {
 </div>
 ```
 
-#### Affichage attendu
+# Affichage attendu
 
 ![image](../images/manage.png)
+
+# Notes
+
+Sauvegardez votre travail :bulb: `git`
