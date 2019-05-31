@@ -1,6 +1,6 @@
 # Dashboard
 
-* Créer le composant `Tableau de Bord`
+* Créer le composant `Tableau de Bord` (paragraphe `2.7`)
 
 ```
 $ ng generate component components/dashboard
