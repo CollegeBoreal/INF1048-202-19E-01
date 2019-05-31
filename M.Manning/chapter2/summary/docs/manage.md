@@ -49,7 +49,7 @@ $ ng generate component components/manage
   }
 ```
 
-* Résultat Final
+* Résultat Final de `manage.component.ts`
 
 ```typescript
 @Component({
