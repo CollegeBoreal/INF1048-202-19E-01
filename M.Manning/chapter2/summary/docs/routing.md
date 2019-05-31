@@ -2,7 +2,7 @@
 
 ### Créer le module de `routage` (paragraphe `2.9`)
 
-   - créer le fichier `src/app/app-routing.module.ts` avec le contenu suivant
+* créer le fichier `src/app/app-routing.module.ts` avec le contenu suivant
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -52,6 +52,45 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+```
+
+### Lier le nouveau module de routage au module principal de l'application
+
+* Éditer le fichier `app.module.ts`
+    
+    - Rajouter le nouveau module de routage dans les propriétés `imports:` du @NgModule
+
+```typescript
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+```
+
+* Résultat final
+
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent,
+    SummaryComponent,
+    DashboardComponent,
+    ManageComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+  providers: [
+    StocksService
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 ```
 
 # Notes:
