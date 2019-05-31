@@ -25,7 +25,7 @@ export class AppRoutingModule { }
 
 Vous pouvez créer le module de routage avec Angular/CLI
 
-:warning: Assurez vous d'utiliser `git` pour récupérer le fichier `app.module.ts` car il sera écraser
+:warning: Assurez vous d'utiliser `git` pour récupérer le fichier `app.module.ts` car il sera écrasé
 
 ```
 $ ng generate module app --routing --flat --force
