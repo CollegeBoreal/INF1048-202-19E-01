@@ -96,4 +96,4 @@ export class SummaryComponent implements OnInit {
   color: #fff;
 }
 ```
-[Next](dashboard.md)
+[Next](simple.md)
