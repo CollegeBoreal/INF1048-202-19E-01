@@ -7,7 +7,7 @@
  ```
 # Création de la page principale
 
-## Créer le composant de page principale
+### Créer le composant de page principale
 
 Suivre la Documentation de [Base](docs/base.md) 
 
