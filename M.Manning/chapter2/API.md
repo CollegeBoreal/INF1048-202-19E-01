@@ -1,4 +1,5 @@
 
+https://github.com/angular-in-action/api (Documentation)
 
 https://angular2-in-action-api.herokuapp.com/stocks/snapshot?symbols=aapl,goog,fb
 
