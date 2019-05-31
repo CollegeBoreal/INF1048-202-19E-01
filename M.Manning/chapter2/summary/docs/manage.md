@@ -30,9 +30,30 @@ $ ng generate component components/manage
 
 * Éditer le composant de Gestion `manage.component.ts`
 
+   - Déclarer les variables locales `stock` (au singulier) et `symbols`
+
 ```typescript
-  symbols: Array<string>;
   stock: string;
+  symbols: Array<string>;
+```
+   - Injecter le Service `StocksService` au constructeur
+
+```typescript
+  constructor(private service: StocksService) { }
+```
+   - Initialiser les variables locales par la fonction `ngOnInit`
+
+```typescript
+  ngOnInit() {
+    this.symbols = this.service.get();
+  }
+```
+
+* Résultat Final
+
+```typescript
+  stock: string;
+  symbols: Array<string>;
 
   constructor(private service: StocksService) { }
 
