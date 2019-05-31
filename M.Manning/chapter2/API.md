@@ -2,6 +2,25 @@
 
 https://angular2-in-action-api.herokuapp.com/stocks/snapshot?symbols=aapl,goog,fb
 
+```typescript
+export interface StockInterface {
+  symbol: string;
+  lastTradePriceOnly: number;
+  change: number;
+  changeInPercent: number;
+}
+```
+
+* Data Excerpt
+
+```json
+[
+  {"symbol":"AAPL","lastTradePriceOnly":175.9,"change":-2.4000092,"changeInPercent":-0.013460511}
+ ,{"symbol":"GOOG","lastTradePriceOnly":1105.3066,"change":-12.643311,"changeInPercent":-0.011309371}
+ ,{"symbol":"FB","lastTradePriceOnly":177.6445,"change":-5.365494,"changeInPercent":-0.029318037}
+]
+```
+
 
 https://angular2-in-action-api.herokuapp.com/stocks/historical/jmia
 
@@ -16,6 +35,8 @@ export interface HistoricalInterface {
   symbol: string;
 }
 ```
+
+* Data Excerpt
 
 
 ```json
