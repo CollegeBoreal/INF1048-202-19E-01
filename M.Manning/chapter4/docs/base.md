@@ -34,4 +34,4 @@ imports: [
 export class AppModule { }
 ```
 
-[Next](dashboard.md)
+[:forward_play: Next ](navbar.md)
