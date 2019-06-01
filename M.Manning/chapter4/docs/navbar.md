@@ -52,3 +52,5 @@ ng generate component navbar
 ```html
 <app-navbar></app-navbar>
 ```
+
+[:fast_forward: Next ](dashboard.md)
