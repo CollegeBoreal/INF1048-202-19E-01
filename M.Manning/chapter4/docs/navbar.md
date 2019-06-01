@@ -42,3 +42,13 @@ ng generate component navbar
   </form>
 </nav>
 ```
+
+## Display the firt page
+
+#### Edit the main app component 
+
+  * open the `app.component.html` and replace its content with
+  
+```html
+<app-navbar></app-navbar>
+```
