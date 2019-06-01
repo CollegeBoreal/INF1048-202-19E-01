@@ -16,9 +16,9 @@
 
 # Build the Datacenter App
 
-### Create the `Base` component
+### Install the `theme` module
 
-Follow the [Base](docs/base.md) Documentation
+Follow the [Theme](docs/theme.md) Documentation
 
 ### Create the `Dashboard` component
 
