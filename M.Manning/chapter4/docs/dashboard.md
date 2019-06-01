@@ -42,6 +42,16 @@ export interface Node {
 
 * Declare a vew local variables
 
+  * import statements to add
+  
+```typescript
+import {Metric} from '../data/metric';
+import {Node} from '../data/node';
+```
+
+  * variables
+
+
 ```typescript
   cpu: Metric;
   mem: Metric;
