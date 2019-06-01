@@ -21,13 +21,13 @@ export interface Metric {
 }
 ```
 
-```typescript
+```bash
 $ ng generate interface data/node
 ```
 
   * Add the below fields
 
-```
+```typescript
 export interface Node {
   name: string;
   cpu: Metric;
