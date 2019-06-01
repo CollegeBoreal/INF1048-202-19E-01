@@ -16,7 +16,7 @@
 
 # Build the Datacenter App
 
-### Create the app component
+### Create the `Dashboard` component
 
 Follow the [Base](docs/base.md) Documentation
 
