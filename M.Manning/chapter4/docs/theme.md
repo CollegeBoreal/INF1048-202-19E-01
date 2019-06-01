@@ -1,4 +1,4 @@
-# Base
+# Theme
 
 * Install [ng-bootstrap](https://ng-bootstrap.github.io) and [bootstrap](https://getbootstrap.com) libraries
 
