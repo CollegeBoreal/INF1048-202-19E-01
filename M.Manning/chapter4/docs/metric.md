@@ -6,6 +6,8 @@
 $ ng generate component metric
 ```
 
+### Edit the component `metric.component.ts`
+
 * Declare its variables
 
 ```typescript
