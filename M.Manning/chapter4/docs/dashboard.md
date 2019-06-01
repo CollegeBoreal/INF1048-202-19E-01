@@ -12,7 +12,7 @@ $ ng generate component dashboard
 $ ng generate interface data/metric
 ```
 
-  - Add the below fields
+   * Add the below fields
 
 ```
 export interface Metric {
@@ -25,7 +25,7 @@ export interface Metric {
 $ ng generate interface data/node
 ```
 
-  - Add the below fields
+  * Add the below fields
 
 ```
 export interface Node {
