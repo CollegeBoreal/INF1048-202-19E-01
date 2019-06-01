@@ -20,6 +20,11 @@
 
 Follow the [Theme](docs/theme.md) Documentation
 
+### Set the app `navigation`
+
+Follow the [NavBar](docs/navbar.md) Documentation
+
+
 ### Create the `Dashboard` component
 
 Follow the [Dashboard](docs/dashboard.md) Documentation
