@@ -6,6 +6,8 @@
 $ ng generate component metric
 ```
 
+### Edit the component `metric.component.ts`
+
 * Declare its variables
 
 ```typescript
@@ -13,7 +15,7 @@ $ ng generate component metric
   @Input('available') max = 100;
 ```
 
-### Add a Component life Cycle `OnChanges` to the `MetricComponent` class
+#### Add a Component life Cycle `OnChanges` to the `MetricComponent` class
 
    * inherit the classes
 
@@ -33,7 +35,7 @@ implements OnInit, OnChanges {
   }
 ```
 
-### Add the other `public` function
+#### Add the other `public` function
 
 ```typescript
   isDanger() {
@@ -41,7 +43,7 @@ implements OnInit, OnChanges {
   }
 ```
 
-### Final Result
+#### Final Result
 
 ```typescript
 @Component({
@@ -69,4 +71,47 @@ export class MetricComponent implements OnInit, OnChanges {
   }
 
 }
+```
+
+### Edit its template `metric.component.html`
+
+* Replace the template content by the below
+
+```html
+<div class="card card-block">
+  <div class="card-body">
+    <nav class="navbar navbar-dark bg-primary mb-1" 
+         [ngClass]="{'bg-danger': isDanger(), 'bg-success': !isDanger()}">
+      <h1 class="navbar-brand mb-0">
+      <ng-content select="metric-title"></ng-content></h1>
+    </nav>
+    <h4 class="card-title">{{value}}/{{max}} ({{value / max | percent:'1.0-2'}})</h4>
+    <p class="card-text">
+      <ng-content select="metric-description"></ng-content>
+    </p>
+    <ngb-progressbar [value]="value" 
+                     [max]="max" 
+                     [type]="isDanger() ? 'danger' : 'success'">
+    </ngb-progressbar>
+  </div>
+</div>
+```
+
+## Using the Metric Component
+
+* Edit the `dashboard.component.html` file
+
+```html
+<div class="container mt-2">
+  <div class="row">
+    <app-metric class="col-sm-6" [used]="cpu.used" [available]="cpu.available">
+      <metric-title>CPU</metric-title>
+      <metric-description>utilization of CPU cores</metric-description>
+    </app-metric>
+    <app-metric class="col-sm-6" [used]="mem.used" [available]="mem.available">
+      <metric-title>Memory</metric-title>
+      <metric-description>utilization of memory in GB</metric-description>
+    </app-metric>
+  </div>
+</div>
 ```

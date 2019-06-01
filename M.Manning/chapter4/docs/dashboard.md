@@ -200,3 +200,5 @@ export class DashboardComponent implements OnInit, OnDestroy {
 }
 
 ```
+
+[:fast_forward: Next ](metric.md)

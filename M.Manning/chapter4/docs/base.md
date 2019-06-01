@@ -1,10 +1,20 @@
 # Base
 
-* Install [ng-bootstrap](https://ng-bootstrap.github.io) library
+* Install [ng-bootstrap](https://ng-bootstrap.github.io) and [bootstrap](https://getbootstrap.com) libraries
 
 ```
-$ npm install --save @ng-bootstrap/ng-bootstrap
+$ npm install --save @ng-bootstrap/ng-bootstrap bootstrap
 ```
+
+* Edit the `Angular` configuration file `angular.json` add the below snippet (look for styles:)
+
+```json
+   "styles": [
+     "node_modules/bootstrap/dist/css/bootstrap.min.css",
+     "src/styles.css"
+   ],
+```
+
 
 * Edit `app.module.ts`
 
@@ -34,4 +44,4 @@ imports: [
 export class AppModule { }
 ```
 
-[Next](dashboard.md)
+[:fast_forward: Next ](navbar.md)
