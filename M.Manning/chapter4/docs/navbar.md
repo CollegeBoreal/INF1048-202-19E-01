@@ -32,7 +32,7 @@ ng generate component navbar
 
 * Edit the `navbar.component.html`
 
-   * replace its content
+   * replace its content with
 
 ```html
 <nav class="navbar navbar-dark bg-dark">
