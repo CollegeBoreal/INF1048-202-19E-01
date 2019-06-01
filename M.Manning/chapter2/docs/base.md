@@ -36,3 +36,9 @@
 ``` 
 
 [Next](service.md)
+
+## Alternative
+
+```
+$ ng add @angular/material @angular/cdk
+```
