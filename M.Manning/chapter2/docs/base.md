@@ -42,3 +42,11 @@
 ```
 $ ng add @angular/material @angular/cdk
 ```
+
+```
+? Choose a prebuilt theme name, or "custom" for a custom theme: (Use arrow keys)
+❯ Indigo/Pink        [ Preview: https://material.angular.io?theme=indigo-pink ] 
+  Deep Purple/Amber  [ Preview: https://material.angular.io?theme=deeppurple-amber ] 
+  Pink/Blue Grey     [ Preview: https://material.angular.io?theme=pink-bluegrey ] 
+  Purple/Green       [ Preview: https://material.angular.io?theme=purple-green ] 
+```
