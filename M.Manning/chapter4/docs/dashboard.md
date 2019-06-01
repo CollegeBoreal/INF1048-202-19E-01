@@ -63,7 +63,7 @@ export interface Node {
 implements OnInit, OnDestroy {
 ```
 
-   * implement the required functions `ngOnInit` and `ngOnDestroy`
+      * implement the required functions `ngOnInit` and `ngOnDestroy`
 
 ```typescript
   ngOnInit(): void {
