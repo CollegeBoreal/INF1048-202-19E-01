@@ -50,3 +50,7 @@ $ ng add @angular/material @angular/cdk
   Pink/Blue Grey     [ Preview: https://material.angular.io?theme=pink-bluegrey ] 
   Purple/Green       [ Preview: https://material.angular.io?theme=purple-green ] 
 ```
+
+```
+? Set up HammerJS for gesture recognition? (Y/n) 
+```
