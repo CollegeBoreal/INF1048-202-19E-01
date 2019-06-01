@@ -40,8 +40,40 @@ export interface Node {
 
 ### Evolve Dashboard Component
 
+* Declare a vew local variables
+
+```typescript
+  cpu: Metric;
+  mem: Metric;
+  cluster1: Node[];
+  cluster2: Node[];
+  interval: any;
+```
+* The component will return a date value (i.e. Output a date to calling components)
+
+```typescript
+  @Output() onRefresh: EventEmitter<Date> = new EventEmitter<Date>();
+```
+
 * Add a Component life Cycle `OnDestroy` to the `Dashboard` class
+
+   * inherit the classes
 
 ```typescript
 implements OnInit, OnDestroy {
+```
+
+   * implement the required functions `ngOnInit` and `ngOnDestroy`
+
+```typescript
+  ngOnInit(): void {
+    this.generateData();
+    this.interval = setInterval(() => {
+      this.generateData();
+    }, 15000);
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
+  }
 ```
