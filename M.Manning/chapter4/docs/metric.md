@@ -9,8 +9,8 @@ $ ng generate component metric
 * Declare its variables
 
 ```typescript
-  @Input('used') value: number = 0;
-  @Input('available') max: number = 100;
+  @Input('used') value = 0;
+  @Input('available') max = 100;
 ```
 
 ### Add a Component life Cycle `OnChanges` to the `MetricComponent` class
