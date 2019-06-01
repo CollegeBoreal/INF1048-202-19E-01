@@ -53,4 +53,8 @@ ng generate component navbar
 <app-navbar></app-navbar>
 ```
 
+## Empty Screen
+
+![image](../images/empty.png)
+
 [:fast_forward: Next ](dashboard.md)
