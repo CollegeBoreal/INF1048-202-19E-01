@@ -15,7 +15,7 @@ $ ng generate component metric
   @Input('available') max = 100;
 ```
 
-### Add a Component life Cycle `OnChanges` to the `MetricComponent` class
+#### Add a Component life Cycle `OnChanges` to the `MetricComponent` class
 
    * inherit the classes
 
@@ -35,7 +35,7 @@ implements OnInit, OnChanges {
   }
 ```
 
-### Add the other `public` function
+#### Add the other `public` function
 
 ```typescript
   isDanger() {
