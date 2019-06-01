@@ -3,8 +3,18 @@
 * Install [ng-bootstrap](https://ng-bootstrap.github.io) library
 
 ```
-$ npm install --save @ng-bootstrap/ng-bootstrap
+$ npm install --save @ng-bootstrap/ng-bootstrap bootstrap
 ```
+
+* Edit the `Angular` configuration file `angular.json` add the below snippet (look for styles:)
+
+```json
+   "styles": [
+     "node_modules/bootstrap/dist/css/bootstrap.min.css",
+     "src/styles.css"
+   ],
+```
+
 
 * Edit `app.module.ts`
 
