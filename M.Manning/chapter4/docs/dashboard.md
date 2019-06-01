@@ -49,6 +49,7 @@ export interface Node {
   cluster2: Node[];
   interval: any;
 ```
+
 * The component will return a date value (i.e. Output a date to calling components)
 
 ```typescript
@@ -63,7 +64,7 @@ export interface Node {
 implements OnInit, OnDestroy {
 ```
 
-      * implement the required functions `ngOnInit` and `ngOnDestroy`
+    * implement the required functions `ngOnInit` and `ngOnDestroy`
 
 ```typescript
   ngOnInit(): void {
