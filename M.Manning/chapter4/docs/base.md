@@ -1,6 +1,6 @@
 # Base
 
-* Install [ng-bootstrap](https://ng-bootstrap.github.io) library
+* Install [ng-bootstrap](https://ng-bootstrap.github.io) and [bootstrap](https://getbootstrap.com) libraries
 
 ```
 $ npm install --save @ng-bootstrap/ng-bootstrap bootstrap
