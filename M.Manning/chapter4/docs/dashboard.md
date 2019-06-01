@@ -62,6 +62,14 @@ import {Node} from '../data/node';
 
 * The component will return a date value (i.e. Output a date to calling components)
 
+   * import statement to add 
+   
+```typescript
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+```
+
+   * add the output parameter
+
 ```typescript
   @Output() onRefresh: EventEmitter<Date> = new EventEmitter<Date>();
 ```
