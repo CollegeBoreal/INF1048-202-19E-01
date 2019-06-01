@@ -44,13 +44,7 @@ $ ng add @angular/material @angular/cdk
 ```
 
 ```
-? Choose a prebuilt theme name, or "custom" for a custom theme: (Use arrow keys)
-❯ Indigo/Pink        [ Preview: https://material.angular.io?theme=indigo-pink ] 
-  Deep Purple/Amber  [ Preview: https://material.angular.io?theme=deeppurple-amber ] 
-  Pink/Blue Grey     [ Preview: https://material.angular.io?theme=pink-bluegrey ] 
-  Purple/Green       [ Preview: https://material.angular.io?theme=purple-green ] 
-```
-
-```
-? Set up HammerJS for gesture recognition? (Y/n) 
+? Choose a prebuilt theme name, or "custom" for a custom theme: Indigo/Pink [ Preview: https://material.angular.io?theme=indigo-pink ]
+? Set up HammerJS for gesture recognition? No
+? Set up browser animations for Angular Material? (Y/n) 
 ```
