@@ -105,14 +105,13 @@ export class MetricComponent implements OnInit, OnChanges {
 <div class="container mt-2">
   <div class="row">
     <app-metric class="col-sm-6" [used]="cpu.used" [available]="cpu.available">
-      <!--<metric-title>CPU</metric-title>-->
-      <!--<metric-description>utilization of CPU cores</metric-description>-->
+      <metric-title>CPU</metric-title>
+      <metric-description>utilization of CPU cores</metric-description>
     </app-metric>
     <app-metric class="col-sm-6" [used]="mem.used" [available]="mem.available">
-      <!--<metric-title>Memory</metric-title>-->
-      <!--<metric-description>utilization of memory in GB</metric-description>-->
+      <metric-title>Memory</metric-title>
+      <metric-description>utilization of memory in GB</metric-description>
     </app-metric>
   </div>
 </div>
-
 ```
