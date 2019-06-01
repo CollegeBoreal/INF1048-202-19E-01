@@ -1,18 +1,20 @@
 # Dashboard
 
-* Generate the Dashboard component
+### Generate the Dashboard component
 
 ```
 $ ng generate component dashboard
 ```
 
-* Generate `Metric` and `Node` data
+### Generate `Metric` and `Node` data
+
+* Generate `Metric` Interface
 
 ```
 $ ng generate interface data/metric
 ```
 
-   * Add the below fields
+   * Edit the `Metric.ts` file and add the below fields
 
 ```typescript
 export interface Metric {
@@ -20,12 +22,13 @@ export interface Metric {
   available: number;
 }
 ```
+* Generate `Node` Interface
 
 ```bash
 $ ng generate interface data/node
 ```
 
-  * Add the below fields
+   * Edit the `Node.ts` file and add the below fields
 
 ```typescript
 export interface Node {
@@ -33,4 +36,12 @@ export interface Node {
   cpu: Metric;
   mem: Metric;
 }
+```
+
+### Evolve Dashboard Component
+
+* Add a Component life Cycle `OnDestroy` to the `Dashboard` class
+
+```typescript
+implements OnInit, OnDestroy {
 ```
