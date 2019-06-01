@@ -22,7 +22,7 @@ ng generate component navbar
 
 * Edit the `navbar.component.css`
 
-   * add a sty to the `btn` class
+   * add a style to the `btn` class
 
 ```css
 .btn {
