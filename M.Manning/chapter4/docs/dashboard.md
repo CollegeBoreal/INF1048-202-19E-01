@@ -201,4 +201,4 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
 ```
 
-[:arrow:](metric.md)
+[:fast_forward:](metric.md)
