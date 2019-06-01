@@ -83,7 +83,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 ```
 
 
-* Add a Component life Cycle `OnDestroy` to the `Dashboard` class
+### Add a Component life Cycle `OnDestroy` to the `Dashboard` class
 
    * inherit the classes
 
@@ -106,7 +106,7 @@ implements OnInit, OnDestroy {
   }
 ```
 
-* Add the other `public` and `private` functions
+### Add the other `public` and `private` functions
 
 ```typescript
   generateData(): void {
