@@ -74,6 +74,15 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   @Output() onRefresh: EventEmitter<Date> = new EventEmitter<Date>();
 ```
 
+* add a static method after the constructor
+
+```typescript
+  private static randomInteger(min: number = 0, max: number = 100): number {
+    return Math.floor(Math.random() * max) + 1;
+  }
+```
+
+
 * Add a Component life Cycle `OnDestroy` to the `Dashboard` class
 
    * inherit the classes
