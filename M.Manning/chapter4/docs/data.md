@@ -20,3 +20,6 @@
 # The App should sisplay
 
 ![image](../images/data.png)
+
+
+[:fast_forward: Next](metric.md)
