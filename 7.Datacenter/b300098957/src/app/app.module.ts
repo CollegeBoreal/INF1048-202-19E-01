@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MetricComponent } from './metric/metric.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NodesComponent } from './nodes/nodes.component';
+import { NodesRowComponent } from './nodes-row/nodes-row.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NodesComponent } from './nodes/nodes.component';
     DashboardComponent,
     MetricComponent,
     NavbarComponent,
-    NodesComponent
+    NodesComponent,
+    NodesRowComponent
   ],
   imports: [
     BrowserModule,
