@@ -5,7 +5,9 @@ const routes: Routes = [
   { path: 'pages', loadChildren: './pages/pages.module#PagesModule' },
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
   { path: '**', redirectTo: 'pages' },
-];const config: ExtraOptions = {
+];
+
+const config: ExtraOptions = {
   useHash: true,
 };
 
