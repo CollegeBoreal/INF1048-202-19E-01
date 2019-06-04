@@ -17,6 +17,8 @@ $ ng generate component nodes-row
 
 ## Edit `nodes.component.html`
 
+:bookmark: `<ng-content>`
+
 ```html
 <thead>
   <tr>
