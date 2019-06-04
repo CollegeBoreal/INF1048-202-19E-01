@@ -8,9 +8,17 @@
 $ ng generate component nodes
 ```
 
-###### Edit `nodes.component.html`
+###### Edit `nodes.component.ts`
 
-:bookmark: `<ng-content>`
+:bookmark: `[app-nodes]`  Attribute Selector
+
+To be treated as an `Attribute` the `selector` in the `@Component` decorator needs `brackets`
+
+```typescript
+  selector: '[app-nodes]',
+```
+
+* Final result
 
 ```typescript
 @Component({
