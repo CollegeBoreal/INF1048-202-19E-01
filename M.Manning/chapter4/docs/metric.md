@@ -108,6 +108,8 @@ export class MetricComponent implements OnInit {
 
 ## Using Accessors to intercept @Inputs
 
+:bookmark: `Accessors` ( get | set )
+
 * replace the 2 variables below with accessor codes
 
 ```typescript
