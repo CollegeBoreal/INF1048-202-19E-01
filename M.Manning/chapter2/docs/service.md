@@ -8,7 +8,7 @@
 $ ng generate interface services/stockInterface
 ``` 
 
-* Éditer le fichier `stockInterface.ts`
+* Éditer le fichier `stock-interface.ts`
 
    * Remplacer le code avec celui ci 
  
