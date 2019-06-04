@@ -106,7 +106,7 @@ export class MetricComponent implements OnInit {
 ![image](../images/metric.png)
 
 
-## Accessors
+## Using Accessors to intercept @Inputs
 
 * replace the 2 variables below with accessor codes
 
