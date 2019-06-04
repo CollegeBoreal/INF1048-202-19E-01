@@ -1,6 +1,6 @@
 # Afficher une page simple
 
-* Modifier le fichier`app.component.ts`
+   * Modifier le fichier`app.component.ts`
 
 ```typescript
   stocks: Array<StockInterface>;
@@ -11,6 +11,26 @@
     });
   }
 ```
+
+   * Résultat final
+
+```typescript
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  stocks: Array<StockInterface>;
+
+  constructor(service: StocksService) {
+    service.load(['JMIA']).subscribe(stocks => {
+      this.stocks = stocks;
+    });
+  }
+}
+```
+
 
 * Modifier le fichier`app.component.html`
 

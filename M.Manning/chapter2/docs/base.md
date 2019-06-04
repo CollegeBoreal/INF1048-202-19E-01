@@ -15,7 +15,7 @@
  }
  ```
  
- * Éditer le fichier `app.component.html` et rajouter le code suivant
+ * Éditer le fichier `app.component.html` et remplacer avec le code suivant
  
  ```html 
  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">

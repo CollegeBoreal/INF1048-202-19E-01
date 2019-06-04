@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NbMenuItem} from '@nebular/theme';
+import {MENU_ITEMS} from './page-menu';
 
 @Component({
   selector: 'app-pages',
@@ -12,11 +13,13 @@ import {NbMenuItem} from '@nebular/theme';
   styles: []
 })
 export class PagesComponent implements OnInit {
+
   menu: NbMenuItem[];
 
   constructor() { }
 
   ngOnInit() {
+    this.menu = MENU_ITEMS;
   }
 
 }

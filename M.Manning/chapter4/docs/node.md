@@ -30,3 +30,92 @@ $ ng generate component nodes-row
 </thead>
 <ng-content></ng-content>
 ```
+
+## Edit `nodes-row.component.html`
+
+   * Replace its content with the below
+
+```html
+<th scope="row">{{node.name}}</th>
+<td [class.table-danger]="isDanger('cpu')">     
+  {{node.cpu.used}}/{{node.cpu.available}}
+</td>
+<td [class.table-danger]="isDanger('cpu')">
+  ({{node.cpu.used / node.cpu.available | percent}})     
+</td>
+<td [class.table-danger]="isDanger('mem')">
+  {{node.mem.used}}/{{node.mem.available}}
+</td>
+<td [class.table-danger]="isDanger('mem')">
+  ({{node.mem.used / node.mem.available | percent}})
+</td>
+<td><button class="btn btn-secondary">View</button></td>
+```
+
+## Edit `nodes-row.component.ts`
+
+:bookmark: `@Input()`
+
+   * add the `@Input()` decorator
+
+```typescript
+ @Input() node: any;
+```
+
+   * add the `isDanger` function
+
+```typescript
+  isDanger(prop) {
+    return this.node[prop].used / this.node[prop].available > 0.7;
+  }
+```
+
+  * Final Result
+
+```typescript
+@Component({
+  selector: 'app-nodes-row',
+  templateUrl: './nodes-row.component.html',
+  styleUrls: ['./nodes-row.component.css']
+})
+export class NodesRowComponent implements OnInit {
+
+  @Input() node: any;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  isDanger(prop) {
+    return this.node[prop].used / this.node[prop].available > 0.7;
+  }
+
+}
+```
+
+## Display the result
+
+   * Edit the `dashboard.component.html`
+
+```html
+<div class="container mt-2">
+  <div class="card card-block">
+    <div class="card-body">
+      <nav class="navbar navbar-dark bg-inverse mb-1">
+        <h1 class="navbar-brand mb-0">Cluster 1</h1>
+      </nav>
+      <table app-nodes class="table table-hover">     
+<tr app-nodes-row *ngFor="let node of cluster1" [node]="node"></tr>
+</table>
+      <nav class="navbar navbar-dark bg-inverse mb-1">
+        <h1 class="navbar-brand mb-0">Cluster 2</h1>
+      </nav>
+      <table app-nodes class="table table-hover">
+        <tr app-nodes-row *ngFor="let node of cluster2" [node]="node"></tr>
+      </table>
+    </div>
+  </div>
+</div>
+```
+

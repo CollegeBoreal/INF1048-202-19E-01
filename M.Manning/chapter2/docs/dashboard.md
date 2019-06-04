@@ -33,7 +33,7 @@ export class AppComponent {}
 
 ### L'application est prete à repartir de nouveau
 
-* Éditer le composant `dashboard`
+* Éditer le composant `dashboard` en ouvrant le fichier `dashboard.component.ts`
 
    - Déclarer les variables locales `stocks` et `symbols`
 
