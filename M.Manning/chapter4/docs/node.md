@@ -154,7 +154,7 @@ export class NodesRowComponent implements OnInit {
 </div>
 ```
 
-   * Observe the `app-nodes` and `app-nodes-row` components used as HTML `attributes` 
+   * Observe the `app-nodes` and `app-nodes-row` components used as HTML `attributes` on the table tag
 
 ```html
       <table app-nodes class="table table-hover">     
