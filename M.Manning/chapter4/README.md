@@ -29,6 +29,10 @@ Follow the [NavBar](docs/navbar.md) Documentation
 
 Follow the [Dashboard](docs/dashboard.md) Documentation
 
+### Display the `Data` component
+
+Follow the [Data](docs/data.md) Documentation
+
 
 ## References:
 
