@@ -100,3 +100,7 @@ export class MetricComponent implements OnInit {
   </div>
 </div>
 ```
+
+## It should display
+
+![image](../images/metric.png)
