@@ -54,6 +54,8 @@ $ ng generate component nodes-row
 
 ## Edit `nodes-row.component.ts`
 
+:bookmark: `@Input()`
+
    * add the `@Input()` decorator
 
 ```typescript
