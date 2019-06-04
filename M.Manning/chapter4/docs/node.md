@@ -141,16 +141,24 @@ export class NodesRowComponent implements OnInit {
         <h1 class="navbar-brand mb-0">Cluster 1</h1>
       </nav>
       <table app-nodes class="table table-hover">     
-<tr app-nodes-row *ngFor="let node of cluster1" [node]="node"></tr>
-</table>
+         <tr app-nodes-row *ngFor="let node of cluster1" [node]="node"></tr>
+      </table>
       <nav class="navbar navbar-dark bg-inverse mb-1">
         <h1 class="navbar-brand mb-0">Cluster 2</h1>
       </nav>
       <table app-nodes class="table table-hover">
-        <tr app-nodes-row *ngFor="let node of cluster2" [node]="node"></tr>
+         <tr app-nodes-row *ngFor="let node of cluster2" [node]="node"></tr>
       </table>
     </div>
   </div>
 </div>
 ```
+
+   * Observe the `app-nodes` and `app-nodes-row` components used as HTML `attributes` 
+
+```html
+      <table app-nodes class="table table-hover">     
+         <tr app-nodes-row *ngFor="let node of cluster1" [node]="node"></tr>
+```
+
 
