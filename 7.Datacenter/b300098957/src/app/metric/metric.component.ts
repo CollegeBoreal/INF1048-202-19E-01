@@ -1,23 +1,21 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-metric',
   templateUrl: './metric.component.html',
   styleUrls: ['./metric.component.css']
 })
-export class MetricComponent implements OnInit, OnChanges {
+export class MetricComponent implements OnInit {
 
-  @Input('used') value = 0;
-  @Input('available') max = 100;
+  @Input() title: string = '';
+  @Input() description: string = '';
+  @Input('used') value: number = 0;
+  @Input('available') max: number = 100;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
-  ngOnChanges(changes) {
-    if (changes.value && isNaN(changes.value.currentValue)) { this.value = 0; }
-    if (changes.max && isNaN(changes.max.currentValue)) { this.max = 0; }
+  ngOnInit() {
   }
 
   isDanger() {
