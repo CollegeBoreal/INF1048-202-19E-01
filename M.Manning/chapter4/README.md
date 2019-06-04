@@ -41,6 +41,10 @@ Follow the [Metric](docs/metric.md) Documentation
 
 Follow the [Node](docs/node.md) Documentation
 
+### Display the `Dashboard` component
+
+Follow the [Projection](docs/projection.md) Documentation
+
 
 ## References:
 
