@@ -161,4 +161,4 @@ export class NodesRowComponent implements OnInit {
          <tr app-nodes-row *ngFor="let node of cluster1" [node]="node"></tr>
 ```
 
-
+![image](../images/nodes-row.png)
