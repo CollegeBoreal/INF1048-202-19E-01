@@ -29,9 +29,17 @@ Follow the [NavBar](docs/navbar.md) Documentation
 
 Follow the [Dashboard](docs/dashboard.md) Documentation
 
-### Display the `Data` component
+### Display the `Data` component first
 
 Follow the [Data](docs/data.md) Documentation
+
+### Create the `Metric` component
+
+Follow the [Metric](docs/metric.md) Documentation
+
+### Create the `Node` Master/Details components
+
+Follow the [Node](docs/node.md) Documentation
 
 
 ## References:
