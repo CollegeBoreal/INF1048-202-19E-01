@@ -129,7 +129,7 @@ export class NodesRowComponent implements OnInit {
 }
 ```
 
-## Display the result
+## Calling the Nodes
 
    * Edit the `dashboard.component.html`
 
