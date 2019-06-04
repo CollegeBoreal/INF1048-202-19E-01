@@ -2,20 +2,33 @@
 
 ## Create Node master/details
 
-   * Master
+### Master
 
 ```
 $ ng generate component nodes
 ```
 
-   * Details
+###### Edit `nodes.component.html`
 
+:bookmark: `<ng-content>`
+
+```typescript
+@Component({
+  selector: '[app-nodes]',
+  templateUrl: './nodes.component.html',
+  styleUrls: ['./nodes.component.css']
+})
+export class NodesComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
 ```
-$ ng generate component nodes-row
-```
 
-
-## Edit `nodes.component.html`
+###### Edit `nodes.component.html`
 
 :bookmark: `<ng-content>`
 
@@ -30,6 +43,14 @@ $ ng generate component nodes-row
 </thead>
 <ng-content></ng-content>
 ```
+
+### Details
+
+```
+$ ng generate component nodes-row
+```
+
+
 
 ## Edit `nodes-row.component.html`
 
