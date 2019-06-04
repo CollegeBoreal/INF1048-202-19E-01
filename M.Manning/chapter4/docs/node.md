@@ -85,6 +85,12 @@ $ ng generate component nodes-row
 
 :bookmark: `@Input()`
 
+   * like `nodes` add the Attribute Selector
+
+```typescript
+  selector: '[app-nodes-row]',
+```
+
    * add the `@Input()` decorator
 
 ```typescript
@@ -103,7 +109,7 @@ $ ng generate component nodes-row
 
 ```typescript
 @Component({
-  selector: 'app-nodes-row',
+  selector: '[app-nodes-row]',
   templateUrl: './nodes-row.component.html',
   styleUrls: ['./nodes-row.component.css']
 })
