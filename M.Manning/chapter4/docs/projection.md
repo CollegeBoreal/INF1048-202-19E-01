@@ -15,7 +15,7 @@
       </app-metric>
 ```
 
-* Finale Result
+* Final Result
 
 ```html
 <div class="container mt-2">
@@ -67,6 +67,13 @@
   @Input() description: string = '';
 ```
 
+* Edit `app.module.ts` to avoid SCHEMA malformation error
+
+```typescript
+  ...<previous lines>
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
+```
 
 ## You should see
 
