@@ -81,6 +81,6 @@
   schemas: [NO_ERRORS_SCHEMA]
 ```
 
-## You should now see
+## You should finally see
 
 ![image](../images/nodes-row.png)
