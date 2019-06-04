@@ -161,6 +161,5 @@ export class NodesRowComponent implements OnInit {
          <tr app-nodes-row *ngFor="let node of cluster1" [node]="node"></tr>
 ```
 
-## You should see
+[:fast_forward: Next ](projection.md)
 
-![image](../images/nodes-row.png)
