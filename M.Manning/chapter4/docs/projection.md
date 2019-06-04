@@ -67,6 +67,12 @@
   @Input() description: string = '';
 ```
 
+### Schema Error
+
+:x: You should now encounter this error
+
+![image](../images/schema-error.png)
+
 * Edit `app.module.ts` to avoid SCHEMA malformation error
 
 ```typescript
