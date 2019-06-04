@@ -203,4 +203,4 @@ export class MetricComponent implements OnInit {
 }
 ```
 
-[:fast forward: Next ](node.md)
+[:fast_forward: Next ](node.md)
