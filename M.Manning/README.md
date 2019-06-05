@@ -8,5 +8,5 @@ https://www.manning.com/books/angular-in-action
 |---------------------|---------------|-------------------------------------------------|
 | [:two:](chapter2)   | Stocks        | [Material Design](https://material.angular.io)  |
 | [:four:](chapter4)  | Data Center   | [NgBootsrap](https://ng-bootstrap.github.io)    |
+| [:six:](chapter6)   | Portfolio     | [Clarity](https://clarity.design/)              |
 
-:congo_kinshasa:
