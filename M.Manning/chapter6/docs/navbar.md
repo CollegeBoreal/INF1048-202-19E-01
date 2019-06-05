@@ -1,5 +1,8 @@
+# Nagigation Bar
 
+### Quick setup
 
+   * Edit the `app.component.html` file and replace its content
 
 ```html
 <div class="main-container">
