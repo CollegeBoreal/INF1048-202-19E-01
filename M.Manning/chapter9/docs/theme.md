@@ -3,21 +3,14 @@
 * Install [Clarity](https://clarity.design) libraries
 
 ```
-$ npm install @clr/icons @clr/angular @clr/ui @webcomponents/custom-elements@1.0.0 --save
+$ npm install material-icons @clr/angular @clr/ui @webcomponents/custom-elements@1.0.0 --save
 ```
 
-* Edit the `Angular` configuration file `angular.json` add the below snippet (look for styles:)
+
+* Edit the `styles.scss` file
 
 ```json
-   "styles": [
-      "node_modules/@clr/icons/clr-icons.min.css",
-      "node_modules/@clr/ui/clr-ui.min.css",
-     "src/styles.css"
-   ],
-   "scripts": [
-     "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
-     "node_modules/@clr/icons/clr-icons.min.js"
-   ],
+@import '~material-icons/iconfont/material-icons.css';
 ```
 
 
