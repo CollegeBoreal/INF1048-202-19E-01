@@ -6,7 +6,7 @@
 $ ng generate component nodes-detail
 ```
 
-* Edit the `nodes-detail.component.ts` file 
+##### Edit the `nodes-detail.component.ts` file 
    
    * add the below local variable
 
@@ -60,6 +60,29 @@ export class NodesDetailComponent implements OnInit {
   }
 
 }
+```
+
+##### Replace the content of the `nodes-detail.component.html` template file 
+
+```html
+<div class="modal-header">
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h4 class="modal-title">{{node.name}}</h4>
+</div>
+<div class="modal-body container">
+  <div class="col-xs-6">
+    <app-metric [used]="node.cpu.used" [available]="node.cpu.available">
+      <metric-title>CPU</metric-title>
+    </app-metric>
+  </div>
+  <div class="col-xs-6">
+    <app-metric [used]="node.mem.used" [available]="node.mem.available">
+      <metric-title>Memory</metric-title>
+    </app-metric>
+  </div>
+</div>
 ```
 
 
