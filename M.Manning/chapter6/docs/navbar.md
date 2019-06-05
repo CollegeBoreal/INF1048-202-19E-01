@@ -1,4 +1,4 @@
-# Nagigation Bar
+# Navigation Bar
 
 ### Quick setup
 
