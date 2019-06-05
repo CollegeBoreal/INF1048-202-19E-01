@@ -3,7 +3,7 @@
 * Install [Clarity](https://clarity.design) libraries
 
 ```
-$ npm install material-icons @clr/angular @clr/ui @webcomponents/custom-elements@1.0.0 --save
+$ npm install material-icons @angular/material @angular/cdk @angular/animations --save
 ```
 
 
