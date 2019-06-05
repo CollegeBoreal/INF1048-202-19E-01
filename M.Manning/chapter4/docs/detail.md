@@ -93,6 +93,13 @@ export class NodesDetailComponent implements OnInit {
 (click)="open(node)"
 ```
 
+   * Final Result of `View` button 
+
+
+```html
+   <td><button class="btn btn-secondary" (click)="open(node)">View</button></td>
+```
+
 ##### Edit the file `nodes-row.component.ts` 
 
    * add the strategy `OnPush` to the `changeDetection` metadata
