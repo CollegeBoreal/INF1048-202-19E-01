@@ -1,6 +1,6 @@
 # Theme
 
-* Install [Clarity](https://clarity.design) libraries
+* Install [Material Design](https://material.angular.io) libraries
 
 ```
 $ npm install material-icons @angular/material @angular/cdk @angular/animations --save
