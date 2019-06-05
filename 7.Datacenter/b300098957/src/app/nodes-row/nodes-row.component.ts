@@ -1,17 +1,19 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {NodesDetailComponent} from '../nodes-detail/nodes-detail.component';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: '[app-nodes-row]',
   templateUrl: './nodes-row.component.html',
-  styleUrls: ['./nodes-row.component.css']
+  styleUrls: ['./nodes-row.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NodesRowComponent implements OnInit {
 
   @Input() node: any;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) {
+  }
 
   ngOnInit() {
   }
