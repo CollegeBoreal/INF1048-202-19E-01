@@ -46,6 +46,16 @@ Follow the [Node](docs/node.md) Documentation
 Follow the [Projection](docs/projection.md) Documentation
 
 
+# Dynamic Rendering COmponent
+
+
+### Created the Node `Detail` component
+
+Follow the [Detail](docs/detail.md) Documentation
+
+
+
+
 ## References:
 
 https://github.com/angular-in-action/datacenter
