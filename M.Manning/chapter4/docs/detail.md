@@ -85,15 +85,23 @@ export class NodesDetailComponent implements OnInit {
 </div>
 ```
 
-##### Edit the file `nodes-row.conponent.html` 
+##### Edit the file `nodes-row.component.html` 
 
-   * add open event to the view button 
+   * add the `open()` function to the `(click)` event to the `View` button 
 
 ```html
 (click)="open(node)"
 ```
 
-##### Edit the file `nodes-row.conponent.ts` 
+##### Edit the file `nodes-row.component.ts` 
+
+   * add the strategy `OnPush` to the `changeDetection` metadata
+   
+```typescript
+   changeDetection: ChangeDetectionStrategy.OnPush
+```
+   
+
 
    * add the parameter `activeModal` to its constructor allowing the display of a modal window
 
@@ -118,7 +126,8 @@ export class NodesDetailComponent implements OnInit {
 @Component({
   selector: '[app-nodes-row]',
   templateUrl: './nodes-row.component.html',
-  styleUrls: ['./nodes-row.component.css']
+  styleUrls: ['./nodes-row.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NodesRowComponent implements OnInit {
 
