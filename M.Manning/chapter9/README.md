@@ -10,7 +10,7 @@
 
 ```
 ? Would you like to add Angular routing? No
-? Which stylesheet format would you like to use? CSS
+? Which stylesheet format would you like to use? SCSS
 ```
 
 
