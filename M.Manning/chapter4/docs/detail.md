@@ -62,7 +62,7 @@ export class NodesDetailComponent implements OnInit {
 }
 ```
 
-##### Replace the content of the `nodes-detail.component.html` template file 
+##### Replace the content of the `nodes-detail.component.html` template file with the below 
 
 ```html
 <div class="modal-header">
@@ -85,5 +85,11 @@ export class NodesDetailComponent implements OnInit {
 </div>
 ```
 
+##### Edit the file `nodes-row.conponent.html` 
 
+   * add open event to the view button 
+
+```html
+(click)="open(node)"
+```
 
