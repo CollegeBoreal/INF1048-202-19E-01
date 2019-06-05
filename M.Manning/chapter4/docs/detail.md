@@ -93,3 +93,51 @@ export class NodesDetailComponent implements OnInit {
 (click)="open(node)"
 ```
 
+##### Edit the file `nodes-row.conponent.ts` 
+
+   * add the parameter `activeModal` to its constructor allowing the display of a modal window
+
+
+```typescript
+  constructor(private activeModal: NgbActiveModal) {}
+```
+
+   * add the `open` function
+  
+
+```typescript
+  open(node) {
+    const modal = this.modalService.open(NodesDetailComponent);
+    modal.componentInstance.node = node;
+  }
+```
+
+* Final Result
+
+```typescript
+@Component({
+  selector: '[app-nodes-row]',
+  templateUrl: './nodes-row.component.html',
+  styleUrls: ['./nodes-row.component.css']
+})
+export class NodesRowComponent implements OnInit {
+
+  @Input() node: any;
+
+  constructor(private modalService: NgbModal) {}
+
+  ngOnInit() {
+  }
+
+  isDanger(prop) {
+    return this.node[prop].used / this.node[prop].available > 0.7;
+  }
+
+  open(node) {
+    const modal = this.modalService.open(NodesDetailComponent);
+    modal.componentInstance.node = node;
+  }
+
+}
+```
+
