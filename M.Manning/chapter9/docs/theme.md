@@ -10,13 +10,14 @@ $ npm install material-icons @angular/material @angular/cdk @angular/animations 
 * Edit the `styles.scss` file
 
 ```json
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~material-icons/iconfont/material-icons.css';
 ```
 
 
 * Edit `app.module.ts`
 
-   - Import `ClarityModule` to the `imports:` metadeta of the `@NgModule` decorator
+   - Import each Material Module to the `imports:` metadeta of the `@NgModule` decorator
 
    - Import `BrowserAnimationsModule` to the `imports:` metadeta of the `@NgModule` decorator
 
@@ -24,8 +25,7 @@ $ npm install material-icons @angular/material @angular/cdk @angular/animations 
 ```typescript
 imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    ClarityModule
+    BrowserAnimationsModule
   ],
 ```
 
@@ -35,7 +35,6 @@ imports: [
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ClarityModule } from '@clr/angular';
 
 import { AppComponent } from './app.component';
 
@@ -45,8 +44,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    ClarityModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
