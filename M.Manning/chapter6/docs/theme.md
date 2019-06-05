@@ -17,7 +17,7 @@ $ npm install @clr/icons @clr/angular @clr/ui @webcomponents/custom-elements@1.0
    "scripts": [
      "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
      "node_modules/@clr/icons/clr-icons.min.js"
-   ]
+   ],
 ```
 
 
