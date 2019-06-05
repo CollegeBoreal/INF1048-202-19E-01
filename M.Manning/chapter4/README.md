@@ -46,10 +46,10 @@ Follow the [Node](docs/node.md) Documentation
 Follow the [Projection](docs/projection.md) Documentation
 
 
-# Dynamic Rendering COmponent
+# Advanced Component
 
 
-### Created the Node `Detail` component
+### Create the Node `Detail` component
 
 Follow the [Detail](docs/detail.md) Documentation
 
