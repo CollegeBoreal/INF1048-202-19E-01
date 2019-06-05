@@ -1,6 +1,6 @@
 # Theme
 
-* Install [ng-bootstrap](https://ng-bootstrap.github.io) and [bootstrap](https://getbootstrap.com) libraries
+* Install [Clarity](https://clarity.design) libraries
 
 ```
 $ npm install @clr/icons @clr/angular @clr/ui @webcomponents/custom-elements@1.0.0 --save
