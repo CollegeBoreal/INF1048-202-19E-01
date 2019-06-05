@@ -7,3 +7,13 @@
 ```html
    <template ngbModalContainer></template>
 ```
+
+#### Edit `app.module.ts`
+
+   * add the below metadata
+
+```typescript
+  entryComponents: [
+    NodesDetailComponent,
+  ],
+```
