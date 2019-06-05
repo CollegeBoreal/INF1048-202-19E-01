@@ -3,27 +3,33 @@
 * Install [ng-bootstrap](https://ng-bootstrap.github.io) and [bootstrap](https://getbootstrap.com) libraries
 
 ```
-$ npm install --save @ng-bootstrap/ng-bootstrap bootstrap
+$ npm install @clr/icons @clr/angular @clr/ui @webcomponents/custom-elements@1.0.0 --save
 ```
 
 * Edit the `Angular` configuration file `angular.json` add the below snippet (look for styles:)
 
 ```json
    "styles": [
-     "node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "node_modules/@clr/icons/clr-icons.min.css",
+      "node_modules/@clr/ui/clr-ui.min.css",
      "src/styles.css"
    ],
+   "scripts": [
+     ... any existing scripts
+     "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+     "node_modules/@clr/icons/clr-icons.min.js"
+   ]
 ```
 
 
 * Edit `app.module.ts`
 
-   - Import `NgbModule` to the `imports:` metadeta of the `@NgModule` decorator
+   - Import `ClarityModule` to the `imports:` metadeta of the `@NgModule` decorator
 
 ```typescript
 imports: [
     BrowserModule,
-    NgbModule
+    ClarityModule
   ],
 ```
 
@@ -36,7 +42,7 @@ imports: [
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    ClarityModule
   ],
   providers: [],
   bootstrap: [AppComponent]
