@@ -47,7 +47,7 @@
 ```
 
 ```typescript
-export const ROUTES = [
+const routes: Routes = [
   { path: 'invoices', component: InvoicesComponent },
   { path: 'invoices/create', component: InvoiceFormComponent },
   { path: 'invoices/:invoiceId', component: InvoiceComponent },
