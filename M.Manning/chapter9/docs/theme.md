@@ -1,18 +1,18 @@
 # Theme
 
-* Install [Material Design](https://material.angular.io) and [Covalent](https://teradata.github.io/covalent) libraries
+* Install [Nebular](https://akveo.github.io/nebular/) and [Material Design](https://material.angular.io) libraries
 
 ```
-$ npm install material-icons @angular/material @angular/cdk @angular/animations --save
+$ ng add @nebular/theme
 ```
 
 and Covalent
 
 ```
-$ npm install @covalent/core --save 
+$ npm install @angular/material material-icons --save
 ```
 
-* Edit the `styles.scss` file
+* Edit the `styles.scss` file and add the below at the end
 
 ```json
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
@@ -24,38 +24,38 @@ $ npm install @covalent/core --save
 
    - Import each Material Module to the `imports:` metadeta of the `@NgModule` decorator
 
-   - Import `BrowserAnimationsModule` to the `imports:` metadeta of the `@NgModule` decorator
-
 
 ```typescript
 imports: [
-    BrowserModule,
-    BrowserAnimationsModule
+    ... Previous Modules,
+    // Material Modules
+    MatCardModule,
+    MatButtonModule
   ],
 ```
 
 * Final Result
 
 ```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { AppComponent } from './app.component';
-
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbLayoutModule,
+    NbEvaIconsModule,
+    // Material Modules
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
 ```
 
 [:fast_forward: Next ](navbar.md)
