@@ -2,7 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {CovalentLayoutModule, CovalentLoadingModule} from '@covalent/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,11 @@ import {CovalentLayoutModule, CovalentLoadingModule} from '@covalent/core';
   ],
   imports: [
     BrowserModule,
-    CovalentLayoutModule,
-    CovalentLoadingModule,
-
+    NoopAnimationsModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbLayoutModule,
+    NbEvaIconsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
