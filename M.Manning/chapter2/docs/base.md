@@ -37,14 +37,3 @@
 
 [Next](service.md)
 
-## Alternative
-
-```
-$ ng add @angular/material @angular/cdk
-```
-
-```
-? Choose a prebuilt theme name, or "custom" for a custom theme: Indigo/Pink 
-? Set up HammerJS for gesture recognition? No
-? Set up browser animations for Angular Material? No
-```
