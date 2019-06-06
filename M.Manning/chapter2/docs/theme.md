@@ -5,8 +5,8 @@
  * Éditer le fichier `index.html` et rajouter le code ci-dessous à l'étiquette `<head>`
  
  ```html 
- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.indigo-orange.min.css">
- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.indigo-orange.min.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  ```
  
  * Éditer le fichier `styles.css` et rajouter le code ci-dessous 
