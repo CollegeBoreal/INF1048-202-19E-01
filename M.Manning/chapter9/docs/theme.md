@@ -1,11 +1,16 @@
 # Theme
 
-* Install [Clarity](https://clarity.design) libraries
+* Install [Material Design](https://material.angular.io) and [Covalent](https://teradata.github.io/covalent) libraries
 
 ```
 $ npm install material-icons @angular/material @angular/cdk @angular/animations --save
 ```
 
+and Covalent
+
+```
+$ npm install @covalent/core --save 
+```
 
 * Edit the `styles.scss` file
 
