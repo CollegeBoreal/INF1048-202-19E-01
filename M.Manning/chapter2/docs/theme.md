@@ -1,4 +1,6 @@
-# Créer a page principale
+# Modifier la page principale
+
+ :bookmark: L'application utilise le thème [Material Design Light](https://getmdl.io/)
  
  * Éditer le fichier `index.html` et rajouter le code ci-dessous à l'étiquette `<head>`
  
