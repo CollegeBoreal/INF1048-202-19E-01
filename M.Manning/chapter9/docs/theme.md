@@ -10,7 +10,7 @@ $ ng add @nebular/theme
    * When asked:
 
 ```
-? Which Nebular theme do you want to use: dark
+? Which Nebular theme do you want to use: default
 ? Use customizable scss themes? No
 ? Set up browser animations for Nebular? No
 ```
