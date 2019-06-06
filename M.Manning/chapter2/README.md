@@ -7,9 +7,9 @@
  ```
 # Création de la page principale
 
-### Créer le composant de page principale
+### Ajouter un theme à l'application
 
-Suivre la Documentation de [Base](docs/base.md) 
+Suivre la Documentation de [Theme](docs/theme.md) 
 
 ### Creér le service d'accés aux données
 
