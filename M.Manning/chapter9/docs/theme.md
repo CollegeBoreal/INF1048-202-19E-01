@@ -1,12 +1,14 @@
 # Theme
 
-* Install [Nebular](https://akveo.github.io/nebular/) and [Material Design](https://material.angular.io) libraries
+#### Install [Nebular](https://akveo.github.io/nebular/) and [Material Design](https://material.angular.io) libraries
+
+* Install [Nebular](https://akveo.github.io/nebular/) Theme
 
 ```
 $ ng add @nebular/theme
 ```
 
-and Covalent
+* Add [Material Design](https://material.angular.io) library
 
 ```
 $ npm install @angular/material material-icons --save
