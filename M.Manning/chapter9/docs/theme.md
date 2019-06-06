@@ -7,6 +7,13 @@
 ```
 $ ng add @nebular/theme
 ```
+   * When asked:
+
+```
+? Which Nebular theme do you want to use: dark
+? Use customizable scss themes? No
+? Set up browser animations for Nebular? No
+```
 
 * Add [Material Design](https://material.angular.io) library
 
