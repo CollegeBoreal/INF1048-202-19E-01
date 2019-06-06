@@ -1,5 +1,11 @@
 
+#Navigation
 
+#### App Component
+
+* Edit `app.component.html` file
+
+```html
 <nb-layout>
 
   <nb-layout-header fixed>
@@ -38,3 +44,4 @@
   </nb-layout-footer>
 
 </nb-layout>
+```
