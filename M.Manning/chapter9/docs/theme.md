@@ -22,7 +22,7 @@ $ npm install @angular/material material-icons --save
 
 * Edit `app.module.ts`
 
-   - Import each Material Module to the `imports:` metadeta of the `@NgModule` decorator
+   - Import each Material Module to the `imports:` metadata of the `@NgModule` decorator
 
 
 ```typescript
