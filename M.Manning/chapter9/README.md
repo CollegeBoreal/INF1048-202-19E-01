@@ -9,7 +9,7 @@
 * When asked answer as below:
 
 ```
-? Would you like to add Angular routing? No
+? Would you like to add Angular routing? <b>No</b>
 ? Which stylesheet format would you like to use? SCSS
 ```
 
