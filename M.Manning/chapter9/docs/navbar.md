@@ -1,5 +1,11 @@
 
+#Navigation
 
+#### App Component
+
+* Edit `app.component.html` file
+
+```html
 <nb-layout>
 
   <nb-layout-header fixed>
@@ -38,3 +44,16 @@
   </nb-layout-footer>
 
 </nb-layout>
+```
+
+* Edit the `app-routing.module.ts`
+
+```typescript
+const routes: Routes = [
+  { path: 'invoices', component: InvoicesComponent },
+  { path: 'invoices/create', component: InvoiceFormComponent },
+  { path: 'invoices/:invoiceId', component: InvoiceComponent },
+  { path: 'invoices/:invoiceId/edit', component: InvoiceFormComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/invoices' },
+];
+```
