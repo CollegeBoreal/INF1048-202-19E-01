@@ -45,3 +45,17 @@
 
 </nb-layout>
 ```
+
+```typescript
+export const ROUTES = [
+  { path: 'invoices', component: InvoicesComponent },
+  { path: 'invoices/create', component: InvoiceFormComponent },
+  { path: 'invoices/:invoiceId', component: InvoiceComponent },
+  { path: 'invoices/:invoiceId/edit', component: InvoiceFormComponent },
+  { path: 'customers', component: CustomersComponent },
+  { path: 'customers/create', component: CustomerFormComponent },
+  { path: 'customers/:customerId', component: CustomerComponent },
+  { path: 'customers/:customerId/edit', component: CustomerFormComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/invoices' },
+];
+```
