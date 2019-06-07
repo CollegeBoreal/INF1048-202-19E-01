@@ -71,6 +71,8 @@ export class SummaryComponent implements OnInit {
 
 * Mettre à jour son `template`avec le code ci-dessous, (i.e. fichier `summary.component.html`)
 
+:bookmark: `interpolation` binding
+
 ```html
 <div class="mdl-card stock-card mdl-shadow--2dp" 
      [ngClass]="{increase: isPositive(), decrease: isNegative()}" style="width: 100%;">
