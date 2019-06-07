@@ -11,6 +11,10 @@ $ ng generate component components/manage
 * Éditer le composant principal de l'application `app.component.html`
 
   - rajouter l'étiquette `<app-manage>`
+  
+  - retirer l'étiquette `<app-dashboard>`
+  
+  - resultat final
 
 ```html
   <main class="mdl-layout__content" style="padding: 1.25rem;" >
