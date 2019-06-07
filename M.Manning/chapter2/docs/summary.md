@@ -73,9 +73,11 @@ export class SummaryComponent implements OnInit {
 
 :bookmark: `binding`
 
-:bookmark: `(1) interpolation` 
+:bookmark: `(1) interpolation {{ }}` 
 
-:bookmark: `(3) property` 
+:bookmark: `(2) property [ ]` 
+
+:bookmark: `(3) event ( )` 
 
 
 ```html
