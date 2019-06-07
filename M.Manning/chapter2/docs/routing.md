@@ -95,7 +95,7 @@ export class AppModule { }
 
 [Next](link.md)
 
-# Notes:
+## Notes: (pour ceux qui sont avancés)
 
 Vous pouvez également créer le module de routage avec Angular/CLI
 
