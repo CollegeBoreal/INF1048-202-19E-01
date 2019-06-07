@@ -2,6 +2,8 @@
 
 ## Interface
 
+:bookmark: `Structure de Données`
+
 * Ajouter une structure de données `StockInterface`
 
 ``` 
