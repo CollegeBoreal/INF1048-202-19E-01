@@ -1,7 +1,18 @@
 
 #Navigation
 
-#### App Component
+#### App Module
+
+* Edit `app.module.ts` and add `MatCardModule` and `MatButtonModule`
+
+```typescript
+imports: [
+    ... Previous Modules,
+    // Material Modules
+    MatCardModule,
+    MatButtonModule
+  ],
+```
 
 #### App Component
 
