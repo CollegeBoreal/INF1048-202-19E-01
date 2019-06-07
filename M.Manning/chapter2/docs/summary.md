@@ -6,6 +6,8 @@ $ ng generate component components/summary
 
 ## Éditer le fichier `summary.component.ts`
 
+:bookmark: `@Input()`
+
 - Ajouter une parametre d'entrée de composant `@Input` appellé `stock`
 
 ```typescript
