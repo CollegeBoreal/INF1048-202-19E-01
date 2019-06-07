@@ -3,6 +3,14 @@
 
 #### App Component
 
+* Edit `index.html` file and add the `DOCTYPE` at the top of the file
+
+```html
+<!DOCTYPE html>
+```
+
+#### App Component
+
 * Edit `app.component.html` file
 
 ```html
