@@ -2,7 +2,7 @@
 
 ## Éditer le composant principal
 
-   - ouvrir `app.component.html` afin d'y insérer la prise murale `<router-outlet>` permettant l'affichage des pages
+   - ouvrir `app.component.html` et remplacer le contenu de `main` par la prise murale `<router-outlet>` permettant l'affichage des pages
    
 ```html
 <main class="mdl-layout__content" stype="padding: 1.25rem;">
