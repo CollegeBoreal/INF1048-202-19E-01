@@ -109,6 +109,8 @@ export class StocksService {
 
 ## Fournir le Service
 
+:bookmark: `Provider` sert a fournir les donnees
+
 * Éditer le fichier `app.module.ts`
 
 - Importer le module HttpClientModule dans la métadonnée `imports:`
