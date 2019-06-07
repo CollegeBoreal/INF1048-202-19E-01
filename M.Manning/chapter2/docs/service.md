@@ -25,6 +25,8 @@ $ ng generate interface services/stockInterface
 
 ## Service
 
+:bookmark: `Service` sert a récupérer les donnees servies par un fournisseur
+
 * Rajouter le `service` appellé `Stocks` avec la commande suivante
 
  ``` 
