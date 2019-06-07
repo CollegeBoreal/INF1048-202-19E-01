@@ -57,6 +57,20 @@ $ ng generate component components/manage
   }
 ```
 
+  - Rajouter les fontions `add` et `remove` afin de gérer la liste de stocks
+  
+```
+  add() {
+    this.symbols.push(this.stock.toUpperCase());
+    this.stock = '';
+  }
+
+  remove(symbol) {
+    this.symbols = this.service.remove(symbol);
+  }
+```
+
+
 * Résultat Final de `manage.component.ts`
 
 ```typescript
