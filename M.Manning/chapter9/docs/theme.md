@@ -11,7 +11,7 @@ $ ng add @nebular/theme
 
 ```
 ? Which Nebular theme do you want to use: default
-? Use customizable scss themes? No
+? Use customizable scss themes? Yes
 ? Set up browser animations for Nebular? No
 ```
 
