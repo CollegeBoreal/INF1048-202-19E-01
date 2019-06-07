@@ -11,10 +11,17 @@ export class ManageComponent implements OnInit {
   symbols: Array<string>;
 
   constructor(private service: StocksService) {
-    this.symbols = this.service.get();
   }
 
   ngOnInit() {
+    this.symbols = this.service.get();
+  }
+  add() {
+    this.symbols.push(this.stock.toUpperCase());
+    this.stock = '';
   }
 
+  remove(symbol) {
+    this.symbols = this.service.remove(symbol);
+  }
 }

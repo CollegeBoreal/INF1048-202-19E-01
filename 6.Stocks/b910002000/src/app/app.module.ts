@@ -8,6 +8,7 @@ import { SummaryComponent } from './components/summary/summary.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ManageComponent } from './components/manage/manage.component';
 import {FormsModule} from '@angular/forms';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    AppRoutingModule
   ],
   providers: [ StocksService],
   bootstrap: [AppComponent]
