@@ -71,7 +71,12 @@ export class SummaryComponent implements OnInit {
 
 * Mettre à jour son `template`avec le code ci-dessous, (i.e. fichier `summary.component.html`)
 
-:bookmark: `interpolation` binding
+:bookmark: `binding`
+
+:bookmark: `(1) interpolation` 
+
+:bookmark: `(3) property` 
+
 
 ```html
 <div class="mdl-card stock-card mdl-shadow--2dp" 
