@@ -4,14 +4,14 @@
     <form style="margin-bottom: 5px;" (submit)="add()">
       <input name="stock" [(ngModel)]="stock"
              class="mdl-textfield__input"
-             type="text" placeholder="Add Stock" />
+             type="text" placeholder="Rajouter du Stock" />
     </form>
     <table class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp" style="width: 100%;">
       <tbody>
       <tr *ngFor="let symbol of symbols">
         <td class="mdl-data-table__cell--non-numeric">{{symbol}}</td>
         <td style="padding-top: 6px;">
-          <button class="mdl-button" (click)="remove(symbol)">Remove</button>
+          <button class="mdl-button" (click)="remove(symbol)">Retirer</button>
         </td>
       </tr>
       </tbody>
