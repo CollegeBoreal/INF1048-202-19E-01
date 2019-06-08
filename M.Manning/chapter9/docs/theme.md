@@ -74,6 +74,16 @@ const MAT_MODULES = [
 * Final Result
 
 ```typescript
+
+// Nebular Modules
+const NB_MODULES = [
+  NbThemeModule.forRoot({ name: 'default' }),
+];
+
+// Material Modules
+const MAT_MODULES = [
+];
+
 @NgModule({
   declarations: [
     AppComponent
