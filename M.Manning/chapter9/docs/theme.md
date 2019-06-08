@@ -58,14 +58,14 @@ const NB_MODULES = [
 
  1) create a constant called `MAT_MODULES` where to put all the `Material Design` Modules
 
-```
+```typescript
 const MAT_MODULES = [
 ]
 ```
 
  2) add MAT_MODULES to the imports metadata
 
-```
+```typescript
   imports: [
      ... previous lines
      ...MAT_MODULES,
