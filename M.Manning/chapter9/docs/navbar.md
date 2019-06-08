@@ -62,14 +62,4 @@ const MAT_MODULES = [
 </nb-layout>
 ```
 
-* Edit the `app-routing.module.ts`
-
-```typescript
-const routes: Routes = [
-  { path: 'invoices', component: InvoicesComponent },
-  { path: 'invoices/create', component: InvoiceFormComponent },
-  { path: 'invoices/:invoiceId', component: InvoiceComponent },
-  { path: 'invoices/:invoiceId/edit', component: InvoiceFormComponent },
-  { path: '', pathMatch: 'full', redirectTo: '/invoices' },
-];
-```
+[:fast_forward: Next](invoice.md)
