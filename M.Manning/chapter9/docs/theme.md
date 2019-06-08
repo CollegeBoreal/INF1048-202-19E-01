@@ -36,14 +36,15 @@ $ npm install @angular/material material-icons --save
 
    - Import each `Nebular` Modules to the `imports:` metadata of the `@NgModule` decorator
    
-   1) create a constant called NB_MODULES
+   
+ 1) create a constant called NB_MODULES
 
 ```typescript
 const NB_MODULES = [
 ]
 ```
 
-   2) add NB_MODULES to the imports metadata
+ 2) add NB_MODULES to the imports metadata
 
 ```typescript
   imports: [
@@ -54,14 +55,14 @@ const NB_MODULES = [
 
    - Import each `Material` Module to the `imports:` metadata of the `@NgModule` decorator
 
-   1) create a constant called MAT_MODULES
+ 1) create a constant called MAT_MODULES
 
 ```
 const MAT_MODULES = [
 ]
 ```
 
-   2) add MAT_MODULES to the imports metadata
+ 2) add MAT_MODULES to the imports metadata
 
 ```
   imports: [
