@@ -21,6 +21,8 @@ $ ng add @nebular/theme
 $ npm install @angular/material material-icons --save
 ```
 
+#### Install styles
+
 * Edit the `styles.scss` file and add the below at the end
 
 ```json
