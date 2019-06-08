@@ -28,6 +28,7 @@ $ npm install @angular/material material-icons --save
 @import '~material-icons/iconfont/material-icons.css';
 ```
 
+#### Install modules
 
 * Edit `app.module.ts`
 
@@ -35,14 +36,14 @@ $ npm install @angular/material material-icons --save
    
    1) create a constant called NB_MODULES
 
-```
+```typescript
 const NB_MODULES = [
 ]
 ```
 
    2) add NB_MODULES to the imports metadata
 
-```
+```typescript
   imports: [
      ... previous lines
      ...NB_MODULES,
