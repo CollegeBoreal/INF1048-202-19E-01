@@ -36,39 +36,27 @@ const MAT_MODULES = [
 ```html
 <nb-layout>
 
-  <nb-layout-header fixed>
-  <!-- Insert header here -->
-    $ Invoicing
+  <nb-layout-header class="layout-container" fixed>
+    <nb-sidebar>
+      <nb-icon icon="activity"></nb-icon>Invoicing
+    </nb-sidebar>
+
+    <nb-sidebar end>
+      <nb-actions size="medium">
+        <nb-action class="control-item">Invoices</nb-action>
+        <nb-action class="control-item">Customers</nb-action>
+      </nb-actions>
+    </nb-sidebar>
   </nb-layout-header>
 
   <nb-layout-column>
 
-    <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
-    
     <router-outlet></router-outlet>
-    
+
   </nb-layout-column>
 
   <nb-layout-footer fixed>
-  <!-- Insert footer here -->
+    <!-- Insert footer here -->
   </nb-layout-footer>
 
 </nb-layout>
