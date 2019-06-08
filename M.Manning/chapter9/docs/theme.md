@@ -31,16 +31,40 @@ $ npm install @angular/material material-icons --save
 
 * Edit `app.module.ts`
 
-   - Import each Material Module to the `imports:` metadata of the `@NgModule` decorator
+   - Import each `Nebular` Modules to the `imports:` metadata of the `@NgModule` decorator
+   
+   1) create a constant called NB_MODULES
 
+```
+const NB_MODULES = [
+]
+```
 
-```typescript
-imports: [
-    ... Previous Modules,
-    // Material Modules
-    MatCardModule,
-    MatButtonModule
-  ],
+   2) add NB_MODULES to the imports metadata
+
+```
+  imports: [
+     ... previous lines
+     ...NB_MODULES,
+  ]
+```
+
+   - Import each `Material` Module to the `imports:` metadata of the `@NgModule` decorator
+
+   1) create a constant called MAT_MODULES
+
+```
+const MAT_MODULES = [
+]
+```
+
+   2) add MAT_MODULES to the imports metadata
+
+```
+  imports: [
+     ... previous lines
+     ...MAT_MODULES,
+  ]
 ```
 
 * Final Result
@@ -52,14 +76,9 @@ imports: [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'default' }),
-    NbLayoutModule,
-    NbEvaIconsModule,
-    // Material Modules
-    MatCardModule,
-    MatButtonModule
+    NoopAnimationsModule,
+    ...NB_MODULES,
+    ...MAT_MODULES
   ],
   providers: [],
   bootstrap: [AppComponent]
