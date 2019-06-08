@@ -81,10 +81,7 @@ const MAT_MODULES = [
 const NB_MODULES = [
   NbThemeModule.forRoot({ name: 'default' }),
   NbEvaIconsModule,
-  NbIconModule,
-  NbLayoutModule,
-  NbSidebarModule.forRoot(),
-  NbActionsModule,
+  NbIconModule
 ];
 
 // Material Modules
