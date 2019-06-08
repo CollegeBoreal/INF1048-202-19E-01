@@ -42,6 +42,8 @@ $ npm install @angular/material material-icons --save
 ```typescript
 const NB_MODULES = [
   NbThemeModule.forRoot({ name: 'default' }),
+  NbEvaIconsModule,
+  NbIconModule,
 ]
 ```
 
@@ -75,14 +77,20 @@ const MAT_MODULES = [
 * Final Result
 
 ```typescript
-
 // Nebular Modules
 const NB_MODULES = [
   NbThemeModule.forRoot({ name: 'default' }),
+  NbEvaIconsModule,
+  NbIconModule,
+  NbLayoutModule,
+  NbSidebarModule.forRoot(),
+  NbActionsModule,
 ];
 
 // Material Modules
 const MAT_MODULES = [
+  MatCardModule,
+  MatButtonModule
 ];
 
 @NgModule({
@@ -92,6 +100,7 @@ const MAT_MODULES = [
   imports: [
     BrowserModule,
     NoopAnimationsModule,
+    AppRoutingModule,
     ...NB_MODULES,
     ...MAT_MODULES
   ],
