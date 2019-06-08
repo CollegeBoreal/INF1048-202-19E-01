@@ -3,6 +3,21 @@
 
 #### App Module
 
+###### Nebular
+
+* Edit `app.module.ts` and add `MatCardModule` and `MatButtonModule`
+
+```typescript
+imports: [
+    ... Previous Modules,
+    // Material Modules
+    MatCardModule,
+    MatButtonModule
+  ],
+```
+
+###### Material Design
+
 * Edit `app.module.ts` and add `MatCardModule` and `MatButtonModule`
 
 ```typescript
