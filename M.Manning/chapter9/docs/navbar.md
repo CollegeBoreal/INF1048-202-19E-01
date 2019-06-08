@@ -5,15 +5,16 @@
 
 ###### Nebular
 
-* Edit `app.module.ts` and add `MatCardModule` and `MatButtonModule`
+* Edit `app.module.ts` and add `NBLayouModule`, `NbSidebarModule` and `NbActionsModule` to the existing `NB_MODULES` constant
 
 ```typescript
-imports: [
-    ... Previous Modules,
-    // Material Modules
-    MatCardModule,
-    MatButtonModule
-  ],
+// Nebular Modules
+const NB_MODULES = [
+  ... Previous Modules,
+  NbLayoutModule,
+  NbSidebarModule.forRoot(),
+  NbActionsModule,
+];
 ```
 
 ###### Material Design
