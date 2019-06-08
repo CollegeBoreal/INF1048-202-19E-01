@@ -41,6 +41,7 @@ $ npm install @angular/material material-icons --save
 
 ```typescript
 const NB_MODULES = [
+  NbThemeModule.forRoot({ name: 'default' }),
 ]
 ```
 
