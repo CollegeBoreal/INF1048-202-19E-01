@@ -19,15 +19,14 @@ const NB_MODULES = [
 
 ###### Material Design
 
-* Edit `app.module.ts` and add `MatCardModule` and `MatButtonModule`
+* Edit `app.module.ts` and add `MatCardModule` and `MatButtonModule` to the existing `MAT_MODULES` constant
 
 ```typescript
-imports: [
-    ... Previous Modules,
-    // Material Modules
-    MatCardModule,
-    MatButtonModule
-  ],
+// Material Modules
+const MAT_MODULES = [
+  MatCardModule,
+  MatButtonModule
+];
 ```
 
 #### App Component
