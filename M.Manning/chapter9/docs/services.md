@@ -47,6 +47,10 @@ export interface Query {
 }
 ```
 
+```
+$  ng generate service services/RestService --skipTests
+```
+
 
 * Using [Barrel](https://medium.com/@adrianfaciu/barrel-files-to-use-or-not-to-use-75521cd18e65) files
 
