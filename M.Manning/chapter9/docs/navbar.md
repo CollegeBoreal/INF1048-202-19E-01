@@ -47,8 +47,48 @@ const MAT_MODULES = [
     </nb-sidebar>
 ```
 
+* replace the content after  <!--The content below is only a placeholder and can be replaced.--> in the `<nb-layout-column>` tag
+
+
 ```html
+    <!--The content below is only a placeholder and can be replaced.-->
     <router-outlet></router-outlet>
 ```
+
+
+* Final Result
+
+```html
+<nb-layout>
+
+  <nb-layout-header fixed>
+  <!-- Insert header here -->
+    <nb-sidebar>
+      <nb-icon icon="activity"></nb-icon>Invoicing
+    </nb-sidebar>
+
+    <nb-sidebar end>
+      <nb-actions size="medium">
+        <nb-action class="control-item">Invoices</nb-action>
+        <nb-action class="control-item">Customers</nb-action>
+      </nb-actions>
+    </nb-sidebar>
+
+  </nb-layout-header>
+
+  <nb-layout-column>
+
+    <router-outlet></router-outlet>
+
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+  <!-- Insert footer here -->
+  </nb-layout-footer>
+
+</nb-layout>
+
+```
+
 
 [:fast_forward: Next](invoice.md)
