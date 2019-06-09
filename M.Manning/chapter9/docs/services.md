@@ -108,6 +108,20 @@ export class RestService {
 }
 ```
 
+```
+$ ng generate service services/customers 
+```
+
+```typescript
+@Injectable({
+  providedIn: 'root'
+})
+export class CustomersService extends RestService {
+  resource: string = '/customers';
+}
+```
+
+
 * Using [Barrel](https://medium.com/@adrianfaciu/barrel-files-to-use-or-not-to-use-75521cd18e65) files
 
 ```typescript
