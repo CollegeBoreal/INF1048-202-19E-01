@@ -6,7 +6,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {NbThemeModule, NbLayoutModule, NbActionsModule, NbSidebarModule, NbIconModule} from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
-import {MatButtonModule, MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule, MatListModule} from '@angular/material';
+import { CustomersComponent } from './customers/customers.component';
+import {HttpClientModule} from '@angular/common/http';
 
 // Nebular Modules
 const NB_MODULES = [
@@ -20,18 +22,21 @@ const NB_MODULES = [
 
 // Material Modules
 const MAT_MODULES = [
-  MatCardModule,
-  MatButtonModule
+  MatButtonModule,
+  MatListModule,
+  MatIconModule,
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     ...NB_MODULES,
     ...MAT_MODULES
   ],
