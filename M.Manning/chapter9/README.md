@@ -27,3 +27,7 @@ Follow the [NavBar](docs/navbar.md) Documentation
 #### Install the `backend` mock server
 
 Follow the [Backend](docs/backend.md) Documentation
+
+#### Create all the `Service` components needed to acceess the  `backend` mock server
+
+Follow the [Service](docs/services.md) Documentation
