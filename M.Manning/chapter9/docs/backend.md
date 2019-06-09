@@ -8,7 +8,7 @@
 $ npm install json-server --save
 ```
 
-* Edit the `package,json` file and add the below `api` K/V (Key/Value) pair to the `scripts` JSON object
+* Edit the `package.json` file and add the below `api` K/V (Key/Value) pair to the `scripts` JSON object
 
 
 ```json
@@ -580,3 +580,4 @@ $ npm run api
 }
 ```
 
+[:fast_forward: Next ](customers.md)
