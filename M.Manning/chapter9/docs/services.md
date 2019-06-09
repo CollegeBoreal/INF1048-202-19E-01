@@ -2,10 +2,8 @@
 
 Services are used to access data from the backend
 
-```
-<p>
+```html
    ...This is a bit long so pay attention to details...
-   </p
 ```
 
 ### State Management
