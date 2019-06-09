@@ -2,20 +2,6 @@
 
 The `Customers` components will be used to demonstrate the [`Template Driven`](https://angular.io/guide/forms) Forms 
 
-###### Material Design
-
-* Edit `app.module.ts` and add `MatButtonModule`, `MatListModule` and `MatIconModule` to the existing `MAT_MODULES` constant
-
-```typescript
-// Material Modules
-const MAT_MODULES = [
-  MatButtonModule,
-  MatListModule,
-  MatIconModule,
-];
-```
-
-
 #### Master (List of all Customers)
 
 ###### Generate `Customers` Component
@@ -73,6 +59,20 @@ export class CustomersComponent implements OnInit {
 ```
 
 ###### Edit the `customers.component.html`
+
+######## Material Design
+
+* Edit `app.module.ts` and add `MatButtonModule`, `MatListModule` and `MatIconModule` to the existing `MAT_MODULES` constant
+
+```typescript
+// Material Modules
+const MAT_MODULES = [
+  MatButtonModule,
+  MatListModule,
+  MatIconModule,
+];
+```
+
 
 * Replace all its content by the below snippet
 
