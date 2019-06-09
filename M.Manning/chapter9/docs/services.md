@@ -51,13 +51,24 @@ export interface Query {
 $  ng generate service services/Rest --skipTests
 ```
 
+* Final Rest Service Result
+
 ```
+import {Inject, Injectable} from '@angular/core';
+import {Query} from './query';
+import {HttpClient} from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
 export class RestService {
+
   base: string = 'http://localhost:3000';
   resource: string = '/';
   type: any;
 
-  constructor(@Inject(HttpClient) private http: HttpClient) { }
+  constructor(@Inject(HttpClient) private http: HttpClient) {
+  }
 
   get url() {
     return this.base + this.resource;
