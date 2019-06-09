@@ -19,3 +19,7 @@
 #### Install the `theme` module
 
 Follow the [Theme](docs/theme.md) Documentation
+
+#### Create the `Navigation` components
+
+Follow the [NavBar](docs/navbar.md) Documentation
