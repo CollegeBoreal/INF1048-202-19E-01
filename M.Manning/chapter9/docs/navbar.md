@@ -1,44 +1,85 @@
 
 #Navigation
 
-#### App Component
+#### App Module
 
-#### App Component
+###### Nebular
 
-* Edit `app.component.html` file
+* Edit `app.module.ts` and add `NBLayouModule`, `NbSidebarModule` and `NbActionsModule` to the existing `NB_MODULES` constant
+
+```typescript
+// Nebular Modules
+const NB_MODULES = [
+  ... Previous Modules,
+  NbLayoutModule,
+  NbSidebarModule.forRoot(),
+  NbActionsModule,
+];
+```
+
+###### Material Design
+
+* Edit `app.module.ts` and add `MatCardModule` and `MatButtonModule` to the existing `MAT_MODULES` constant
+
+```typescript
+// Material Modules
+const MAT_MODULES = [
+  MatCardModule,
+  MatButtonModule
+];
+```
+
+#### Edit `app.component.html` file
+
+* add the layout header content after `<!-- Insert header here -->` in the `<nb-layout-header>` tag
+
+```html
+    <!-- Insert header here -->
+    <nb-sidebar>
+      <nb-icon icon="activity"></nb-icon>Invoicing
+    </nb-sidebar>
+
+    <nb-sidebar end>
+      <nb-actions size="medium">
+        <nb-action class="control-item">Invoices</nb-action>
+        <nb-action class="control-item">Customers</nb-action>
+      </nb-actions>
+    </nb-sidebar>
+```
+
+* replace the content after  <!--The content below is only a placeholder and can be replaced.--> in the `<nb-layout-column>` tag
+
+
+```html
+    <!--The content below is only a placeholder and can be replaced.-->
+    <router-outlet></router-outlet>
+```
+
+
+* Final Result
 
 ```html
 <nb-layout>
 
   <nb-layout-header fixed>
   <!-- Insert header here -->
-    $ Invoicing
+    <nb-sidebar>
+      <nb-icon icon="activity"></nb-icon>Invoicing
+    </nb-sidebar>
+
+    <nb-sidebar end>
+      <nb-actions size="medium">
+        <nb-action class="control-item">Invoices</nb-action>
+        <nb-action class="control-item">Customers</nb-action>
+      </nb-actions>
+    </nb-sidebar>
+
   </nb-layout-header>
 
   <nb-layout-column>
 
-    <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
-    
     <router-outlet></router-outlet>
-    
+
   </nb-layout-column>
 
   <nb-layout-footer fixed>
@@ -48,14 +89,15 @@
 </nb-layout>
 ```
 
-* Edit the `app-routing.module.ts`
+#### Edit `app.component.scss` file
 
-```typescript
-const routes: Routes = [
-  { path: 'invoices', component: InvoicesComponent },
-  { path: 'invoices/create', component: InvoiceFormComponent },
-  { path: 'invoices/:invoiceId', component: InvoiceComponent },
-  { path: 'invoices/:invoiceId/edit', component: InvoiceFormComponent },
-  { path: '', pathMatch: 'full', redirectTo: '/invoices' },
-];
+   * add the below content
+
+```css
+.control-item {
+  display: block;
+}
 ```
+
+
+[:fast_forward: Next](invoice.md)
