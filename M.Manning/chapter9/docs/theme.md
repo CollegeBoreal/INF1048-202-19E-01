@@ -86,8 +86,6 @@ const NB_MODULES = [
 
 // Material Modules
 const MAT_MODULES = [
-  MatCardModule,
-  MatButtonModule
 ];
 
 @NgModule({
