@@ -3,7 +3,7 @@
 Services are used to access data from the backend
 
 ```html
-   ...This is a bit long so pay attention to details...
+<P>...This is a bit long so pay attention to details...</P>
 ```
 
 ### State Management
