@@ -13,7 +13,7 @@ $ npm install json-server --save
 
 ```json
 "scripts": {
-    ___other key/value pairs___,
+     other key value pairs,
     "api": "json-server --watch db.json"
 }
 ```
