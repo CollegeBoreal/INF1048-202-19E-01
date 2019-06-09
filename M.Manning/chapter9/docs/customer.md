@@ -10,7 +10,7 @@ This component displays the customer
 $ ng generate component customer
 ```
 
-* Change the controller by editing the `customer.component.ts` file 
+##### Change the controller by editing the `customer.component.ts` file 
 
  1) add the `customer` variable 
 
@@ -71,6 +71,10 @@ export class CustomerComponent implements OnInit {
   }
 }
 ```
+
+###### Change the template by editing the `customer.component.html` file 
+
+* It will display the Customer Component
 
 ```html
 <mat-list *ngIf="customer">
