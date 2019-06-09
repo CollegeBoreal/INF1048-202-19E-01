@@ -26,7 +26,7 @@ export class Invoice {
 }
 ```
 
-* Barrel
+* Using [Barrel](https://medium.com/@adrianfaciu/barrel-files-to-use-or-not-to-use-75521cd18e65) files
 
 ```typescript
 export * from './customer';
