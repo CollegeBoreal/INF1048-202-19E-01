@@ -16,7 +16,7 @@ const MAT_MODULES = [
 ```
 
 
-#### Master 
+#### Master (List of all Customers)
 
 ###### Generate `Customers` Component
 
