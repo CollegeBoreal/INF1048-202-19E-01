@@ -176,7 +176,7 @@ export class InvoicesService extends RestService {
 }
 ```
 
-### Advertise the newly created services and data classes
+### Advertise the newly created services, data classes and connect to App Module
 
 
 * Using [Barrel](https://medium.com/@adrianfaciu/barrel-files-to-use-or-not-to-use-75521cd18e65) files
@@ -194,6 +194,21 @@ export * from './customer';
 export * from './customers.service';
 export * from './invoice';
 export * from './invoices.service';
+```
+
+* Add the `HttpClientModule` allowing access to the outside world to the App Module file
+
+- Edit the `app.module.ts` file and add the `HttpClientModule`, see final result
+
+```
+  imports: [
+    BrowserModule,
+    NoopAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ...NB_MODULES,
+    ...MAT_MODULES
+  ],
 ```
 
 [:fast_forward: Next ](customers.md)
