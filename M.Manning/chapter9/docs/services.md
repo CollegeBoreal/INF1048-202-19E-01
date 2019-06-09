@@ -48,7 +48,7 @@ export interface Query {
 ```
 
 ```
-$  ng generate service services/Rest --skipTests
+$  ng generate service services/Rest
 ```
 
 * Final Rest Service Result
