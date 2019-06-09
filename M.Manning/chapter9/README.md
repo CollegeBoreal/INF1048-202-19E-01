@@ -20,6 +20,10 @@
 
 Follow the [Theme](docs/theme.md) Documentation
 
-#### Create the `Navigation` components
+#### Add `Navigation` to the main `app` module
 
 Follow the [NavBar](docs/navbar.md) Documentation
+
+#### Install the `backend` mock server
+
+Follow the [Backend](docs/backend.md) Documentation
