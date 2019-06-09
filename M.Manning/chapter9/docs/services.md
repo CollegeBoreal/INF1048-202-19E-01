@@ -26,6 +26,17 @@ export class Invoice {
 }
 ```
 
+```typescript
+interface Query {
+  limit?: number;
+  order?: string;
+  sort?: string;
+  embed?: string;
+  expand?: string;
+}
+```
+
+
 * Using [Barrel](https://medium.com/@adrianfaciu/barrel-files-to-use-or-not-to-use-75521cd18e65) files
 
 ```typescript
