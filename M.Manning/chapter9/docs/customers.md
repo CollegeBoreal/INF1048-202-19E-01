@@ -70,8 +70,23 @@ export class CustomersComponent implements OnInit {
       });
   }
 }
-
 ```
+
+###### Edit the `customers.component.html`
+
+* Replace all its content by the below snippet
+
+```html
+<mat-list *ngIf="customers">
+  <h3 mat-subheader>Customers</h3>
+  <mat-list-item *ngFor="let customer of customers" routerLink='/customers/{{customer.id}}'>
+    <mat-icon mat-list-icon>note</mat-icon>
+    <h4 mat-line>{{customer.name}}</h4>
+    <p mat-line> {{customer.email}} </p>
+  </mat-list-item>
+</mat-list>
+```
+
 
 #### Routing
 
