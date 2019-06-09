@@ -53,7 +53,7 @@ $  ng generate service services/Rest --skipTests
 
 * Final Rest Service Result
 
-```
+```typescript
 import {Inject, Injectable} from '@angular/core';
 import {Query} from './query';
 import {HttpClient} from '@angular/common/http';
