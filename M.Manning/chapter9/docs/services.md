@@ -2,7 +2,9 @@
 
 Services are used to access data from backend
 
-
+```
+$ ng generate class services/Customer --skipTests
+```
 
 ```typescript
 export class Customer {
@@ -11,6 +13,10 @@ export class Customer {
   name: string;
   phone: string;
 }
+```
+
+```
+$ ng generate class services/Invoice --skipTests
 ```
 
 
@@ -26,8 +32,13 @@ export class Invoice {
 }
 ```
 
+```
+$ ng generate interface services/Query
+```
+
+
 ```typescript
-interface Query {
+export interface Query {
   limit?: number;
   order?: string;
   sort?: string;
