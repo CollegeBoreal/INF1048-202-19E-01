@@ -87,7 +87,16 @@ const MAT_MODULES = [
   </nb-layout-footer>
 
 </nb-layout>
+```
 
+#### Edit `app.component.scss` file
+
+   * add the below content
+
+```css
+.control-item {
+  display: block;
+}
 ```
 
 
