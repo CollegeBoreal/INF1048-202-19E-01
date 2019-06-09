@@ -87,4 +87,4 @@ export class CustomersComponent implements OnInit {
 
 ![image](../images/customers.png)
 
-[:fast_forward: Next ](curstomer.md)
+[:fast_forward: Next ](customer.md)
