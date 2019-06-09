@@ -72,3 +72,13 @@ export class CustomersComponent implements OnInit {
 }
 
 ```
+
+#### Routing
+
+* Edit the `app.component.html` file and replace the `<router-outlet` tag with the `<app-customers>` tag
+
+```html
+
+    <!--The content below is only a placeholder and can be replaced.-->
+    <app-customers></app-customers>
+```
