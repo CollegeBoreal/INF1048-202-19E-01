@@ -17,18 +17,6 @@ const NB_MODULES = [
 ];
 ```
 
-###### Material Design
-
-* Edit `app.module.ts` and add `MatCardModule` and `MatButtonModule` to the existing `MAT_MODULES` constant
-
-```typescript
-// Material Modules
-const MAT_MODULES = [
-  MatCardModule,
-  MatButtonModule
-];
-```
-
 #### Edit `app.component.html` file
 
 * add the layout header content after `<!-- Insert header here -->` in the `<nb-layout-header>` tag
