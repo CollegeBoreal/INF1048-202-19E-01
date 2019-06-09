@@ -1,9 +1,45 @@
 # Customer
 
+This component displays the customer
+
+##### Detail
+
+* Generate the `Customer` Component
 
 ```
 $ ng generate component customer
 ```
+
+* Change the controller by editing the `customer.component.ts` file 
+
+ 1) add the `customer` variable 
+
+```typescript
+  customer: Customer;
+```
+
+ 2) Edit the `constructor` by injecting the `CustomersService` and `ActivatedRoute` that will allow us to retrieve the route parameter
+
+```typescript
+  constructor(
+    private customersService: CustomersService,
+    private route: ActivatedRoute) {
+  }
+```
+
+3) Add code to the `nbOnInit()` function to retrive the customer data from it's :id:
+
+```typescript
+    this.route.params.pipe(
+      map((params: Params) => params.customerId),
+      switchMap(customerId => this.customersService.get<Customer>(customerId))
+    ).subscribe(customer => {
+      this.customer = customer;
+    });
+```
+
+
+* Final Result
 
 ```typescript
 import {Component, OnInit} from '@angular/core';
@@ -36,6 +72,26 @@ export class CustomerComponent implements OnInit {
 }
 ```
 
+```html
+<mat-list *ngIf="customer">
+  <h3 mat-subheader>Customer ID: {{customer.id}}</h3>
+  <mat-list-item>
+    <mat-icon mat-list-icon>perm_identity</mat-icon>
+    <h4 mat-line>{{customer.name}}</h4>
+    <p mat-line>Customer</p>
+  </mat-list-item>
+  <mat-list-item>
+    <mat-icon mat-list-icon>email</mat-icon>
+    <h4 mat-line>{{customer.email}}</h4>
+    <p mat-line>Email</p>
+  </mat-list-item>
+  <mat-list-item>
+    <mat-icon mat-list-icon>phone</mat-icon>
+    <h4 mat-line>{{customer.phone}}</h4>
+    <p mat-line>Phone</p>
+  </mat-list-item>
+</mat-list>
+```
 
 ```html
 <button mat-fab class="mat-fab-bottom-right fixed mat-accent mat-fab" routerLink="/customers/create">
