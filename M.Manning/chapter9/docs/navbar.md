@@ -100,5 +100,8 @@ const MAT_MODULES = [
 }
 ```
 
+## You should see this
+
+![image](../images/layout.png)
 
 [:fast_forward: Next](backend.md)
