@@ -90,12 +90,13 @@ export class CustomersComponent implements OnInit {
 
 #### Routing
 
-* Edit the `app.component.html` file and replace the `<router-outlet` tag with the `<app-customers>` tag
+* Edit the `app-routing.module.ts` file and add the below route
 
-```html
-
-    <!--The content below is only a placeholder and can be replaced.-->
-    <app-customers></app-customers>
+```typescript
+const routes: Routes = [
+  { path: 'customers', component: CustomersComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/customers' },
+];
 ```
 
 ### You should see this
