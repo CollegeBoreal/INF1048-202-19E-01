@@ -36,16 +36,6 @@ export class CustomerComponent implements OnInit {
 }
 ```
 
-```html
-<mat-list *ngIf="customers">
-  <h3 mat-subheader>Customers</h3>
-  <mat-list-item *ngFor="let customer of customers" routerLink='/customers/{{customer.id}}'>
-    <mat-icon mat-list-icon>note</mat-icon>
-    <h4 mat-line>{{customer.name}}</h4>
-    <p mat-line> {{customer.email}} </p>
-  </mat-list-item>
-</mat-list>
-```
 
 ```html
 <button mat-fab class="mat-fab-bottom-right fixed mat-accent mat-fab" routerLink="/customers/create">
