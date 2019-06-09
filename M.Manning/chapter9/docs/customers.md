@@ -79,7 +79,7 @@ export class CustomersComponent implements OnInit {
 ```html
 <mat-list *ngIf="customers">
   <h3 mat-subheader>Customers</h3>
-  <mat-list-item *ngFor="let customer of customers" routerLink='/customers/{{customer.id}}'>
+  <mat-list-item *ngFor="let customer of customers" >
     <mat-icon mat-list-icon>note</mat-icon>
     <h4 mat-line>{{customer.name}}</h4>
     <p mat-line> {{customer.email}} </p>
