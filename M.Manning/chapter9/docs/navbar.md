@@ -78,6 +78,7 @@ const MAT_MODULES = [
 
   <nb-layout-column>
 
+    <!--The content below is only a placeholder and can be replaced.-->
     <router-outlet></router-outlet>
 
   </nb-layout-column>
@@ -99,5 +100,8 @@ const MAT_MODULES = [
 }
 ```
 
+## You should see this
+
+![image](../images/layout.png)
 
 [:fast_forward: Next](backend.md)
