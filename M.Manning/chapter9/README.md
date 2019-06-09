@@ -16,6 +16,6 @@
 
 # Build the Portfolio App
 
-### Install the `theme` module
+##### Install the `theme` module
 
 Follow the [Theme](docs/theme.md) Documentation
