@@ -29,14 +29,12 @@ const MAT_MODULES = [
 ];
 ```
 
-#### App Component
+#### Edit `app.component.html` file
 
-* Edit `app.component.html` file
+* add the layout header content after `<!-- Insert header here -->` in the `<nb-layout-header>` tag
 
 ```html
-<nb-layout>
-
-  <nb-layout-header class="layout-container" fixed>
+    <!-- Insert header here -->
     <nb-sidebar>
       <nb-icon icon="activity"></nb-icon>Invoicing
     </nb-sidebar>
@@ -47,19 +45,10 @@ const MAT_MODULES = [
         <nb-action class="control-item">Customers</nb-action>
       </nb-actions>
     </nb-sidebar>
-  </nb-layout-header>
+```
 
-  <nb-layout-column>
-
+```html
     <router-outlet></router-outlet>
-
-  </nb-layout-column>
-
-  <nb-layout-footer fixed>
-    <!-- Insert footer here -->
-  </nb-layout-footer>
-
-</nb-layout>
 ```
 
 [:fast_forward: Next](invoice.md)
