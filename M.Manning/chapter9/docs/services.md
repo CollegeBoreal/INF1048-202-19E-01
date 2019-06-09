@@ -1,10 +1,19 @@
 # Services 
 
-Services are used to access data from backend
+Services are used to access data from the backend
+
+### State Management
+
+##### Create class needed to manage Customers
+
+* Generate the Customer `Class`
 
 ```
 $ ng generate class services/Customer --skipTests
 ```
+
+* Add the Customer `Fields`
+
 
 ```typescript
 export class Customer {
@@ -15,9 +24,15 @@ export class Customer {
 }
 ```
 
+##### Create class needed to manage Invoices
+
+* Generate the Invoice `Class`
+
 ```
 $ ng generate class services/Invoice --skipTests
 ```
+
+* Add the Invoice `Fields`
 
 
 ```typescript
@@ -32,10 +47,15 @@ export class Invoice {
 }
 ```
 
+##### Create Interface needed to manage a Generic State through a Query 
+
+* Generate the Query `Interface`
+
 ```
 $ ng generate interface services/Query
 ```
 
+* Add the Query `Fields`
 
 ```typescript
 export interface Query {
@@ -46,6 +66,12 @@ export interface Query {
   expand?: string;
 }
 ```
+
+### State Access Management
+
+##### Base State Access Management
+
+* Generate the Rest `Service` which is a generic source code for both Invoices and Customers
 
 ```
 $  ng generate service services/Rest
@@ -108,9 +134,17 @@ export class RestService {
 }
 ```
 
+##### Inherited State Access Management
+
+* Generate the `Customers` Service
+
+
 ```
 $ ng generate service services/customers 
 ```
+
+* Edit the inherited source code
+
 
 ```typescript
 @Injectable({
@@ -121,9 +155,13 @@ export class CustomersService extends RestService {
 }
 ```
 
+* Generate the `Invoices` Service
+
 ```
 $ ng generate service services/invoices
 ```
+
+* Edit the inherited source code
 
 ```typescript
 @Injectable({
@@ -134,8 +172,18 @@ export class InvoicesService extends RestService {
 }
 ```
 
+### Advertise the newly created services and data classes
+
 
 * Using [Barrel](https://medium.com/@adrianfaciu/barrel-files-to-use-or-not-to-use-75521cd18e65) files
+
+* Generate the `Index` file
+
+```
+$ ng generate interface services/index
+```
+
+* Replace its content with the below
 
 ```typescript
 export * from './customer';
