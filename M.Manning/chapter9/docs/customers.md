@@ -60,7 +60,7 @@ export class CustomersComponent implements OnInit {
 
 ###### Edit the `customers.component.html`
 
-######## Material Design
+*** ADD `Material Design` Modules used by the template
 
 * Edit `app.module.ts` and add `MatButtonModule`, `MatListModule` and `MatIconModule` to the existing `MAT_MODULES` constant
 
