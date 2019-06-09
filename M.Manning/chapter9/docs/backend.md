@@ -26,7 +26,7 @@ $ npm run api
 ```
 
 
-* Create a new file `db.json`
+* Create a new file `db.json` and paste the below content
 
 ```json
 {
