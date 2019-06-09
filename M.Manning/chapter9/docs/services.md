@@ -198,7 +198,7 @@ export * from './invoices.service';
 
 * Add the `HttpClientModule` allowing access to the outside world to the App Module file
 
-- Edit the `app.module.ts` file and add the `HttpClientModule`, see final result
+- Edit the `app.module.ts` file and add the `HttpClientModule` to the `imports:` metadata, see final result
 
 ```
   imports: [
