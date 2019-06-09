@@ -16,7 +16,7 @@ Services are used to access data from the backend
 $ ng generate class services/Customer --skipTests
 ```
 
-* Add the Customer `Fields`
+* Add the Customer `Fields` to the `customer.ts` file
 
 
 ```typescript
@@ -36,7 +36,7 @@ export class Customer {
 $ ng generate class services/Invoice --skipTests
 ```
 
-* Add the Invoice `Fields`
+* Add the Invoice `Fields` to the `invoice.ts` file
 
 
 ```typescript
@@ -59,7 +59,7 @@ export class Invoice {
 $ ng generate interface services/Query
 ```
 
-* Add the Query `Fields`
+* Add the Query `Fields` to the `query.ts` file
 
 ```typescript
 export interface Query {
@@ -81,7 +81,7 @@ export interface Query {
 $  ng generate service services/Rest
 ```
 
-* Final Rest Service Result
+* Final Rest Service Result when editing `rest.service.ts`
 
 ```typescript
 import {Inject, Injectable} from '@angular/core';
@@ -147,7 +147,7 @@ export class RestService {
 $ ng generate service services/customers 
 ```
 
-* Edit the inherited source code
+* Edit the inherited source code by changing  the `customers.service.ts` file
 
 
 ```typescript
@@ -165,7 +165,7 @@ export class CustomersService extends RestService {
 $ ng generate service services/invoices
 ```
 
-* Edit the inherited source code
+* Edit the inherited source code by changing  the `invoices.service.ts` file
 
 ```typescript
 @Injectable({
@@ -187,7 +187,7 @@ export class InvoicesService extends RestService {
 $ ng generate interface services/index
 ```
 
-* Replace its content with the below
+* Edit the file `index.ts` by replace its content with the below
 
 ```typescript
 export * from './customer';
@@ -200,7 +200,7 @@ export * from './invoices.service';
 
 - Edit the `app.module.ts` file and add the `HttpClientModule` to the `imports:` metadata, see final result
 
-```
+```typescript
   imports: [
     BrowserModule,
     NoopAnimationsModule,
