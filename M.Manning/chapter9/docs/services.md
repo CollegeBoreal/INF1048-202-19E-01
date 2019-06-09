@@ -2,6 +2,10 @@
 
 Services are used to access data from the backend
 
+```
+   ...This is a bit long so pay attention to details...
+```
+
 ### State Management
 
 ##### Create class needed to manage Customers
