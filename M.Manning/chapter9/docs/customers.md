@@ -82,3 +82,7 @@ export class CustomersComponent implements OnInit {
     <!--The content below is only a placeholder and can be replaced.-->
     <app-customers></app-customers>
 ```
+
+### You should see this
+
+![image](../images/customers.png)
