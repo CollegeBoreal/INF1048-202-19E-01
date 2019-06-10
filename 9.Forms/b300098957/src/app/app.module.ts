@@ -6,10 +6,15 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {NbThemeModule, NbLayoutModule, NbActionsModule, NbSidebarModule, NbIconModule} from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
-import {MatButtonModule, MatCardModule, MatIconModule, MatListModule} from '@angular/material';
+import {
+  MatButtonModule, MatCardModule, MatError, MatFormFieldModule, MatIconModule, MatInputModule,
+  MatListModule
+} from '@angular/material';
 import { CustomersComponent } from './customers/customers.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CustomerComponent } from './customer/customer.component';
+import { CustomerFormComponent } from './customer-form/customer-form.component';
+import {FormsModule} from "@angular/forms";
 
 // Nebular Modules
 const NB_MODULES = [
@@ -26,13 +31,23 @@ const MAT_MODULES = [
   MatButtonModule,
   MatListModule,
   MatIconModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule
 ];
+
+// Form Modules
+const FORM_MODULES = [
+  FormsModule
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomersComponent,
-    CustomerComponent
+    CustomerComponent,
+    CustomerFormComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +55,8 @@ const MAT_MODULES = [
     AppRoutingModule,
     HttpClientModule,
     ...NB_MODULES,
-    ...MAT_MODULES
+    ...MAT_MODULES,
+    ...FORM_MODULES
   ],
   providers: [],
   bootstrap: [AppComponent]
