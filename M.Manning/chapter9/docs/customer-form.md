@@ -44,7 +44,54 @@ $ ng generate component customerForm
   }
 ```
 
+* add operation CRUD functions like `save()`, `delete()`
 
+```typescript 
+  save() {
+    if (this.customer.id) {
+      this.customersService.update<Customer>(this.customer.id, this.customer).subscribe(response => {
+        this.viewCustomer(response.id);
+      });
+    } else {
+      this.customersService.create<Customer>(this.customer).subscribe(response => {
+        this.viewCustomer(response.id);
+      });
+    }
+  }
+
+  delete() {
+    this.dialogService.openConfirm({
+      message: 'Are you sure you want to delete this customer?',
+      title: 'Confirm',
+      acceptButton: 'Delete'
+    }).afterClosed().subscribe((accept: boolean) => {
+      if (accept) {
+        this.loadingService.register('customer');
+        this.customersService.delete(this.customer.id).subscribe(response => {
+          this.loadingService.resolve('customer');
+          this.customer.id = null;
+          this.cancel();
+        });
+      }
+    });
+  }
+```
+
+* add navigation functions like `cancel()`, `viewCustomer()`
+
+```typescript 
+  cancel() {
+    if (this.customer.id) {
+      this.router.navigate(['/customers', this.customer.id]);
+    } else {
+      this.router.navigateByUrl('/customers');
+    }
+  }
+
+  private viewCustomer(id: number) {
+    this.router.navigate(['/customers', id]);
+  }
+```
 
 ```html
 <button mat-fab class="mat-fab-bottom-right fixed mat-accent mat-fab" routerLink="/customers/create">
