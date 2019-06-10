@@ -94,6 +94,45 @@ $ ng generate component customerForm
 ```
 
 ```html
+<form *ngIf="customer" #form="ngForm" (ngSubmit)="save()">
+  <mat-card>
+    <mat-card-header>Edit Customer</mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <input name="customer" mdInput placeholder="Customer Name" 
+               [(ngModel)]="customer.name" required #name="ngModel">
+        <mat-error *ngIf="name.touched && name.invalid">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input name="email" mdInput type="email" placeholder="Email" 
+               [(ngModel)]="customer.email" required #email="ngModel">
+        <mat-error *ngIf="email.touched && email.invalid">
+          A valid email is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input name="phone" mdInput type="tel" placeholder="Phone" 
+               [(ngModel)]="customer.phone" required phone #phone="ngModel">
+        <mat-error *ngIf="phone.touched && phone.errors?.phone">
+          Not a valid phone number
+        </mat-error>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="button" mat-button (click)="delete()" *ngIf="customer.id">Delete</button>
+      <button type="button" mat-button (click)="cancel()">Cancel</button>
+      <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+
+```
+
+
+
+```html
 <button mat-fab class="mat-fab-bottom-right fixed mat-accent mat-fab" routerLink="/customers/create">
   <mat-icon>add</mat-icon>
 </button>
