@@ -1,7 +1,12 @@
-# Customer
+# Customer Form
 
-This component displays the customer
+This component allows the editing of customer component
 
+##### Create the `customer` Form Component
+
+```
+$ ng generate component customerForm
+```
 
 
 ```html
