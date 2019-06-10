@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatButtonModule, MatCardModule, MatIconModule, MatListModule} from '@angular/material';
 import { CustomersComponent } from './customers/customers.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CustomerComponent } from './customer/customer.component';
 
 // Nebular Modules
 const NB_MODULES = [
@@ -30,7 +31,8 @@ const MAT_MODULES = [
 @NgModule({
   declarations: [
     AppComponent,
-    CustomersComponent
+    CustomersComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
