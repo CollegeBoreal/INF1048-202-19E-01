@@ -76,7 +76,9 @@ const MAT_MODULES = [
 
 * Replace all its content by the below snippet
 
-:warning: You may have noticed that the Angular In Action book uses `<md-list>` instead of `<mat-list>`. This may be due to the usage of `Material Design` in `Covalent`
+:warning: You may have noticed that the Angular In Action book uses `<md-list>` instead of `<mat-list>`. 
+          This is due to the usage of `Material Design` in `Covalent` being old
+          [deprecation-of-md-prefix](https://github.com/angular/components/blob/master/CHANGELOG.md#deprecation-of-md-prefix)
 
 ```html
 <mat-list *ngIf="customers">
