@@ -21,18 +21,23 @@ const NB_MODULES = [
 
 * add the layout header content after `<!-- Insert header here -->` in the `<nb-layout-header>` tag
 
-```html
-    <!-- Insert header here -->
-    <nb-sidebar>
-      <nb-icon icon="activity"></nb-icon>Invoicing
-    </nb-sidebar>
+:warning: Disabling `<nb-sidebar>` since it is preventing mouse events to work
 
-    <nb-sidebar end>
-      <nb-actions size="medium">
-        <nb-action class="control-item">Invoices</nb-action>
-        <nb-action class="control-item">Customers</nb-action>
+```html
+  <nb-layout-header fixed>
+  <!-- Insert header here -->
+    <!--<nb-sidebar >-->
+      <nb-icon icon="activity"></nb-icon>Invoicing
+    <!--</nb-sidebar>-->
+
+    <!--<nb-sidebar end>-->
+      <nb-actions size="medium" fullWidth="false">
+        <nb-action class="control-item" >Invoices</nb-action>
+        <nb-action class="control-item" routerLink="/customers/">Customers</nb-action>
       </nb-actions>
-    </nb-sidebar>
+    <!--</nb-sidebar>-->
+
+  </nb-layout-header>
 ```
 
 * replace the content after  <!--The content below is only a placeholder and can be replaced.--> in the `<nb-layout-column>` tag
@@ -51,16 +56,16 @@ const NB_MODULES = [
 
   <nb-layout-header fixed>
   <!-- Insert header here -->
-    <nb-sidebar>
+    <!--<nb-sidebar >-->
       <nb-icon icon="activity"></nb-icon>Invoicing
-    </nb-sidebar>
+    <!--</nb-sidebar>-->
 
-    <nb-sidebar end>
-      <nb-actions size="medium">
-        <nb-action class="control-item">Invoices</nb-action>
-        <nb-action class="control-item">Customers</nb-action>
+    <!--<nb-sidebar end>-->
+      <nb-actions size="medium" fullWidth="false">
+        <nb-action class="control-item" >Invoices</nb-action>
+        <nb-action class="control-item" routerLink="/customers/">Customers</nb-action>
       </nb-actions>
-    </nb-sidebar>
+    <!--</nb-sidebar>-->
 
   </nb-layout-header>
 
