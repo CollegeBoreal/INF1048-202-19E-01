@@ -33,7 +33,7 @@ const NB_MODULES = [
     <!--<nb-sidebar end>-->
       <nb-actions size="medium" fullWidth="false">
         <nb-action class="control-item" >Invoices</nb-action>
-        <nb-action class="control-item" routerLink="/customers/">Customers</nb-action>
+        <nb-action class="control-item" >Customers</nb-action>
       </nb-actions>
     <!--</nb-sidebar>-->
 
@@ -63,7 +63,7 @@ const NB_MODULES = [
     <!--<nb-sidebar end>-->
       <nb-actions size="medium" fullWidth="false">
         <nb-action class="control-item" >Invoices</nb-action>
-        <nb-action class="control-item" routerLink="/customers/">Customers</nb-action>
+        <nb-action class="control-item" >Customers</nb-action>
       </nb-actions>
     <!--</nb-sidebar>-->
 
