@@ -225,6 +225,19 @@ export class CustomerFormComponent implements OnInit {
 </form>
 ```
 
+* Edit the `customer-form.component.ts` stylesheet file
+
+
+```css
+:host {
+  padding: 1.25rem;
+}
+
+input, mat-form-field {
+  width: 100%;
+}
+```
+
 
 
 ```html
