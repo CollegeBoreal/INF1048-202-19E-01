@@ -23,6 +23,7 @@ import {AppComponent} from './app.component';
 import {CustomersComponent} from './customers/customers.component';
 import {CustomerComponent} from './customer/customer.component';
 import {CustomerFormComponent} from './customer-form/customer-form.component';
+import { PhoneDirective } from './validators/phone.directive';
 
 // Nebular Modules
 const NB_MODULES = [
@@ -56,7 +57,8 @@ const FORM_MODULES = [
     AppComponent,
     CustomersComponent,
     CustomerComponent,
-    CustomerFormComponent
+    CustomerFormComponent,
+    PhoneDirective
   ],
   imports: [
     BrowserModule,

@@ -17,9 +17,9 @@
         </mat-error>
       </mat-form-field>
       <mat-form-field>
-        <input name="phone" matInput type="tel" placeholder="Phone"
+        <input name="phone" matInput type="tel" placeholder="Phone" appPhoneValidation
                [(ngModel)]="customer.phone" required  #phone="ngModel">
-        <!--<mat-error *ngIf="phone.touched && phone.errors.required">-->
+        <!--<mat-error *ngIf="phone.touched && phone.errors?.required">-->
         <mat-error *ngIf="phone.touched">
           Not a valid phone number
         </mat-error>
