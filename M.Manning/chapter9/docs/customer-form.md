@@ -22,9 +22,10 @@ $ ng generate component customerForm
 ```typescript 
   constructor(
     private router: Router,
-    // private dialogService: TdDialogService,
+    private dialogService: NbDialogService,
     private customersService: CustomersService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute) {
+  }
 ```typescript 
 
 
