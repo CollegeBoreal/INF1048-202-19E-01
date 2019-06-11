@@ -35,23 +35,35 @@ const MAT_MODULES = [
 * Final Result
 
 ```typescript 
-import { BrowserModule } from '@angular/platform-browser';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import {NbThemeModule, NbLayoutModule, NbActionsModule, NbSidebarModule, NbIconModule} from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { AppRoutingModule } from './app-routing.module';
-import {MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatListModule} from '@angular/material';
+import {BrowserModule} from '@angular/platform-browser';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule} from '@angular/core';
+import {
+  NbThemeModule
+  , NbLayoutModule
+  , NbActionsModule
+  , NbSidebarModule
+  , NbIconModule
+} from '@nebular/theme';
+import {NbEvaIconsModule} from '@nebular/eva-icons';
+import {AppRoutingModule} from './app-routing.module';
+import {
+  MatButtonModule
+  , MatCardModule
+  , MatFormFieldModule
+  , MatIconModule
+  , MatListModule
+} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import { AppComponent } from './app.component';
-import { CustomersComponent } from './customers/customers.component';
-import { CustomerComponent } from './customer/customer.component';
-import { CustomerFormComponent } from './customer-form/customer-form.component';
+import {AppComponent} from './app.component';
+import {CustomersComponent} from './customers/customers.component';
+import {CustomerComponent} from './customer/customer.component';
+import {CustomerFormComponent} from './customer-form/customer-form.component';
 
 // Nebular Modules
 const NB_MODULES = [
-  NbThemeModule.forRoot({ name: 'default' }),
+  NbThemeModule.forRoot({name: 'default'}),
   NbEvaIconsModule,
   NbIconModule,
   NbLayoutModule,
@@ -93,8 +105,8 @@ const FORM_MODULES = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
-
+export class AppModule {
+}
 ```
 
 [:fast_forward: Next ](customer-forms.md)
