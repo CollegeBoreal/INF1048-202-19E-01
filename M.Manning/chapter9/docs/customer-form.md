@@ -238,11 +238,6 @@ input, mat-form-field {
 }
 ```
 
+[:fast_forward: Next ](customer-form-validation.md)
 
-
-```html
-<button mat-fab class="mat-fab-bottom-right fixed mat-accent mat-fab" routerLink="/customers/create">
-  <mat-icon>add</mat-icon>
-</button>
-```
 
