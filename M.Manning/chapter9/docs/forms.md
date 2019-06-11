@@ -32,7 +32,7 @@ const MAT_MODULES = [
   ],
 ```
 
-* Final Result
+* Full Script Final Result
 
 ```typescript 
 import {BrowserModule} from '@angular/platform-browser';
