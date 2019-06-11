@@ -18,7 +18,9 @@ const FORM_MODULES = [
 // Material Modules
 const MAT_MODULES = [
      <previous modules>
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatInputModule
+
 ];
 ```
 
