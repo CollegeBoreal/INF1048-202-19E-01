@@ -103,6 +103,19 @@ const routes: Routes = [
 ];
 ```
 
+* Edit the `app.component.html` file and add the below route link
+
+```html
+routerLink="/customers/"
+```
+
+to the `customers` action
+
+```html
+     <nb-action class="control-item" routerLink="/customers/">Customers</nb-action>
+```
+
+
 ### You should see this
 
 ![image](../images/customers.png)
