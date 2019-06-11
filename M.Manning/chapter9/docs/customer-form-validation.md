@@ -24,6 +24,29 @@ export function PhoneValidator(): ValidatorFn {
 ```
 
 
+```typescript
+  selector: '[phone][ngModel]',
+```
+
+```typescript
+  providers: [{ provide: NG_VALIDATORS, useExisting: PhoneDirective, multi: true }]
+```
+
+```typescript
+  private validator = PhoneValidator();
+```
+
+```typescript
+   implements Validator
+```
+
+```typescript
+  validate(control: AbstractControl): { [key: string]: any } {
+    return this.validator(control);
+  }
+```
+
+
 
 
 ##### Edit `customers.component.html`
