@@ -8,6 +8,18 @@ This component allows the editing of customer component
 $ ng generate component customerForm
 ```
 
+##### Edit the `app-routing.module.ts` and add the `CustomerFormComponent` form to the `routes` constant
+
+```typescript
+const routes: Routes = [
+  { path: 'customers', component: CustomersComponent },
+  { path: 'customers/:customerId', component: CustomerComponent },
+  { path: 'customers/:customerId/edit', component: CustomerFormComponent },
+  { path: 'customers/create', component: CustomerFormComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/customers' },
+];
+```
+
 ##### Edit the `customer` Form Controller `customer-form.component.ts`
 
 
