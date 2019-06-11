@@ -174,7 +174,7 @@ export class CustomerFormComponent implements OnInit {
 }
 ```
 
-
+* Edit the `customer-form.component.html` template file
 
 ```html
 <form *ngIf="customer" #form="ngForm" (ngSubmit)="save()">
@@ -198,7 +198,8 @@ export class CustomerFormComponent implements OnInit {
       <mat-form-field>
         <input name="phone" mdInput type="tel" placeholder="Phone" 
                [(ngModel)]="customer.phone" required phone #phone="ngModel">
-        <mat-error *ngIf="phone.touched && phone.errors?.phone">
+        <!--<mat-error *ngIf="phone.touched && phone.errors.required">-->
+        <mat-error *ngIf="phone.touched">
           Not a valid phone number
         </mat-error>
       </mat-form-field>
