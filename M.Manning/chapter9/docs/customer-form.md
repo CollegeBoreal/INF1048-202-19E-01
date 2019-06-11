@@ -8,7 +8,7 @@ This component allows the editing of customer component
 $ ng generate component customerForm
 ```
 
-##### Edit the `app-routing.module.ts` and add the `CustomerFormComponent` form to the `routes` constant
+##### Edit the `app-routing.module.ts` and add the `CustomerFormComponent` form by replacing the `routes` constant by the below snippet
 
 ```typescript
 const routes: Routes = [
