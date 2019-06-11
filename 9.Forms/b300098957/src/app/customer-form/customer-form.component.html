@@ -2,24 +2,28 @@
   <mat-card>
     <mat-card-header>Edit Customer</mat-card-header>
     <mat-card-content>
-      <mat-input-container>
-        <input name="customer" mdInput placeholder="Customer Name" [(ngModel)]="customer.name" required #name="ngModel">
+      <mat-form-field>
+        <input name="customer" matInput placeholder="Customer Name"
+               [(ngModel)]="customer.name" required #name="ngModel">
         <mat-error *ngIf="name.touched && name.invalid">
           Name is required
         </mat-error>
-      </mat-input-container>
-      <mat-input-container>
-        <input name="email" mdInput type="email" placeholder="Email" [(ngModel)]="customer.email" required #email="ngModel">
+      </mat-form-field>
+      <mat-form-field>
+        <input name="email" matInput type="email" placeholder="Email"
+               [(ngModel)]="customer.email" required #email="ngModel">
         <mat-error *ngIf="email.touched && email.invalid">
           A valid email is required
         </mat-error>
-      </mat-input-container>
-      <mat-input-container>
-        <input name="phone" mdInput type="tel" placeholder="Phone" [(ngModel)]="customer.phone" required phone #phone="ngModel">
-        <mat-error *ngIf="phone.touched && phone.errors?.phone">
+      </mat-form-field>
+      <mat-form-field>
+        <input name="phone" matInput type="tel" placeholder="Phone"
+               [(ngModel)]="customer.phone" required  #phone="ngModel">
+        <!--<mat-error *ngIf="phone.touched && phone.errors.required">-->
+        <mat-error *ngIf="phone.touched">
           Not a valid phone number
         </mat-error>
-      </mat-input-container>
+      </mat-form-field>
     </mat-card-content>
     <mat-card-actions>
       <button type="button" mat-button (click)="delete()" *ngIf="customer.id">Delete</button>
