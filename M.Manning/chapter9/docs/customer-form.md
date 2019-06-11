@@ -194,22 +194,22 @@ export class CustomerFormComponent implements OnInit {
     <mat-card-header>Edit Customer</mat-card-header>
     <mat-card-content>
       <mat-form-field>
-        <input name="customer" mdInput placeholder="Customer Name" 
+        <input name="customer" matInput placeholder="Customer Name"
                [(ngModel)]="customer.name" required #name="ngModel">
         <mat-error *ngIf="name.touched && name.invalid">
           Name is required
         </mat-error>
       </mat-form-field>
       <mat-form-field>
-        <input name="email" mdInput type="email" placeholder="Email" 
+        <input name="email" matInput type="email" placeholder="Email"
                [(ngModel)]="customer.email" required #email="ngModel">
         <mat-error *ngIf="email.touched && email.invalid">
           A valid email is required
         </mat-error>
       </mat-form-field>
       <mat-form-field>
-        <input name="phone" mdInput type="tel" placeholder="Phone" 
-               [(ngModel)]="customer.phone" required phone #phone="ngModel">
+        <input name="phone" matInput type="tel" placeholder="Phone"
+               [(ngModel)]="customer.phone" required  #phone="ngModel">
         <!--<mat-error *ngIf="phone.touched && phone.errors.required">-->
         <mat-error *ngIf="phone.touched">
           Not a valid phone number
@@ -223,7 +223,6 @@ export class CustomerFormComponent implements OnInit {
     </mat-card-actions>
   </mat-card>
 </form>
-
 ```
 
 
