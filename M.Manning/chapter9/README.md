@@ -3,7 +3,7 @@
 * Create a new project with your :id: (i.e. b30000000 )
 
  ``` 
- $ ng new <ID> && cd <ID>
+ $ ng new <ID> --style=scss && cd <ID>
  ```
 
 * When asked answer as below:
