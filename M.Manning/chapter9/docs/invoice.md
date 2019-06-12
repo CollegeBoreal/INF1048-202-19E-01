@@ -129,7 +129,6 @@ export class InvoiceComponent implements OnInit {
       <p mat-line>Customer</p>
     </mat-list-item>
   </mat-list>
-  <button mat-fab class="mat-fab-bottom-right fixed mat-accent mat-fab" routerLink="/invoices/{{invoice?.id}}/edit"><mat-icon>mode_edit</mat-icon></button>
 ```
 
 
