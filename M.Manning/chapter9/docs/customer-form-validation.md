@@ -25,7 +25,7 @@ export function PhoneValidator(): ValidatorFn {
 
 
 ```typescript
-  selector: '[phone][ngModel]',
+  selector: '[appPhoneValidation]',
 ```
 
 ```typescript
@@ -54,7 +54,7 @@ import {AbstractControl, NG_VALIDATORS, Validator} from '@angular/forms';
 import {PhoneValidator} from './phone.validator';
 
 @Directive({
-  selector: '[phone][ngModel]',
+  selector: '[appPhoneValidation]',
   providers: [{ provide: NG_VALIDATORS, useExisting: PhoneDirective, multi: true }]
 })
 export class PhoneDirective implements Validator {
