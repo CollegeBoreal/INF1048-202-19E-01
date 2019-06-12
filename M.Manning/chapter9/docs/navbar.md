@@ -23,6 +23,7 @@ const NB_MODULES = [
 // Material Modules
 const MAT_MODULES = [
   MatIconModule,
+]
 ```
 
 #### Edit `app.component.html` file
