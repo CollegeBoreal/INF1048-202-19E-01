@@ -81,7 +81,11 @@ export interface Query {
 $  ng generate service services/Rest
 ```
 
-* Final Rest Service Result when editing `rest.service.ts`
+* Replace Rest Service Code by opening `rest.service.ts` and changing all its content with:
+
+`^a` select all its content
+
+`^v` paste
 
 ```typescript
 import {Inject, Injectable} from '@angular/core';

@@ -42,21 +42,45 @@ const routes: Routes = [
     private router: Router,
     private route: ActivatedRoute) {
   }
-```typescript 
+``` 
 
 
 * change its `nbOnInit()` function
 
 ```typescript 
   ngOnInit() {
-    this.route.params.map((params: Params) => params.customerId).subscribe(customerId => {
-      if (customerId) {
-        this.customersService.get<Customer>(customerId).subscribe(customer => {
-          this.customer = customer;
+    this.invoiceForm = this.formBuilder.group({
+      id: [''],
+      service: ['', Validators.required],
+      customerId: ['', Validators.required],
+      rate: ['', Validators.required],
+      hours: ['', [Validators.required]],
+      date: ['', Validators.required],
+      paid: ['']
+    });
+
+    this.customersService.query<Array<Customer>>().subscribe(customers => {
+      this.customers = customers;
+    });
+
+    this.route.params.pipe(
+      map((params: Params) => params.invoiceId)
+    ).subscribe(invoiceId => {
+      if (invoiceId) {
+        this.invoicesService.get<Invoice>(invoiceId).subscribe(invoice => {
+          this.invoiceForm.setValue(invoice);
+          this.invoice = invoice;
         });
       } else {
-        this.customer = new Customer();
+        this.invoice = new Invoice();
       }
+    });
+
+    combineLatest(
+      this.invoiceForm.get('rate').valueChanges,
+      this.invoiceForm.get('hours').valueChanges
+    ).subscribe(([rate = 0, hours = 0]) => {
+      this.total = rate * hours;
     });
   }
 ```
@@ -65,34 +89,34 @@ const routes: Routes = [
 
 ```typescript 
   save() {
-    if (this.customer.id) {
-      this.customersService.update<Customer>(this.customer.id, this.customer).subscribe(response => {
-        this.viewCustomer(response.id);
+    if (this.invoice.id) {
+      this.invoicesService.update<Invoice>(this.invoice.id, this.invoiceForm.value).subscribe(response => {
+        this.viewInvoice(response.id);
       });
     } else {
-      this.customersService.create<Customer>(this.customer).subscribe(response => {
-        this.viewCustomer(response.id);
+      this.invoicesService.create<Invoice>(this.invoiceForm.value).subscribe(response => {
+        this.viewInvoice(response.id);
       });
     }
   }
 
   delete() {
-  /*
+/*
     this.dialogService.openConfirm({
-      message: 'Are you sure you want to delete this customer?',
+      message: 'Are you sure you want to delete this invoice?',
       title: 'Confirm',
       acceptButton: 'Delete'
     }).afterClosed().subscribe((accept: boolean) => {
       if (accept) {
-        this.loadingService.register('customer');
-        this.customersService.delete(this.customer.id).subscribe(response => {
-          this.loadingService.resolve('customer');
-          this.customer.id = null;
+        this.loadingService.register('invoice');
+        this.invoicesService.delete(this.invoice.id).subscribe(response => {
+          this.loadingService.resolve('invoice');
+          this.invoice.id = null;
           this.cancel();
         });
       }
     });
-    */
+*/
   }
 ```
 
@@ -100,74 +124,109 @@ const routes: Routes = [
 
 ```typescript 
   cancel() {
-    if (this.customer.id) {
-      this.router.navigate(['/customers', this.customer.id]);
+    if (this.invoice.id) {
+      this.router.navigate(['/invoices', this.invoice.id]);
     } else {
-      this.router.navigateByUrl('/customers');
+      this.router.navigateByUrl('/invoices');
     }
   }
 
-  private viewCustomer(id: number) {
-    this.router.navigate(['/customers', id]);
+  private viewInvoice(id: number) {
+    this.router.navigate(['/invoices', id]);
   }
 ```
 
 * Final Result
 
 ```typescript
-@Component({
-  selector: 'app-customer-form',
-  templateUrl: './customer-form.component.html',
-  styleUrls: ['./customer-form.component.scss']
-})
-export class CustomerFormComponent implements OnInit {
+import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {CustomersService, InvoicesService, Customer, Invoice} from '../services';
+import {combineLatest} from 'rxjs';
+import {map} from 'rxjs/operators';
 
+@Component({
+  selector: 'app-invoice-form',
+  templateUrl: './invoice-form.component.html',
+  styleUrls: ['./invoice-form.component.scss']
+})
+export class InvoiceFormComponent implements OnInit {
+
+  invoiceForm: FormGroup;
+  invoice: Invoice;
   customer: Customer;
+  customers: Customer[];
+  total = 0;
 
   constructor(
-    private router: Router,
-    private dialogService: NbDialogService,
+    private invoicesService: InvoicesService,
     private customersService: CustomersService,
+    private formBuilder: FormBuilder,
+    private router: Router,
     private route: ActivatedRoute) {
   }
 
   ngOnInit() {
+    this.invoiceForm = this.formBuilder.group({
+      id: [''],
+      service: ['', Validators.required],
+      customerId: ['', Validators.required],
+      rate: ['', Validators.required],
+      hours: ['', [Validators.required]],
+      date: ['', Validators.required],
+      paid: ['']
+    });
+
+    this.customersService.query<Array<Customer>>().subscribe(customers => {
+      this.customers = customers;
+    });
+
     this.route.params.pipe(
-      map((params: Params) => params.customerId)
-    ).subscribe(customerId => {
-      if (customerId) {
-        this.customersService.get<Customer>(customerId)
-          .subscribe(customer => {
-            this.customer = customer;
-          });
+      map((params: Params) => params.invoiceId)
+    ).subscribe(invoiceId => {
+      if (invoiceId) {
+        this.invoicesService.get<Invoice>(invoiceId).subscribe(invoice => {
+          this.invoiceForm.setValue(invoice);
+          this.invoice = invoice;
+        });
       } else {
-        this.customer = new Customer();
+        this.invoice = new Invoice();
       }
+    });
+
+    combineLatest(
+      this.invoiceForm.get('rate').valueChanges,
+      this.invoiceForm.get('hours').valueChanges
+    ).subscribe(([rate = 0, hours = 0]) => {
+      this.total = rate * hours;
     });
   }
 
   save() {
-    if (this.customer.id) {
-      this.customersService.update<Customer>(this.customer.id, this.customer).subscribe(response => {
-        this.viewCustomer(response.id);
+    if (this.invoice.id) {
+      this.invoicesService.update<Invoice>(this.invoice.id, this.invoiceForm.value).subscribe(response => {
+        this.viewInvoice(response.id);
       });
     } else {
-      this.customersService.create<Customer>(this.customer).subscribe(response => {
-        this.viewCustomer(response.id);
+      this.invoicesService.create<Invoice>(this.invoiceForm.value).subscribe(response => {
+        this.viewInvoice(response.id);
       });
     }
   }
 
   delete() {
 /*
-    this.dialogService.open({
-      message: 'Are you sure you want to delete this customer?',
+    this.dialogService.openConfirm({
+      message: 'Are you sure you want to delete this invoice?',
       title: 'Confirm',
       acceptButton: 'Delete'
     }).afterClosed().subscribe((accept: boolean) => {
       if (accept) {
-        this.customersService.delete(this.customer.id).subscribe(response => {
-          this.customer.id = null;
+        this.loadingService.register('invoice');
+        this.invoicesService.delete(this.invoice.id).subscribe(response => {
+          this.loadingService.resolve('invoice');
+          this.invoice.id = null;
           this.cancel();
         });
       }
@@ -176,54 +235,57 @@ export class CustomerFormComponent implements OnInit {
   }
 
   cancel() {
-    if (this.customer.id) {
-      this.router.navigate(['/customers', this.customer.id]);
+    if (this.invoice.id) {
+      this.router.navigate(['/invoices', this.invoice.id]);
     } else {
-      this.router.navigateByUrl('/customers');
+      this.router.navigateByUrl('/invoices');
     }
   }
 
-  private viewCustomer(id: number) {
-    this.router.navigate(['/customers', id]);
+  private viewInvoice(id: number) {
+    this.router.navigate(['/invoices', id]);
   }
 
 }
 ```
 
-* Edit the `customer-form.component.html` template file
+* Edit the `invoice-form.component.html` template file
 
 ```html
-<form *ngIf="customer" #form="ngForm" (ngSubmit)="save()">
+<form *ngIf="invoice" [formGroup]="invoiceForm">     
   <mat-card>
-    <mat-card-header>Edit Customer</mat-card-header>
+    <mat-card-header>Edit Invoice</mat-card-header>
     <mat-card-content>
       <mat-form-field>
-        <input name="customer" matInput placeholder="Customer Name"
-               [(ngModel)]="customer.name" required #name="ngModel">
-        <mat-error *ngIf="name.touched && name.invalid">
-          Name is required
-        </mat-error>
+        <input name="service" matInput type="text" placeholder="Service" formControlName="service">     
       </mat-form-field>
       <mat-form-field>
-        <input name="email" matInput type="email" placeholder="Email"
-               [(ngModel)]="customer.email" required #email="ngModel">
-        <mat-error *ngIf="email.touched && email.invalid">
-          A valid email is required
-        </mat-error>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">     
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      </mat-form-field>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-form-field>
+        <input name="hours" matInput type="number" placeholder="Hours" formControlName="hours">
       </mat-form-field>
       <mat-form-field>
-        <input name="phone" matInput type="tel" placeholder="Phone"
-               [(ngModel)]="customer.phone" required  #phone="ngModel">
-        <!--<mat-error *ngIf="phone.touched && phone.errors.required">-->
-        <mat-error *ngIf="phone.touched">
-          Not a valid phone number
-        </mat-error>
+        <input name="rate" matInput type="number" placeholder="Rate" formControlName="rate">
       </mat-form-field>
+      <div>
+        <mat-select name="customerId" placeholder="Customer" formControlName="customerId">
+          <mat-option [value]="customer.id" *ngFor="let customer of customers">{{customer?.name}}</mat-option>
+        </mat-select>
+      </div>
+      <div class="toggler">
+        <mat-slide-toggle formControlName="paid">Paid</mat-slide-toggle>     
+      </div>
+      <div class="total">
+        Total: {{total | currency:'USD':true:'.2'}}
+      </div>
     </mat-card-content>
     <mat-card-actions>
-      <button type="button" mat-button (click)="delete()" *ngIf="customer.id">Delete</button>
-      <button type="button" mat-button (click)="cancel()">Cancel</button>
-      <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Save</button>
+      <button type="button" mat-button>Delete</button>
+      <button type="button" mat-button>Cancel</button>
+      <button type="submit" mat-raised-button color="primary">Save</button>
     </mat-card-actions>
   </mat-card>
 </form>
@@ -234,13 +296,24 @@ export class CustomerFormComponent implements OnInit {
 
 ```css
 :host {
-  padding: 1.25rem;
+  padding: 20px;
 }
 
-input, mat-form-field {
+input, md-input-container, md-select {
   width: 100%;
+}
+md-card-actions {
+  margin-top: 20px;
+  display: block;
+}
+.toggler {
+  padding-top: 20px;
+}
+.total {
+  padding-top: 20px;
+  text-align: right;
 }
 ```
 
-[:fast_forward: Next ](customer-form-validation.md)
+[:fast_forward: Next ](invoice-form-validation.md)
 
