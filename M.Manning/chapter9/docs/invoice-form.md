@@ -42,7 +42,7 @@ const routes: Routes = [
     private router: Router,
     private route: ActivatedRoute) {
   }
-```typescript 
+``` 
 
 
 * change its `nbOnInit()` function
