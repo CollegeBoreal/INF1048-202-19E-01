@@ -14,11 +14,15 @@ import {
   MatButtonModule
   , MatCardModule
   , MatFormFieldModule
-  , MatIconModule, MatInputModule
+  , MatIconModule
+  , MatInputModule
   , MatListModule
+  , MatSelectModule
+  , MatSlideToggleModule
+  , MatDatepickerModule
 } from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {CustomersComponent} from './customers/customers.component';
 import {CustomerComponent} from './customer/customer.component';
@@ -41,17 +45,21 @@ const NB_MODULES = [
 
 // Material Modules
 const MAT_MODULES = [
+  MatIconModule,
   MatButtonModule,
   MatListModule,
-  MatIconModule,
   MatCardModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatDatepickerModule,
+  MatSelectModule,
+  MatSlideToggleModule,
 ];
 
 // Form Modules
 const FORM_MODULES = [
-  FormsModule
+  FormsModule,
+  ReactiveFormsModule
 ];
 
 
@@ -73,7 +81,7 @@ const FORM_MODULES = [
     HttpClientModule,
     ...NB_MODULES,
     ...MAT_MODULES,
-    ...FORM_MODULES
+    ...FORM_MODULES,
   ],
   providers: [],
   bootstrap: [AppComponent]
