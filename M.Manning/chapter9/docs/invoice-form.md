@@ -49,14 +49,38 @@ const routes: Routes = [
 
 ```typescript 
   ngOnInit() {
-    this.route.params.map((params: Params) => params.customerId).subscribe(customerId => {
-      if (customerId) {
-        this.customersService.get<Customer>(customerId).subscribe(customer => {
-          this.customer = customer;
+    this.invoiceForm = this.formBuilder.group({
+      id: [''],
+      service: ['', Validators.required],
+      customerId: ['', Validators.required],
+      rate: ['', Validators.required],
+      hours: ['', [Validators.required]],
+      date: ['', Validators.required],
+      paid: ['']
+    });
+
+    this.customersService.query<Array<Customer>>().subscribe(customers => {
+      this.customers = customers;
+    });
+
+    this.route.params.pipe(
+      map((params: Params) => params.invoiceId)
+    ).subscribe(invoiceId => {
+      if (invoiceId) {
+        this.invoicesService.get<Invoice>(invoiceId).subscribe(invoice => {
+          this.invoiceForm.setValue(invoice);
+          this.invoice = invoice;
         });
       } else {
-        this.customer = new Customer();
+        this.invoice = new Invoice();
       }
+    });
+
+    combineLatest(
+      this.invoiceForm.get('rate').valueChanges,
+      this.invoiceForm.get('hours').valueChanges
+    ).subscribe(([rate = 0, hours = 0]) => {
+      this.total = rate * hours;
     });
   }
 ```
