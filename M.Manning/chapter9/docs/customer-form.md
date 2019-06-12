@@ -264,7 +264,7 @@ export class CustomerFormComponent implements OnInit {
 </form>
 ```
 
-* Edit the `customer-form.component.ts` stylesheet file
+* Edit the `customer-form.component.scss` stylesheet file
 
 
 ```css
