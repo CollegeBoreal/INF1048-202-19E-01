@@ -2,6 +2,45 @@
 
 This component allows the editing of customer component
 
+###### Dealing with `Customer Form` Component
+
+*** ADD `Material Design` Modules used by the template
+
+* Edit `app.module.ts` and add `MatCardModule`, `MatFormFieldModule`, ... to the existing `MAT_MODULES` constant
+
+```typescript
+// Material Modules
+const MAT_MODULES = [
+  --- previous modules ---
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+];
+```
+
+*** ADD `Form` Modules used by the template
+
+* Edit `app.module.ts` and add `FormModule` to the new `FORM_MODULES` constant
+
+```typescript
+// Form Modules
+const FORM_MODULES = [
+  FormsModule
+];
+```
+
+* Edit `app.module.ts` and add the new `FORM_MODULES` to the `@NgModule`'s `imports` metadata
+
+```typescript
+   imports: [
+    --- other modules ---
+    ...NB_MODULES,
+    ...MAT_MODULES,
+    ...FORM_MODULES,
+  ],
+```
+
+
 ##### Create the `customer` Form Component
 
 ```
@@ -38,18 +77,21 @@ const routes: Routes = [
     private customersService: CustomersService,
     private route: ActivatedRoute) {
   }
-```typescript 
+``` 
 
 
 * change its `nbOnInit()` function
 
 ```typescript 
   ngOnInit() {
-    this.route.params.map((params: Params) => params.customerId).subscribe(customerId => {
+    this.route.params.pipe(
+      map((params: Params) => params.customerId)
+    ).subscribe(customerId => {
       if (customerId) {
-        this.customersService.get<Customer>(customerId).subscribe(customer => {
-          this.customer = customer;
-        });
+        this.customersService.get<Customer>(customerId)
+          .subscribe(customer => {
+            this.customer = customer;
+          });
       } else {
         this.customer = new Customer();
       }
@@ -225,7 +267,7 @@ export class CustomerFormComponent implements OnInit {
 </form>
 ```
 
-* Edit the `customer-form.component.ts` stylesheet file
+* Edit the `customer-form.component.scss` stylesheet file
 
 
 ```css
@@ -236,6 +278,16 @@ export class CustomerFormComponent implements OnInit {
 input, mat-form-field {
   width: 100%;
 }
+```
+
+##### Connect the Edit Button
+
+* Edit the `customer.component.html` template file and add the below snippet
+
+```html
+<button mat-fab class="mat-fab-bottom-right fixed mat-accent mat-fab" 
+        routerLink="/customers/{{customer?.id}}/edit"><mat-icon>mode_edit</mat-icon>
+</button>
 ```
 
 [:fast_forward: Next ](customer-form-validation.md)

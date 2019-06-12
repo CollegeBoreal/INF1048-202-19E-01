@@ -23,22 +23,33 @@ export function PhoneValidator(): ValidatorFn {
 }
 ```
 
+##### Add the Phone Validator to the Directive
+
+* Edit the `phone.directive.ts` file and change its selector
 
 ```typescript
-  selector: '[phone][ngModel]',
+  selector: '[appPhoneValidation]',
 ```
+
+* Add the below `providers:` field to the `@Directive` decorator  
 
 ```typescript
   providers: [{ provide: NG_VALIDATORS, useExisting: PhoneDirective, multi: true }]
 ```
 
+* Add the below local variable
+
 ```typescript
   private validator = PhoneValidator();
 ```
 
+* Add the below `Validator` Class implementation to the `PhoneDirective` class
+
 ```typescript
    implements Validator
 ```
+
+* Add the below `Validate` function
 
 ```typescript
   validate(control: AbstractControl): { [key: string]: any } {
@@ -54,7 +65,7 @@ import {AbstractControl, NG_VALIDATORS, Validator} from '@angular/forms';
 import {PhoneValidator} from './phone.validator';
 
 @Directive({
-  selector: '[phone][ngModel]',
+  selector: '[appPhoneValidation]',
   providers: [{ provide: NG_VALIDATORS, useExisting: PhoneDirective, multi: true }]
 })
 export class PhoneDirective implements Validator {
@@ -70,6 +81,19 @@ export class PhoneDirective implements Validator {
 }
 ```
 
+##### Add the Phone Validator Directive to the customer form component
+
+* Edit the `customer-form.component.html` file and replace its phone `<input>` field
+
+```
+      <mat-form-field>
+        <input name="phone" matInput type="tel" placeholder="Phone" appPhoneValidation
+               [(ngModel)]="customer.phone" required  #phone="ngModel">
+        <mat-error *ngIf="phone.touched && phone.errors?.required">
+          Not a valid phone number
+        </mat-error>
+      </mat-form-field>
+```
 
 
 ##### Edit `customers.component.html`
