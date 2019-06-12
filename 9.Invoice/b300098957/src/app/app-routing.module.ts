@@ -5,6 +5,7 @@ import {CustomersComponent} from './customers/customers.component';
 import {CustomerComponent} from './customer/customer.component';
 import {CustomerFormComponent} from './customer-form/customer-form.component';
 import {InvoicesComponent} from './invoices/invoices.component';
+import {InvoiceComponent} from './invoice/invoice.component';
 
 const routes: Routes = [
   { path: 'customers', component: CustomersComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'customers/:customerId/edit', component: CustomerFormComponent },
   { path: 'customers/create', component: CustomerFormComponent },
   { path: 'invoices', component: InvoicesComponent },
+  { path: 'invoices/:invoiceId', component: InvoiceComponent },
   { path: '', pathMatch: 'full', redirectTo: '/invoices' },
 ];
 
