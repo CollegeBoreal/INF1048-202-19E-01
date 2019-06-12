@@ -71,7 +71,7 @@ const MAT_MODULES = [
 
 ```typescript
   imports: [
-     ... previous lines
+     --- previous lines ---
      ...MAT_MODULES,
   ]
 ```
