@@ -6,14 +6,15 @@ This component allows the editing of customer component
 
 *** ADD `Material Design` Modules used by the template
 
-* Edit `app.module.ts` and add `MatCardModule`, `MatFormFieldModule` to the existing `MAT_MODULES` constant
+* Edit `app.module.ts` and add `MatCardModule`, `MatFormFieldModule`, ... to the existing `MAT_MODULES` constant
 
 ```typescript
 // Material Modules
 const MAT_MODULES = [
   --- previous modules ---
   MatCardModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatInputModule,
 ];
 ```
 
