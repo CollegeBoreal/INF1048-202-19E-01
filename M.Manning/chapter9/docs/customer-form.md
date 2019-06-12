@@ -285,7 +285,9 @@ input, mat-form-field {
 * Edit the `customer.component.html` template file and add the below snippet
 
 ```html
-<button mat-fab class="mat-fab-bottom-right fixed mat-accent mat-fab" routerLink="/customers/{{customer?.id}}/edit"><mat-icon>mode_edit</mat-icon></button>
+<button mat-fab class="mat-fab-bottom-right fixed mat-accent mat-fab" 
+        routerLink="/customers/{{customer?.id}}/edit"><mat-icon>mode_edit</mat-icon>
+</button>
 ```
 
 [:fast_forward: Next ](customer-form-validation.md)
