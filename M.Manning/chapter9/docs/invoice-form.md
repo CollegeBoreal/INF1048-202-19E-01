@@ -2,6 +2,20 @@
 
 This component allows the editing of invoice component
 
+##### Install hammer JS [Gesture Support](https://material.angular.io/guide/getting-started#step-5-gesture-support)
+
+* Install the library
+
+```
+$ npm install hammerjs --save
+```
+
+* import the library by editing  `main.ts` file and adding the below import:
+
+```typescript
+import 'hammerjs';
+```
+
 ##### Create the `invoice` Form Component
 
 ```
