@@ -18,6 +18,30 @@ const MAT_MODULES = [
 ];
 ```
 
+*** ADD `Form` Modules used by the template
+
+* Edit `app.module.ts` and add `FormModule` to the new `FORM_MODULES` constant
+
+```typescript
+// Form Modules
+const FORM_MODULES = [
+  FormsModule,
+  ReactiveFormsModule
+];
+```
+
+* Edit `app.module.ts` and add the new `FORM_MODULES` to the `@NgModule`'s `imports` metadata
+
+```typescript
+   imports: [
+    --- other modules ---
+    ...NB_MODULES,
+    ...MAT_MODULES,
+    ...FORM_MODULES,
+  ],
+```
+
+
 ##### Create the `customer` Form Component
 
 ```
