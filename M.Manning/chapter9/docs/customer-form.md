@@ -38,7 +38,7 @@ const routes: Routes = [
     private customersService: CustomersService,
     private route: ActivatedRoute) {
   }
-```typescript 
+``` 
 
 
 * change its `nbOnInit()` function
