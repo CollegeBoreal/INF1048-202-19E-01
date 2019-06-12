@@ -296,13 +296,24 @@ export class InvoiceFormComponent implements OnInit {
 
 ```css
 :host {
-  padding: 1.25rem;
+  padding: 20px;
 }
 
-input, mat-form-field {
+input, md-input-container, md-select {
   width: 100%;
+}
+md-card-actions {
+  margin-top: 20px;
+  display: block;
+}
+.toggler {
+  padding-top: 20px;
+}
+.total {
+  padding-top: 20px;
+  text-align: right;
 }
 ```
 
-[:fast_forward: Next ](customer-form-validation.md)
+[:fast_forward: Next ](invoice-form-validation.md)
 
