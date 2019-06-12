@@ -1,0 +1,31 @@
+<nb-layout>
+
+  <nb-layout-header fixed>
+    <!-- Insert header here -->
+    <!--<nb-sidebar >-->
+    <mat-icon>attach_money</mat-icon>Invoicing
+    <!--</nb-sidebar>-->
+
+    <nb-sidebar end>
+      <nb-actions size="medium" fullWidth="false">
+        <nb-action class="control-item" >Invoices</nb-action>
+        <nb-action class="control-item" >Customers</nb-action>
+      </nb-actions>
+    </nb-sidebar>
+
+  </nb-layout-header>
+
+  <nb-layout-column>
+
+    <!--The content below is only a placeholder and can be replaced.-->
+    <router-outlet></router-outlet>
+
+    
+    
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+  <!-- Insert footer here -->
+  </nb-layout-footer>
+
+</nb-layout>
