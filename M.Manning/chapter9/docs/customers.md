@@ -58,7 +58,7 @@ export class CustomersComponent implements OnInit {
 }
 ```
 
-###### Edit the `customers.component.html`
+###### Dealing with `Customers` Component
 
 *** ADD `Material Design` Modules used by the template
 
@@ -74,7 +74,7 @@ const MAT_MODULES = [
 ```
 
 
-* Replace all its content by the below snippet
+* Edit the `customers.component.html` by replacing all its content by the below snippet
 
 :warning: You may have noticed that the Angular In Action book uses `<md-list>` instead of `<mat-list>`. 
           This is due to the usage of `Material Design` in `Covalent` being old
