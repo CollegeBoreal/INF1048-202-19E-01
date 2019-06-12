@@ -17,6 +17,15 @@ const NB_MODULES = [
 ];
 ```
 
+* also add `MatIconModule` to the existing `MAT_MODULES` constant
+
+```typescript
+// Material Modules
+const MAT_MODULES = [
+  MatIconModule,
+]
+```
+
 #### Edit `app.component.html` file
 
 * add the layout header content after `<!-- Insert header here -->` in the `<nb-layout-header>` tag

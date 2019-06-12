@@ -22,19 +22,24 @@ const routes: Routes = [
 ##### Edit the `invoice` Form Controller `invoice-form.component.ts`
 
 
-* add the invoice local variable
+* add the invoice local variables
 
 ```typescript 
+  invoiceForm: FormGroup;
+  invoice: Invoice;
   customer: Customer;
+  customers: Customer[];
+  total = 0;
 ```
 
 * change its constructor
 
 ```typescript 
   constructor(
-    private router: Router,
-    private dialogService: NbDialogService,
+    private invoicesService: InvoicesService,
     private customersService: CustomersService,
+    private formBuilder: FormBuilder,
+    private router: Router,
     private route: ActivatedRoute) {
   }
 ```typescript 

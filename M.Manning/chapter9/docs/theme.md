@@ -47,11 +47,13 @@ const NB_MODULES = [
 ]
 ```
 
- 2) add NB_MODULES to the imports metadata
+ 2) add NB_MODULES to the `@NgModule`'s `imports:` metadata
+ 
+ :warning: the 3 dots are required `...NB_MODULES`
 
 ```typescript
   imports: [
-     ... previous lines
+     --- previous lines ---
      ...NB_MODULES,
   ]
 ```
@@ -69,7 +71,7 @@ const MAT_MODULES = [
 
 ```typescript
   imports: [
-     ... previous lines
+     --- previous lines ---
      ...MAT_MODULES,
   ]
 ```
