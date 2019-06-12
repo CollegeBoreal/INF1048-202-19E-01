@@ -128,6 +128,6 @@ to the `customers` action
 
 ### You should see this
 
-![image](../images/customers.png)
+![image](../images/invoices.png)
 
 [:fast_forward: Next ](invoice.md)
