@@ -23,19 +23,21 @@ const NB_MODULES = [
 
 :warning: Disabling `<nb-sidebar>` since it is preventing mouse events to work
 
+:x: Adding `<mat-icon>` mixed with `nebular` allows the use of `<nb-sidebar>` without mouse issue
+
 ```html
   <nb-layout-header fixed>
   <!-- Insert header here -->
     <!--<nb-sidebar >-->
-      <nb-icon icon="activity"></nb-icon>Invoicing
+    <mat-icon>attach_money</mat-icon>Invoicing
     <!--</nb-sidebar>-->
 
-    <!--<nb-sidebar end>-->
+    <nb-sidebar end>
       <nb-actions size="medium" fullWidth="false">
         <nb-action class="control-item" >Invoices</nb-action>
         <nb-action class="control-item" >Customers</nb-action>
       </nb-actions>
-    <!--</nb-sidebar>-->
+    </nb-sidebar>
 
   </nb-layout-header>
 ```
