@@ -25,8 +25,7 @@ const MAT_MODULES = [
 ```typescript
 // Form Modules
 const FORM_MODULES = [
-  FormsModule,
-  ReactiveFormsModule
+  FormsModule
 ];
 ```
 
