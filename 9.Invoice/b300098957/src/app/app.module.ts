@@ -19,7 +19,7 @@ import {
   , MatListModule
   , MatSelectModule
   , MatSlideToggleModule
-  , MatDatepickerModule
+  , MatDatepickerModule, MatNativeDateModule
 } from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -54,6 +54,7 @@ const MAT_MODULES = [
   MatDatepickerModule,
   MatSelectModule,
   MatSlideToggleModule,
+  MatNativeDateModule
 ];
 
 // Form Modules
