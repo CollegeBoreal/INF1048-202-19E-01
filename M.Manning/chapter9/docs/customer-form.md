@@ -2,6 +2,21 @@
 
 This component allows the editing of customer component
 
+###### Dealing with `Customer Form` Component
+
+*** ADD `Material Design` Modules used by the template
+
+* Edit `app.module.ts` and add `MatCardModule`, `MatFormFieldModule` to the existing `MAT_MODULES` constant
+
+```typescript
+// Material Modules
+const MAT_MODULES = [
+  --- previous modules ---
+  MatCardModule,
+  MatFormFieldModule
+];
+```
+
 ##### Create the `customer` Form Component
 
 ```
