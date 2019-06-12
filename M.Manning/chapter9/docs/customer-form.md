@@ -84,11 +84,14 @@ const routes: Routes = [
 
 ```typescript 
   ngOnInit() {
-    this.route.params.map((params: Params) => params.customerId).subscribe(customerId => {
+    this.route.params.pipe(
+      map((params: Params) => params.customerId)
+    ).subscribe(customerId => {
       if (customerId) {
-        this.customersService.get<Customer>(customerId).subscribe(customer => {
-          this.customer = customer;
-        });
+        this.customersService.get<Customer>(customerId)
+          .subscribe(customer => {
+            this.customer = customer;
+          });
       } else {
         this.customer = new Customer();
       }
