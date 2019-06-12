@@ -23,22 +23,33 @@ export function PhoneValidator(): ValidatorFn {
 }
 ```
 
+##### Add the Phone Validator to the Directive
+
+* Edit the `phone.directive.ts` file and change its selector
 
 ```typescript
   selector: '[appPhoneValidation]',
 ```
 
+* Add the below `providers:` field to the `@Directive` decorator  
+
 ```typescript
   providers: [{ provide: NG_VALIDATORS, useExisting: PhoneDirective, multi: true }]
 ```
+
+* Add the below local variable
 
 ```typescript
   private validator = PhoneValidator();
 ```
 
+* Add the below `Validator` Class implementation to the `PhoneDirective` class
+
 ```typescript
    implements Validator
 ```
+
+* Add the below `Validate` function
 
 ```typescript
   validate(control: AbstractControl): { [key: string]: any } {
