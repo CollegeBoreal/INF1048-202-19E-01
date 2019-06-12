@@ -31,3 +31,7 @@ Follow the [Backend](docs/backend.md) Documentation
 #### Create all the `Service` components needed to acceess the  `backend` mock server
 
 Follow the [Service](docs/services.md) Documentation
+
+#### Create all the `Customer` components 
+
+Follow the [Customer](docs/customers.md) Documentation
