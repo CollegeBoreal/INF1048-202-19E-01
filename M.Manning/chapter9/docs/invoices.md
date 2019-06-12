@@ -72,9 +72,9 @@ export class InvoicesComponent implements OnInit {
 ```typescript
 // Material Modules
 const MAT_MODULES = [
+  MatIconModule,
   MatButtonModule,
   MatListModule,
-  MatIconModule,
 ];
 ```
 
