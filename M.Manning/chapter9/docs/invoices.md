@@ -21,7 +21,8 @@ $ ng generate component invoices
 * Edit its `constructor` by addind the `CustomersService` class
 
 ```typescript
-  constructor(private invoicesService: InvoicesService) { }
+  constructor(private invoicesService: InvoicesService) {
+  }
 ```
 
 * Edit its `ngOnInit` function with the below code
@@ -39,15 +40,16 @@ $ ng generate component invoices
 
 ```typescript
 @Component({
-  selector: 'app-customers',
-  templateUrl: './customers.component.html',
-  styleUrls: ['./customers.component.scss']
+  selector: 'app-invoices',
+  templateUrl: './invoices.component.html',
+  styleUrls: ['./invoices.component.scss']
 })
-export class CustomersComponent implements OnInit {
+export class InvoicesComponent implements OnInit {
 
   invoices: Invoice[];
 
-  constructor(private invoicesService: InvoicesService) { }
+  constructor(private invoicesService: InvoicesService) {
+  }
 
   ngOnInit() {
     this.invoicesService.query<Array<Invoice>>({sort: 'created', order: 'desc'})
@@ -55,12 +57,15 @@ export class CustomersComponent implements OnInit {
         this.invoices = invoices;
       });
   }
+
 }
 ```
 
-###### Edit the `customers.component.html`
+##### Invoices Component
 
-*** ADD `Material Design` Modules used by the template
+###### ADD `Material Design` Modules used by the template
+
+:warning: only if it is not already there
 
 * Edit `app.module.ts` and add `MatButtonModule`, `MatListModule` and `MatIconModule` to the existing `MAT_MODULES` constant
 
@@ -72,6 +77,8 @@ const MAT_MODULES = [
   MatIconModule,
 ];
 ```
+
+###### Edit the `invoices.component.html`
 
 
 * Replace all its content by the below snippet
@@ -95,6 +102,9 @@ const MAT_MODULES = [
 #### Routing
 
 * Edit the `app-routing.module.ts` file and add the below route
+
+:warning: keep other routes if you followed the `Customers` path
+
 
 ```typescript
 const routes: Routes = [
