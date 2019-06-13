@@ -52,6 +52,12 @@ export class AppComponent {
 
 * Résultat final
 
+:bookmark:  `Directives` de `Structure de Contrôle` d'Angular
+
+:bookmark: `(1) *ngIf` pour les conditions
+
+:bookmark: `(2) *ngFor` pour les boucles
+
 ```html
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
