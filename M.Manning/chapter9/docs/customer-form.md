@@ -230,7 +230,9 @@ export class CustomerFormComponent implements OnInit {
 
 * Edit the `customer-form.component.html` template file
 
-Binding with `#name`
+Binding with `Template Variable` usually called `#name` 
+
+:warning: `name` can only be used in the template
 
 :bookmark: `ngForm` 
 
