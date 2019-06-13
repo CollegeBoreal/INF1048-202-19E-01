@@ -324,7 +324,7 @@ const MAT_MODULES = [
         <mat-slide-toggle formControlName="paid">Paid</mat-slide-toggle>     
       </div>
       <div class="total">
-        Total: {{total | currency:'USD':true:'.2'}}
+        Total: {{total | currency:'USD':'symbol-narrow':'4.2-2'}}
       </div>
     </mat-card-content>
     <mat-card-actions>
