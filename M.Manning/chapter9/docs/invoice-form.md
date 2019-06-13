@@ -263,7 +263,7 @@ export class InvoiceFormComponent implements OnInit {
 
 ##### Dealing with `InvoiceForm` Component
 
-###### Install hammer JS [Gesture Support](https://material.angular.io/guide/getting-started#step-5-gesture-support)
+###### Install hammer JS [Gesture Support](https://material.angular.io/guide/getting-started#step-5-gesture-support) needed for (mat-slide-toggle, mat-slider, matTooltip)
 
 * Install the library
 
