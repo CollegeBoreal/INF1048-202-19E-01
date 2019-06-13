@@ -11,7 +11,9 @@
 ```
 
    - dans `app.component.html` ajouter la navigation `<nav>` liée `[routerLink]` aux différentes routes
-   
+
+:bookmark: `routerLink` Capturer le lien de routage
+
 ```html
 <nav class="mdl-navigation mdl-layout--large-screen-only">
    <a class="mdl-navigation__link" [routerLink]="['/']">Dashboard</a>
@@ -20,6 +22,9 @@
 ```
 
 * Résultat Final
+
+:bookmark: `router-outlet` Prise murale pour afficher le composant 
+
 
 ```html
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
