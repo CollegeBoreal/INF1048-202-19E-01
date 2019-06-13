@@ -230,6 +230,14 @@ export class CustomerFormComponent implements OnInit {
 
 * Edit the `customer-form.component.html` template file
 
+Binding with `#name`
+
+:bookmark: `ngForm` 
+
+:bookmark: `ngModel` 
+
+:bookmark: `[()]` Two Way Binding or Banana In a Box
+
 ```html
 <form *ngIf="customer" #form="ngForm" (ngSubmit)="save()">
   <mat-card>
