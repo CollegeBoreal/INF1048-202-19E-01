@@ -315,7 +315,9 @@ const MAT_MODULES = [
       </mat-form-field>
       <div>
         <mat-select name="customerId" placeholder="Customer" formControlName="customerId">
-          <mat-option [value]="customer.id" *ngFor="let customer of customers">{{customer?.name}}</mat-option>
+          <mat-option [value]="customer.id" *ngFor="let customer of customers">
+            {{customer?.name}}
+          </mat-option>
         </mat-select>
       </div>
       <div class="toggler">
