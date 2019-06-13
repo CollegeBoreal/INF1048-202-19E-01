@@ -232,13 +232,12 @@ export class CustomerFormComponent implements OnInit {
 
 Binding with [`Template Reference Variable`](https://angular.io/guide/template-syntax#template-reference-variables--var-) usually called `#name` 
 
-:warning: `#name` can only be used in the template not by the controller
+:warning: `#name` `reference` variable can only be used in the template not by the controller
 
-:bookmark: `ngForm` 
+:bookmark: `ngForm` is used to link the `reference` variable to the entire form (i.e. form.invalid)
 
-:bookmark: `ngModel` 
+:bookmark: `ngModel` is used to link the `reference` variable to the `<Input>` form field (i.e. phone.touched)
 
-:bookmark: `[()]` Two Way Binding or Banana In a Box
 
 ```html
 <form *ngIf="customer" #form="ngForm" (ngSubmit)="save()">
