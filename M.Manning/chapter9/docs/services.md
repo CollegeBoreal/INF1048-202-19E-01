@@ -87,7 +87,7 @@ $  ng generate service services/Rest
 
 `^v` paste
 
-:bookmark: `@Injectable`
+:bookmark: `@Injectable` Decorator allowing service injection
 
 ```typescript
 import {Inject, Injectable} from '@angular/core';
