@@ -232,7 +232,7 @@ export class CustomerFormComponent implements OnInit {
 
 Binding with `Template Variable` usually called `#name` 
 
-:warning: `name` can only be used in the template
+:warning: `#name` can only be used in the template not by the controller
 
 :bookmark: `ngForm` 
 
