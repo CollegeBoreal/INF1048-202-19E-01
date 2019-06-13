@@ -338,22 +338,31 @@ const MAT_MODULES = [
 
 * Edit the `invoice-form.component.scss` stylesheet file
 
+:warning: Strange mouse behavior when setting the `mat-form-field`'s width to 100%
+
 
 ```css
 :host {
   padding: 1.25rem;
 }
-
+/*
+Setting the mat-form-filed width to 100%
+prevents some mouse events to occur
+For example, the date picker can't be activated
+ */
 input, mat-form-field, mat-select {
-  width: 100%;
+  width: 80%;
 }
+
 mat-card-actions {
   margin-top: 1.25rem;
   display: block;
 }
+
 .toggler {
   padding-top: 1.25rem;
 }
+
 .total {
   padding-top: 1.25rem;
   text-align: right;
