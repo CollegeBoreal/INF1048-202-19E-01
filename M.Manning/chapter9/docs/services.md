@@ -87,6 +87,8 @@ $  ng generate service services/Rest
 
 `^v` paste
 
+:bookmark: `@Injectable`
+
 ```typescript
 import {Inject, Injectable} from '@angular/core';
 import {Query} from './query';
