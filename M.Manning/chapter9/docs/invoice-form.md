@@ -339,21 +339,21 @@ const MAT_MODULES = [
 
 ```css
 :host {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
-input, md-input-container, md-select {
+input, mat-form-field, mat-select {
   width: 100%;
 }
-md-card-actions {
-  margin-top: 20px;
+mat-card-actions {
+  margin-top: 1.25rem;
   display: block;
 }
 .toggler {
-  padding-top: 20px;
+  padding-top: 1.25rem;
 }
 .total {
-  padding-top: 20px;
+  padding-top: 1.25rem;
   text-align: right;
 }
 ```
