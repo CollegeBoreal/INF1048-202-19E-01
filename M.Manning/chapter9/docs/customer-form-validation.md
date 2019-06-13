@@ -85,14 +85,14 @@ export class PhoneDirective implements Validator {
 
 * Edit the `customer-form.component.html` file and replace its phone `<input>` field
 
-```
-      <mat-form-field>
-        <input name="phone" matInput type="tel" placeholder="Phone" appPhoneValidation
-               [(ngModel)]="customer.phone" required  #phone="ngModel">
-        <mat-error *ngIf="phone.touched && phone.errors?.required">
-          Not a valid phone number
-        </mat-error>
-      </mat-form-field>
+```html
+  <mat-form-field>
+    <input name="phone" matInput type="tel" placeholder="Phone" appPhoneValidation
+           [(ngModel)]="customer.phone" required  #phone="ngModel">
+    <mat-error *ngIf="phone.touched && phone.errors?.required">
+      Not a valid phone number
+    </mat-error>
+  </mat-form-field>
 ```
 
 
