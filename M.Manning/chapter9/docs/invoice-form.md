@@ -8,7 +8,7 @@ This component allows the editing of invoice component
 $ ng generate component invoiceForm
 ```
 
-##### Edit the `app-routing.module.ts` and add the `InvoiceFormComponent` form by adding/replacing the `routes` constant by the below snippet
+###### Edit the `app-routing.module.ts` and add the `InvoiceFormComponent` form by adding/replacing the `routes` constant by the below snippet
 
 ```typescript
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
 ];
 ```
 
-##### Edit the `invoice` Form Controller `invoice-form.component.ts`
+###### Edit the `invoice` Form Controller `invoice-form.component.ts`
 
 
 * add the invoice local variables
@@ -261,9 +261,9 @@ export class InvoiceFormComponent implements OnInit {
 }
 ```
 
-###### Dealing with `InvoiceForm` Component
+##### Dealing with `InvoiceForm` Component
 
-##### Install hammer JS [Gesture Support](https://material.angular.io/guide/getting-started#step-5-gesture-support)
+###### Install hammer JS [Gesture Support](https://material.angular.io/guide/getting-started#step-5-gesture-support)
 
 * Install the library
 
@@ -278,7 +278,7 @@ import 'hammerjs';
 ```
 
 
-##### ADD `Material Design` Modules used by the template
+###### ADD `Material Design` Modules used by the template
 
 * Edit `app.module.ts` and add `MatDatepickerModule`, `MatSelectModule` and `MatSlideToggleModule` to the existing `MAT_MODULES` constant
 
