@@ -230,7 +230,7 @@ export class CustomerFormComponent implements OnInit {
 
 * Edit the `customer-form.component.html` template file
 
-Binding with `Template Variable` usually called `#name` 
+Binding with [`Template Reference Variable`](https://angular.io/guide/template-syntax#template-reference-variables--var-) usually called `#name` 
 
 :warning: `#name` can only be used in the template not by the controller
 
