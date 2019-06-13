@@ -2,20 +2,6 @@
 
 This component allows the editing of invoice component
 
-##### Install hammer JS [Gesture Support](https://material.angular.io/guide/getting-started#step-5-gesture-support)
-
-* Install the library
-
-```
-$ npm install hammerjs --save
-```
-
-* import the library by editing  `main.ts` file and adding the below import:
-
-```typescript
-import 'hammerjs';
-```
-
 ##### Create the `invoice` Form Component
 
 ```
@@ -277,7 +263,22 @@ export class InvoiceFormComponent implements OnInit {
 
 ###### Dealing with `InvoiceForm` Component
 
-*** ADD `Material Design` Modules used by the template
+##### Install hammer JS [Gesture Support](https://material.angular.io/guide/getting-started#step-5-gesture-support)
+
+* Install the library
+
+```
+$ npm install hammerjs --save
+```
+
+* import the library by editing  `main.ts` file and adding the below import:
+
+```typescript
+import 'hammerjs';
+```
+
+
+##### ADD `Material Design` Modules used by the template
 
 * Edit `app.module.ts` and add `MatDatepickerModule`, `MatSelectModule` and `MatSlideToggleModule` to the existing `MAT_MODULES` constant
 
