@@ -45,6 +45,6 @@ Follow the [Customer Form](docs/customer-form.md) Documentation
 
 Follow the [Invoice](docs/invoices.md) Documentation
 
-#### Edit the `Invoice` components using the `Reactive` Forms
+#### Edit the `Invoice` component using the `Reactive` Forms
 
 Follow the [Invoice Form](docs/invoice-form.md) Documentation
