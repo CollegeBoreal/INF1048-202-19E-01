@@ -1,4 +1,39 @@
-```html
+# Form Validation
+
+##### Create a Phone Validator
+
+* Create a `TypeScript` file `src/app/validators/phone.validator.ts` and add the below snippet:
+
+```typescript
+  import { AbstractControl, ValidatorFn } from '@angular/forms';
+
+  export function HoursValidator(control: AbstractControl) : { [key: string]: any } {     
+    return (Number.isInteger(control.value * 4)) ? null : { hours: true };     
+  }
+```
+
+the `HoursValidator` function will be added to the Validators Array qualifying `hours:` field in the `invoiceForm` `FormGroup`
+
+```typescript
+      hours: ['', [Validators.required, HoursValidator]],
+```
+
+* Edit `invoice-form.component.ts` and add the new Validator to the the `invoiceForm` `FormGroup` class variable
+
+
+```typescript
+    this.invoiceForm = this.formBuilder.group({
+      id: [''],
+      service: ['', Validators.required],
+      customerId: ['', Validators.required],
+      rate: ['', Validators.required],
+      hours: ['', [Validators.required, HoursValidator]],
+      date: ['', Validators.required],
+      paid: ['']
+    });
+```
+
+```html 
 <form *ngIf="invoice" [formGroup]="invoiceForm" (ngSubmit)="save()">
   <mat-card>
     <mat-card-header>Edit Invoice</mat-card-header>
