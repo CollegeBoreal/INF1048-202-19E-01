@@ -12,7 +12,14 @@
   }
 ```
 
-* Edit `invoice-form.component.ts` and add the new Validator to the FormGroup object
+the `HoursValidator` function will be added to the Validators Array qualifying `hours:` field in the `invoiceForm` `FormGroup`
+
+```typescript
+      hours: ['', [Validators.required, HoursValidator]],
+```
+
+* Edit `invoice-form.component.ts` and add the new Validator to the the `invoiceForm` `FormGroup` class variable
+
 
 ```typescript
     this.invoiceForm = this.formBuilder.group({
@@ -20,7 +27,7 @@
       service: ['', Validators.required],
       customerId: ['', Validators.required],
       rate: ['', Validators.required],
-      hours: ['', [Validators.required]],
+      hours: ['', [Validators.required, HoursValidator]],
       date: ['', Validators.required],
       paid: ['']
     });
