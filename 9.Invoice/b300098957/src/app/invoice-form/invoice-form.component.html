@@ -1,4 +1,4 @@
-<form *ngIf="invoice" [formGroup]="invoiceForm">     
+<form *ngIf="invoice" [formGroup]="invoiceForm" (ngSubmit)="save()">
   <mat-card>
     <mat-card-header>Edit Invoice</mat-card-header>
     <mat-card-content>
@@ -6,7 +6,7 @@
         <input name="service" matInput type="text" placeholder="Service" formControlName="service">     
       </mat-form-field>
       <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">     
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       </mat-form-field>
       <mat-datepicker #picker></mat-datepicker>
@@ -18,14 +18,16 @@
       </mat-form-field>
       <div>
         <mat-select name="customerId" placeholder="Customer" formControlName="customerId">
-          <mat-option [value]="customer.id" *ngFor="let customer of customers">{{customer?.name}}</mat-option>
+          <mat-option [value]="customer.id" *ngFor="let customer of customers">
+            {{customer?.name}}
+          </mat-option>
         </mat-select>
       </div>
       <div class="toggler">
-        <mat-slide-toggle formControlName="paid">Paid</mat-slide-toggle>     
+        <mat-slide-toggle formControlName="paid">Paid</mat-slide-toggle>
       </div>
       <div class="total">
-        Total: {{total | currency:'USD':true:'.2'}}
+        Total: {{total | currency:'USD':'symbol-narrow':'4.2-2'}}
       </div>
     </mat-card-content>
     <mat-card-actions>
