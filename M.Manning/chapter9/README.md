@@ -32,9 +32,14 @@ Follow the [Backend](docs/backend.md) Documentation
 
 Follow the [Service](docs/services.md) Documentation
 
-#### Create the `Customer` components `Template-Driven` Forms
+#### Create the `Customer` components 
 
 Follow the [Customer](docs/customers.md) Documentation
+
+#### Edit the `Customer` components using the `Template-Driven` Forms
+
+Follow the [Customer Form](docs/customer-form.md) Documentation
+
 
 #### Create the `Invoice` components `Reactive` Forms
 
