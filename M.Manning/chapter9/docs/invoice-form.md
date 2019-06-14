@@ -294,6 +294,17 @@ const MAT_MODULES = [
 
 * Edit the `invoice-form.component.html` template file
 
+Binding with [`Template Reference Variable`](https://angular.io/guide/template-syntax#template-reference-variables--var-) usually called `#name` 
+
+Registering the [control](https://angular.io/guide/reactive-forms#step-3-registering-the-control-in-the-template) in the template 
+
+[Associating the formgroup model and view](https://angular.io/guide/reactive-forms#step-2-associating-the-formgroup-model-and-view)
+
+
+:bookmark: `formGroup` 
+
+:bookmark: `formControlName` 
+
 ```html
 <form *ngIf="invoice" [formGroup]="invoiceForm">     
   <mat-card>
