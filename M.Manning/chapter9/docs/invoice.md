@@ -115,12 +115,12 @@ export class InvoiceComponent implements OnInit {
     </mat-list-item>
     <mat-list-item>
       <mat-icon mat-list-icon>schedule</mat-icon>
-      <h4 mat-line>{{invoice.hours}} hours at {{invoice.rate | currency:'USD':true:'.0'}}</h4>
+      <h4 mat-line>{{invoice.hours}} hours at {{invoice.rate | currency:'USD':'symbol-narrow':'.0'}}</h4>
       <p mat-line>Hours and Rate</p>
     </mat-list-item>
     <mat-list-item>
       <mat-icon mat-list-icon>attach_money</mat-icon>
-      <h4 mat-line>{{invoice.hours * invoice.rate | currency:'USD':true:'.0'}}</h4>
+      <h4 mat-line>{{invoice.hours * invoice.rate | currency:'USD':'symbol-narrow':'4.2-2'}}</h4>
       <p mat-line>Total Invoiced</p>
     </mat-list-item>
     <mat-list-item>
