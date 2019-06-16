@@ -94,41 +94,41 @@ export class InvoiceComponent implements OnInit {
 * It will display the Invoice Component
 
 ```html
-  <mat-list *ngIf="invoice && customer">
-    <h3 mat-subheader>Invoice ID: {{invoice.id}}</h3>
-    <mat-list-item>
-      <mat-icon mat-list-icon *ngIf="invoice.paid">done</mat-icon>
-      <mat-icon mat-list-icon *ngIf="!invoice.paid">clear</mat-icon>
-      <h4 mat-line *ngIf="invoice.paid">Payment Received</h4>
-      <h4 mat-line *ngIf="!invoice.paid">Outstanding</h4>
-      <p mat-line>Payment Status</p>
-    </mat-list-item>
-    <mat-list-item>
-      <mat-icon mat-list-icon>done</mat-icon>
-      <h4 mat-line>{{invoice.service}}</h4>
-      <p mat-line>Service</p>
-    </mat-list-item>
-    <mat-list-item>
-      <mat-icon mat-list-icon>date_range</mat-icon>
-      <h4 mat-line>{{invoice.date | date}}</h4>
-      <p mat-line>Date</p>
-    </mat-list-item>
-    <mat-list-item>
-      <mat-icon mat-list-icon>schedule</mat-icon>
-      <h4 mat-line>{{invoice.hours}} hours at {{invoice.rate | currency:'USD':'symbol-narrow':'.0'}}</h4>
-      <p mat-line>Hours and Rate</p>
-    </mat-list-item>
-    <mat-list-item>
-      <mat-icon mat-list-icon>attach_money</mat-icon>
-      <h4 mat-line>{{invoice.hours * invoice.rate | currency:'USD':'symbol-narrow':'4.2-2'}}</h4>
-      <p mat-line>Total Invoiced</p>
-    </mat-list-item>
-    <mat-list-item>
-      <mat-icon mat-list-icon>perm_identity</mat-icon>
-      <h4 mat-line>{{customer.name}}</h4>
-      <p mat-line>Customer</p>
-    </mat-list-item>
-  </mat-list>
+<mat-list *ngIf="invoice && customer">
+  <h3 mat-subheader>Invoice ID: {{invoice.id}}</h3>
+  <mat-list-item>
+    <mat-icon mat-list-icon *ngIf="invoice.paid">done</mat-icon>
+    <mat-icon mat-list-icon *ngIf="!invoice.paid">clear</mat-icon>
+    <h4 mat-line *ngIf="invoice.paid">Payment Received</h4>
+    <h4 mat-line *ngIf="!invoice.paid">Outstanding</h4>
+    <p mat-line>Payment Status</p>
+  </mat-list-item>
+  <mat-list-item>
+    <mat-icon mat-list-icon>done</mat-icon>
+    <h4 mat-line>{{invoice.service}}</h4>
+    <p mat-line>Service</p>
+  </mat-list-item>
+  <mat-list-item>
+    <mat-icon mat-list-icon>date_range</mat-icon>
+    <h4 mat-line>{{invoice.date | date}}</h4>
+    <p mat-line>Date</p>
+  </mat-list-item>
+  <mat-list-item>
+    <mat-icon mat-list-icon>schedule</mat-icon>
+    <h4 mat-line>{{invoice.hours}} hours at {{invoice.rate | currency:'USD':'symbol-narrow':'.0'}}</h4>
+    <p mat-line>Hours and Rate</p>
+  </mat-list-item>
+  <mat-list-item>
+    <mat-icon mat-list-icon>attach_money</mat-icon>
+    <h4 mat-line>{{invoice.hours * invoice.rate | currency:'USD':'symbol-narrow':'4.2-2'}}</h4>
+    <p mat-line>Total Invoiced</p>
+  </mat-list-item>
+  <mat-list-item>
+    <mat-icon mat-list-icon>perm_identity</mat-icon>
+    <h4 mat-line>{{customer.name}}</h4>
+    <p mat-line>Customer</p>
+  </mat-list-item>
+</mat-list>
 ```
 
 
