@@ -44,8 +44,26 @@ const routes: Routes = [
   }
 ``` 
 
+###### Init Function
+
+the `nbOnInit()` function will 
 
 * change its `nbOnInit()` function
+
+
+
+```typescript
+    this.invoiceForm = this.formBuilder.group({
+      id: [''],
+      service: ['', Validators.required],
+      customerId: ['', Validators.required],
+      rate: ['', Validators.required],
+      hours: ['', [Validators.required]],
+      date: ['', Validators.required],
+      paid: ['']
+    });
+```
+
 
 ```typescript 
   ngOnInit() {
@@ -292,9 +310,30 @@ const MAT_MODULES = [
 ];
 ```
 
-* Edit the `invoice-form.component.html` template file
+###### Reactive Form Scheme
 
-Binding with [`Template Reference Variable`](https://angular.io/guide/template-syntax#template-reference-variables--var-) usually called `#name` 
+* In the `invoice-form.component.ts` Controller the `invoiceForm` variable is initialized in the `ngOnInit` function 
+
+```typescript
+  invoiceForm: FormGroup;
+
+  ngOnInit() {
+    this.invoiceForm = this.formBuilder.group({
+
+      id: [''],
+      service: ['', Validators.required],
+      customerId: ['', Validators.required],
+      rate: ['', Validators.required],
+      hours: ['', [Validators.required]],
+      date: ['', Validators.required],
+      paid: ['']
+    });
+    
+    ... more code ...
+  }
+```
+
+* In the `invoice-form.component.html` template the below scheme is used to allow form binding
 
 Registering the [control](https://angular.io/guide/reactive-forms#step-3-registering-the-control-in-the-template) in the template 
 
@@ -304,6 +343,9 @@ Registering the [control](https://angular.io/guide/reactive-forms#step-3-registe
 :bookmark: `formGroup` 
 
 :bookmark: `formControlName` 
+
+* Edit the `invoice-form.component.html` template file
+
 
 ```html
 <form *ngIf="invoice" [formGroup]="invoiceForm">     
