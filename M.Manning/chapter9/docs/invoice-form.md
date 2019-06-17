@@ -340,9 +340,9 @@ Registering the [control](https://angular.io/guide/reactive-forms#step-3-registe
 [Associating the formgroup model and view](https://angular.io/guide/reactive-forms#step-2-associating-the-formgroup-model-and-view)
 
 
-:bookmark: `formGroup` 
+:bookmark: `formGroup` matches the `invoiceForm: FormGroup` declared in the controller
 
-:bookmark: `formControlName` 
+:bookmark: `formControlName`s match the `formBuilder.group` fields declared in the controller
 
 * Edit the `invoice-form.component.html` template file
 
