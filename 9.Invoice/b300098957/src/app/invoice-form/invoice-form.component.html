@@ -3,18 +3,30 @@
     <mat-card-header>Edit Invoice</mat-card-header>
     <mat-card-content>
       <mat-form-field>
-        <input name="service" matInput type="text" placeholder="Service" formControlName="service">     
+        <input name="service" matInput type="text" placeholder="Service" formControlName="service">
+        <mat-error *ngIf="invoiceForm.get('service').touched && invoiceForm.get('service').invalid">
+          Service is required
+        </mat-error>     
       </mat-form-field>
       <mat-form-field>
         <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-error *ngIf="invoiceForm.get('date').touched && invoiceForm.get('date').invalid">
+          Date is required
+        </mat-error>
       </mat-form-field>
       <mat-datepicker #picker></mat-datepicker>
       <mat-form-field>
         <input name="hours" matInput type="number" placeholder="Hours" formControlName="hours">
+        <mat-error *ngIf="invoiceForm.get('hours').touched && invoiceForm.get('hours').invalid">
+          Hours must be in quarter hour increments
+        </mat-error>
       </mat-form-field>
       <mat-form-field>
         <input name="rate" matInput type="number" placeholder="Rate" formControlName="rate">
+        <mat-error *ngIf="invoiceForm.get('rate').touched && invoiceForm.get('rate').invalid">
+          Hourly rate is required
+        </mat-error>
       </mat-form-field>
       <div>
         <mat-select name="customerId" placeholder="Customer" formControlName="customerId">

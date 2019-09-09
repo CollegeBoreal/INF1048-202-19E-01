@@ -6,7 +6,7 @@ import {CustomerComponent} from './customer/customer.component';
 import {CustomerFormComponent} from './customer-form/customer-form.component';
 import {InvoicesComponent} from './invoices/invoices.component';
 import {InvoiceComponent} from './invoice/invoice.component';
-import {InvoiceFormComponent} from "./invoice-form/invoice-form.component";
+import {InvoiceFormComponent} from './invoice-form/invoice-form.component';
 
 const routes: Routes = [
   { path: 'customers', component: CustomersComponent },
