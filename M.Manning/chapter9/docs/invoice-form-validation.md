@@ -33,6 +33,8 @@ the `HoursValidator` function will be added to the Validators Array qualifying `
     });
 ```
 
+* Edit `invoice-form.component.html` template and the validation messages enclosed by the `<mat-error>` tag
+
 ```html 
 <form *ngIf="invoice" [formGroup]="invoiceForm" (ngSubmit)="save()">
   <mat-card>
