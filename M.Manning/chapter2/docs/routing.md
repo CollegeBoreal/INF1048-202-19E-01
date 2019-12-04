@@ -93,7 +93,7 @@ export class AppRoutingModule { }
 export class AppModule { }
 ```
 
-[Next](link.md)
+[➡️](link.md)
 
 ## Notes: (pour ceux qui sont avancés)
 
