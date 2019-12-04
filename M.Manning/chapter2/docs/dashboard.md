@@ -95,6 +95,6 @@ export class DashboardComponent implements OnInit {
 
 ![image](../images/dashboard.png)
 
-[Next](manage.md)
+[➡️](manage.md)
 
 
